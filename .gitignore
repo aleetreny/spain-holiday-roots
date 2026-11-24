@@ -1,0 +1,15 @@
+# data and caches (heavy, regenerable)
+data/
+raw_data_cache/
+clean_data/
+metadata_cache/
+_local/
+.venv/
+__pycache__/
+*.pyc
+*.zip
+*.pdf
+*.parquet
+*.npy
+*.pkl
+.DS_Store

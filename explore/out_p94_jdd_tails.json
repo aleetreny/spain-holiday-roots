@@ -1,0 +1,57 @@
+{
+  "jdd_rewiring": {
+    "obs": {
+      "r": -0.02556806262312078,
+      "R_avg": 0.5974901832368942,
+      "R_max": 0.09022135927850056
+    },
+    "jdd_mean": {
+      "r": -0.02810149138681383,
+      "R_avg": 0.07342098132920083,
+      "R_max": 0.014959723627562437
+    },
+    "jdd_sd": {
+      "r": 0.00027339751099102086,
+      "R_avg": 0.002134751748685702,
+      "R_max": 0.004191238189855855
+    }
+  },
+  "tails": {
+    "wk_deg_100": {
+      "xmin": 100,
+      "n_tail": 829,
+      "alpha_pl": 3.209,
+      "R_pl_minus_ln": 127.32,
+      "z_vuong": 5.04,
+      "p_val": 0.0,
+      "favors": "Power-law"
+    },
+    "wk_deg_200": {
+      "xmin": 200,
+      "n_tail": 178,
+      "alpha_pl": 3.642,
+      "R_pl_minus_ln": 27.56,
+      "z_vuong": 1.86,
+      "p_val": 0.0628,
+      "favors": "Power-law"
+    },
+    "wk_str_30k": {
+      "xmin": 30000,
+      "n_tail": 840,
+      "alpha_pl": 2.16,
+      "R_pl_minus_ln": 110.8,
+      "z_vuong": 4.91,
+      "p_val": 0.0,
+      "favors": "Power-law"
+    },
+    "wk_str_100k": {
+      "xmin": 100000,
+      "n_tail": 223,
+      "alpha_pl": 2.485,
+      "R_pl_minus_ln": 26.58,
+      "z_vuong": 1.93,
+      "p_val": 0.0537,
+      "favors": "Power-law"
+    }
+  }
+}

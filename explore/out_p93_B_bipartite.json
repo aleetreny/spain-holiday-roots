@@ -1,0 +1,2141 @@
+{
+  "Mid_Aug": {
+    "BiCM": {
+      "n_comms_cities": 5,
+      "n_comms_ge5": 5,
+      "flow_inside_pct": 51.144317886078895,
+      "n_noncontig_strict": 5,
+      "n_noncontig_major": 5,
+      "mean_pieces": 31.8,
+      "diasp_dest_pct": 8.751027115858669,
+      "diasp_flow_pct": 8.169138032562968,
+      "roots_in_comm": 0.05981052768370676,
+      "roots_out_comm": 0.021344462865907972,
+      "roots_enrichment": 2.802156608927272,
+      "nmi_ccaa": 0.5472026856057756,
+      "nmi_prov": 0.46225222496664875,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 22,
+          "n_dests": 368,
+          "n_pieces": 39,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 11.141304347826088,
+          "diasp_flow_pct": 5.796968240747916,
+          "mean_diasp_km": 256.2573618218762,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Benidorm",
+            "Elche/Elx",
+            "Elda"
+          ],
+          "top_dests": [
+            "San Javier",
+            "Pilar de la Horadada",
+            "Benicasim/Benic\u00e0ssim",
+            "Mazarr\u00f3n"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 24,
+          "n_dests": 494,
+          "n_pieces": 34,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 11.94331983805668,
+          "diasp_flow_pct": 4.615765548701388,
+          "mean_diasp_km": 357.32119968275106,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Calafell",
+            "Vendrell, El",
+            "Castell-Platja d'Aro",
+            "Palafrugell"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 30,
+          "n_dests": 458,
+          "n_pieces": 22,
+          "n_major_pieces": 6,
+          "diasp_dest_pct": 6.550218340611353,
+          "diasp_flow_pct": 3.956566227127174,
+          "mean_diasp_km": 242.67684738660236,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Badajoz",
+            "Algeciras",
+            "C\u00e1diz"
+          ],
+          "top_dests": [
+            "Chipiona",
+            "Rota",
+            "Punta Umbr\u00eda",
+            "Puerto de Santa Mar\u00eda, El"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 31,
+          "n_dests": 652,
+          "n_pieces": 26,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 3.374233128834356,
+          "diasp_flow_pct": 12.444690689177266,
+          "mean_diasp_km": 208.80663388665042,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Burgos",
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela",
+            "Irun"
+          ],
+          "top_dests": [
+            "Sanxenxo",
+            "Benidorm",
+            "Marbella",
+            "Llanes"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 30,
+          "n_dests": 462,
+          "n_pieces": 38,
+          "n_major_pieces": 8,
+          "diasp_dest_pct": 13.203463203463203,
+          "diasp_flow_pct": 11.614672915047873,
+          "mean_diasp_km": 261.81725828882713,
+          "cities": [
+            "\u00c1vila",
+            "M\u00e9rida",
+            "C\u00e1ceres",
+            "Ciudad Real",
+            "Guadalajara",
+            "Alcal\u00e1 de Henares"
+          ],
+          "top_dests": [
+            "Gandia",
+            "Navaluenga agregacion de municipios",
+            "Saced\u00f3n agregacion de municipios",
+            "Cazalegas agregacion de municipios"
+          ]
+        }
+      ],
+      "Q_B": 0.15903785890075578,
+      "bicm_err": 9.936778724295436e-07,
+      "n_dests_active": 2434
+    },
+    "Barber_CM": {
+      "n_comms_cities": 7,
+      "n_comms_ge5": 7,
+      "flow_inside_pct": 59.72427459989309,
+      "n_noncontig_strict": 5,
+      "n_noncontig_major": 3,
+      "mean_pieces": 6.714285714285714,
+      "diasp_dest_pct": 2.629416598192276,
+      "diasp_flow_pct": 6.908132008488543,
+      "roots_in_comm": 0.0695262711597254,
+      "roots_out_comm": 0.021336380910592447,
+      "roots_enrichment": 3.25857845578718,
+      "nmi_ccaa": 0.7132415200930501,
+      "nmi_prov": 0.6028945190262823,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 31,
+          "n_dests": 429,
+          "n_pieces": 29,
+          "n_major_pieces": 7,
+          "diasp_dest_pct": 10.722610722610723,
+          "diasp_flow_pct": 23.660528664370666,
+          "mean_diasp_km": 174.57724994064694,
+          "cities": [
+            "Orihuela",
+            "\u00c1vila",
+            "Ciudad Real",
+            "Cuenca",
+            "Guadalajara",
+            "Alcal\u00e1 de Henares"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Torrevieja",
+            "Benidorm",
+            "Gandia"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 13,
+          "n_dests": 288,
+          "n_pieces": 2,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.3472222222222222,
+          "diasp_flow_pct": 0.5816957581156214,
+          "mean_diasp_km": 25.464322293030083,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela",
+            "Le\u00f3n",
+            "Ponferrada",
+            "Lugo"
+          ],
+          "top_dests": [
+            "Sanxenxo",
+            "Gij\u00f3n",
+            "Llanes",
+            "Cangas"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 5,
+          "n_dests": 54,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Torrevieja",
+            "Cartagena",
+            "Lorca",
+            "Molina de Segura",
+            "Murcia"
+          ],
+          "top_dests": [
+            "San Javier",
+            "Pilar de la Horadada",
+            "Cartagena",
+            "Mazarr\u00f3n"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 32,
+          "n_dests": 528,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres"
+          ],
+          "top_dests": [
+            "Chipiona",
+            "Rota",
+            "Punta Umbr\u00eda",
+            "Chiclana de la Frontera"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 14,
+          "n_dests": 271,
+          "n_pieces": 3,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.7380073800738007,
+          "diasp_flow_pct": 0.07187206258123757,
+          "mean_diasp_km": 22.164478049499664,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Elche/Elx",
+            "Elda",
+            "San Vicente del Raspeig/Sant Vicent del Raspeig"
+          ],
+          "top_dests": [
+            "Benicasim/Benic\u00e0ssim",
+            "Santa Pola",
+            "Cullera",
+            "J\u00e1vea/X\u00e0bia"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 16,
+          "n_dests": 366,
+          "n_pieces": 3,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 1.366120218579235,
+          "diasp_flow_pct": 0.8217168429046399,
+          "mean_diasp_km": 205.44788934550314,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Benidorm",
+            "Burgos",
+            "Irun",
+            "Donostia/San Sebasti\u00e1n",
+            "Logro\u00f1o"
+          ],
+          "top_dests": [
+            "Noja",
+            "Laredo",
+            "Valle de Valdebezana agregacion de municipios",
+            "Castro-Urdiales"
+          ]
+        },
+        {
+          "comm": 6,
+          "n_cities": 26,
+          "n_dests": 498,
+          "n_pieces": 8,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 2.0080321285140563,
+          "diasp_flow_pct": 0.9393064366849176,
+          "mean_diasp_km": 322.03600553751147,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Barcelona",
+            "Calafell",
+            "Salou",
+            "Vendrell, El"
+          ]
+        }
+      ],
+      "Q_B": 0.41815583910307774,
+      "n_dests_active": 2434
+    },
+    "Spatial_grav": {
+      "n_comms_cities": 16,
+      "n_comms_ge5": 16,
+      "flow_inside_pct": 41.732683927684825,
+      "n_noncontig_strict": 16,
+      "n_noncontig_major": 12,
+      "mean_pieces": 18.375,
+      "diasp_dest_pct": 35.12736236647494,
+      "diasp_flow_pct": 41.26153189025208,
+      "roots_in_comm": 0.035130664435605786,
+      "roots_out_comm": 0.025762921974035694,
+      "roots_enrichment": 1.3636133537574295,
+      "nmi_ccaa": 0.30734613056066235,
+      "nmi_prov": 0.3540895023632396,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 3,
+          "n_dests": 47,
+          "n_pieces": 12,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 23.404255319148938,
+          "diasp_flow_pct": 1.2300731719706495,
+          "mean_diasp_km": 181.3726132984393,
+          "cities": [
+            "Castell\u00f3 de la Plana",
+            "Vila-real",
+            "Guadalajara"
+          ],
+          "top_dests": [
+            "Benicasim/Benic\u00e0ssim",
+            "Vilafranca/Villafranca del Cid agregacion de municipios",
+            "Llucena/Lucena del Cid agregacion de municipios",
+            "Brihuega agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 60,
+          "n_dests": 1175,
+          "n_pieces": 74,
+          "n_major_pieces": 22,
+          "diasp_dest_pct": 21.95744680851064,
+          "diasp_flow_pct": 10.308122617560548,
+          "mean_diasp_km": 113.1983321025437,
+          "cities": [
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Benidorm",
+            "Elda",
+            "Orihuela",
+            "San Vicente del Raspeig/Sant Vicent del Raspeig"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Palafrugell",
+            "Castell-Platja d'Aro",
+            "Blanes"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 2,
+          "n_dests": 30,
+          "n_pieces": 7,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 50.0,
+          "diasp_flow_pct": 79.75007959994846,
+          "mean_diasp_km": 56.35657655162971,
+          "cities": [
+            "Granada",
+            "Ja\u00e9n"
+          ],
+          "top_dests": [
+            "Almu\u00f1\u00e9car",
+            "Motril",
+            "Salobre\u00f1a",
+            "Roquetas de Mar"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 27,
+          "n_dests": 420,
+          "n_pieces": 73,
+          "n_major_pieces": 26,
+          "diasp_dest_pct": 72.14285714285714,
+          "diasp_flow_pct": 75.09929451751648,
+          "mean_diasp_km": 313.10101153461824,
+          "cities": [
+            "C\u00f3rdoba",
+            "Linares",
+            "Lugo",
+            "Alcal\u00e1 de Henares",
+            "Alcobendas",
+            "Alcorc\u00f3n"
+          ],
+          "top_dests": [
+            "Torrevieja",
+            "Marbella",
+            "Benidorm",
+            "Gandia"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 2,
+          "n_dests": 37,
+          "n_pieces": 10,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 59.45945945945946,
+          "diasp_flow_pct": 14.794948201881052,
+          "mean_diasp_km": 44.852506216065635,
+          "cities": [
+            "Girona",
+            "Logro\u00f1o"
+          ],
+          "top_dests": [
+            "Agoncillo agregacion de municipios",
+            "Entrena agregacion de municipios",
+            "Ezcaray agregacion de municipios",
+            "Ba\u00f1os de R\u00edo Tob\u00eda agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 3,
+          "n_dests": 40,
+          "n_pieces": 5,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 10.0,
+          "diasp_flow_pct": 12.723977704320966,
+          "mean_diasp_km": 337.15529248091474,
+          "cities": [
+            "Lorca",
+            "Molina de Segura",
+            "Murcia"
+          ],
+          "top_dests": [
+            "Pilar de la Horadada",
+            "\u00c1guilas",
+            "Mazarr\u00f3n",
+            "Alc\u00e1zares, Los"
+          ]
+        },
+        {
+          "comm": 6,
+          "n_cities": 5,
+          "n_dests": 90,
+          "n_pieces": 13,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 60.0,
+          "diasp_flow_pct": 41.64382951658923,
+          "mean_diasp_km": 95.24384248871249,
+          "cities": [
+            "Irun",
+            "Donostia/San Sebasti\u00e1n",
+            "Pamplona/Iru\u00f1a",
+            "Palencia",
+            "Salamanca"
+          ],
+          "top_dests": [
+            "Galindo y Perahuy agregacion de municipios",
+            "Linares de Riofr\u00edo agregacion de municipios",
+            "Erro agregacion de municipios",
+            "Alberca, La agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 7,
+          "n_cities": 6,
+          "n_dests": 85,
+          "n_pieces": 12,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 41.1764705882353,
+          "diasp_flow_pct": 16.13170758070668,
+          "mean_diasp_km": 54.96638343546425,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Hospitalet de Llobregat, L'",
+            "Le\u00f3n",
+            "Avil\u00e9s",
+            "Gij\u00f3n",
+            "Segovia"
+          ],
+          "top_dests": [
+            "Villaviciosa",
+            "Santas Martas agregacion de municipios",
+            "Valdefresno agregacion de municipios",
+            "Llamas de la Ribera agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 8,
+          "n_cities": 2,
+          "n_dests": 15,
+          "n_pieces": 5,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 26.666666666666668,
+          "diasp_flow_pct": 50.92026267592781,
+          "mean_diasp_km": 61.41921841259372,
+          "cities": [
+            "Oviedo",
+            "Siero"
+          ],
+          "top_dests": [
+            "Llanes",
+            "Goz\u00f3n",
+            "Colunga agregacion de municipios",
+            "Tapia de Casariego"
+          ]
+        },
+        {
+          "comm": 9,
+          "n_cities": 7,
+          "n_dests": 90,
+          "n_pieces": 23,
+          "n_major_pieces": 8,
+          "diasp_dest_pct": 42.22222222222222,
+          "diasp_flow_pct": 73.33521560831531,
+          "mean_diasp_km": 198.06259681198443,
+          "cities": [
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres",
+            "Alcal\u00e1 de Guada\u00edra",
+            "Dos Hermanas",
+            "Sevilla"
+          ],
+          "top_dests": [
+            "Chipiona",
+            "Rota",
+            "Almonte",
+            "Lepe"
+          ]
+        },
+        {
+          "comm": 10,
+          "n_cities": 1,
+          "n_dests": 6,
+          "n_pieces": 2,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 16.666666666666668,
+          "diasp_flow_pct": 2.2939901662321107,
+          "mean_diasp_km": 29.795565707627084,
+          "cities": [
+            "\u00c1vila"
+          ],
+          "top_dests": [
+            "San Pedro del Arroyo agregacion de municipios",
+            "Solosancho agregacion de municipios",
+            "Sanchidri\u00e1n agregacion de municipios",
+            "Madrigal de las Altas Torres agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 11,
+          "n_cities": 1,
+          "n_dests": 29,
+          "n_pieces": 2,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 3.4482758620689653,
+          "diasp_flow_pct": 0.05726621415558429,
+          "mean_diasp_km": 459.0331272428021,
+          "cities": [
+            "Valladolid"
+          ],
+          "top_dests": [
+            "Traspinedo agregacion de municipios",
+            "Quintanilla de On\u00e9simo agregacion de municipios",
+            "Villabr\u00e1gima agregacion de municipios",
+            "Geria agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 12,
+          "n_cities": 4,
+          "n_dests": 84,
+          "n_pieces": 12,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 25.0,
+          "diasp_flow_pct": 25.03154647003701,
+          "mean_diasp_km": 160.2511762131509,
+          "cities": [
+            "Huesca",
+            "Soria",
+            "Teruel",
+            "Zaragoza"
+          ],
+          "top_dests": [
+            "Biescas agregacion de municipios",
+            "Salou",
+            "Jaca",
+            "Pen\u00edscola/Pe\u00f1\u00edscola"
+          ]
+        },
+        {
+          "comm": 13,
+          "n_cities": 6,
+          "n_dests": 78,
+          "n_pieces": 22,
+          "n_major_pieces": 7,
+          "diasp_dest_pct": 38.46153846153846,
+          "diasp_flow_pct": 30.257038155983324,
+          "mean_diasp_km": 197.3780874835824,
+          "cities": [
+            "Elche/Elx",
+            "Burgos",
+            "Barakaldo",
+            "Bilbao",
+            "Getxo",
+            "Zamora"
+          ],
+          "top_dests": [
+            "Santa Pola",
+            "Noja",
+            "Laredo",
+            "Valle de Valdebezana agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 14,
+          "n_cities": 2,
+          "n_dests": 37,
+          "n_pieces": 8,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 97.29729729729729,
+          "diasp_flow_pct": 99.5988562991884,
+          "mean_diasp_km": 39.52421153865417,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Santiago de Compostela"
+          ],
+          "top_dests": [
+            "Ribeira",
+            "Muros",
+            "Sada",
+            "Vilagarc\u00eda de Arousa"
+          ]
+        },
+        {
+          "comm": 15,
+          "n_cities": 6,
+          "n_dests": 171,
+          "n_pieces": 14,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 12.865497076023392,
+          "diasp_flow_pct": 9.590300863096653,
+          "mean_diasp_km": 159.7402135012361,
+          "cities": [
+            "Albacete",
+            "Ciudad Real",
+            "Cuenca",
+            "Paterna",
+            "Torrent",
+            "Val\u00e8ncia"
+          ],
+          "top_dests": [
+            "J\u00e1vea/X\u00e0bia",
+            "Sueca",
+            "Chelva agregacion de municipios",
+            "Viver agregacion de municipios"
+          ]
+        }
+      ],
+      "Q_B": 0.16490959307925734,
+      "n_dests_active": 2434
+    }
+  },
+  "Mid_Aug_MC_null": {
+    "N_MC": 100,
+    "obs_Q": 0.16490959307925734,
+    "mc_Q_mean": 0.008893916562624563,
+    "mc_Q_sd": 0.00013355458580271046,
+    "z_Q": 1168.179105037264,
+    "obs_diasp_dest_pct": 35.12736236647494,
+    "mc_diasp_dest_mean": 80.47736161875828,
+    "mc_diasp_dest_sd": 1.9731563182865597,
+    "obs_diasp_flow_pct": 41.26153189025208,
+    "mc_diasp_flow_mean": 63.76464211553934,
+    "mc_diasp_flow_sd": 4.0714555652341256,
+    "obs_roots_enrich": 1.3636133537574295,
+    "mc_roots_mean": 1.0974366821513837,
+    "mc_roots_sd": 0.03560367235681535,
+    "z_roots": 7.476101592511527,
+    "obs_noncontig_major": 12,
+    "mc_noncontig_mean": 11.79,
+    "mc_noncontig_sd": 1.160129303138232
+  },
+  "All_Saints": {
+    "BiCM": {
+      "n_comms_cities": 5,
+      "n_comms_ge5": 5,
+      "flow_inside_pct": 58.63315937151413,
+      "n_noncontig_strict": 5,
+      "n_noncontig_major": 4,
+      "mean_pieces": 13.4,
+      "diasp_dest_pct": 3.211198023878139,
+      "diasp_flow_pct": 4.123583698873374,
+      "roots_in_comm": 0.062262212670477164,
+      "roots_out_comm": 0.020850770735841677,
+      "roots_enrichment": 2.98608686744854,
+      "nmi_ccaa": 0.6532256067574959,
+      "nmi_prov": 0.5347381563509779,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 22,
+          "n_dests": 356,
+          "n_pieces": 9,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 3.0898876404494384,
+          "diasp_flow_pct": 0.6908569596639009,
+          "mean_diasp_km": 146.33306448148704,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Benidorm",
+            "Elche/Elx",
+            "Elda"
+          ],
+          "top_dests": [
+            "Murcia",
+            "Elche/Elx",
+            "Benidorm",
+            "Santa Pola"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 24,
+          "n_dests": 442,
+          "n_pieces": 8,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 2.262443438914027,
+          "diasp_flow_pct": 0.5923035012121528,
+          "mean_diasp_km": 195.7101154849246,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Badalona",
+            "Hospitalet de Llobregat, L'",
+            "Terrassa",
+            "Sabadell"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 31,
+          "n_dests": 467,
+          "n_pieces": 25,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 5.56745182012848,
+          "diasp_flow_pct": 9.64830899955043,
+          "mean_diasp_km": 229.15298546393132,
+          "cities": [
+            "\u00c1vila",
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres",
+            "Ciudad Real",
+            "Guadalajara"
+          ],
+          "top_dests": [
+            "Legan\u00e9s",
+            "Getafe",
+            "Fuenlabrada",
+            "Torrej\u00f3n de Ardoz"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 29,
+          "n_dests": 462,
+          "n_pieces": 11,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 3.896103896103896,
+          "diasp_flow_pct": 8.058693816380266,
+          "mean_diasp_km": 243.16057022704217,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Algeciras",
+            "C\u00e1diz",
+            "Chiclana de la Frontera"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Granada",
+            "Torremolinos",
+            "Marbella"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 31,
+          "n_dests": 702,
+          "n_pieces": 14,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 1.8518518518518519,
+          "diasp_flow_pct": 2.3209564946805226,
+          "mean_diasp_km": 106.29863045685093,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Burgos",
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela",
+            "Irun"
+          ],
+          "top_dests": [
+            "Coru\u00f1a, A",
+            "Le\u00f3n",
+            "Santiago de Compostela",
+            "Donostia/San Sebasti\u00e1n"
+          ]
+        }
+      ],
+      "Q_B": 0.33629035291874343,
+      "bicm_err": 9.989866782689205e-07,
+      "n_dests_active": 2429
+    },
+    "Barber_CM": {
+      "n_comms_cities": 7,
+      "n_comms_ge5": 7,
+      "flow_inside_pct": 70.74120116554087,
+      "n_noncontig_strict": 4,
+      "n_noncontig_major": 2,
+      "mean_pieces": 2.7142857142857144,
+      "diasp_dest_pct": 0.7410456978180321,
+      "diasp_flow_pct": 1.2252159411190697,
+      "roots_in_comm": 0.0750041248977582,
+      "roots_out_comm": 0.020598855672852922,
+      "roots_enrichment": 3.641179203784877,
+      "nmi_ccaa": 0.78705933428078,
+      "nmi_prov": 0.6415843583043347,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 20,
+          "n_dests": 333,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Benidorm",
+            "Elche/Elx",
+            "Elda"
+          ],
+          "top_dests": [
+            "Val\u00e8ncia",
+            "Murcia",
+            "Alicante/Alacant",
+            "Elche/Elx"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 33,
+          "n_dests": 468,
+          "n_pieces": 8,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 2.3504273504273505,
+          "diasp_flow_pct": 3.6748764263813354,
+          "mean_diasp_km": 151.61400979116416,
+          "cities": [
+            "\u00c1vila",
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres",
+            "Ciudad Real",
+            "Cuenca"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Legan\u00e9s",
+            "Getafe",
+            "Alcorc\u00f3n"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 23,
+          "n_dests": 400,
+          "n_pieces": 3,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.5,
+          "diasp_flow_pct": 0.3296403625475264,
+          "mean_diasp_km": 158.29158551744408,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Barcelona",
+            "Badalona",
+            "Hospitalet de Llobregat, L'",
+            "Terrassa"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 7,
+          "n_dests": 203,
+          "n_pieces": 2,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.49261083743842365,
+          "diasp_flow_pct": 0.27381113781213307,
+          "mean_diasp_km": 25.464322293030083,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela",
+            "Lugo",
+            "Ourense",
+            "Pontevedra"
+          ],
+          "top_dests": [
+            "Santiago de Compostela",
+            "Coru\u00f1a, A",
+            "Vigo",
+            "Ourense"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 21,
+          "n_dests": 467,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Burgos",
+            "Irun",
+            "Donostia/San Sebasti\u00e1n",
+            "Le\u00f3n",
+            "Ponferrada"
+          ],
+          "top_dests": [
+            "Oviedo",
+            "Gij\u00f3n",
+            "Bilbao",
+            "Santander"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 4,
+          "n_dests": 94,
+          "n_pieces": 3,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 4.25531914893617,
+          "diasp_flow_pct": 0.5609899841494329,
+          "mean_diasp_km": 101.35270079101572,
+          "cities": [
+            "Huesca",
+            "Soria",
+            "Teruel",
+            "Zaragoza"
+          ],
+          "top_dests": [
+            "Zaragoza",
+            "Jaca",
+            "Biescas agregacion de municipios",
+            "Huesca"
+          ]
+        },
+        {
+          "comm": 6,
+          "n_cities": 29,
+          "n_dests": 464,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Algeciras",
+            "C\u00e1diz",
+            "Chiclana de la Frontera"
+          ],
+          "top_dests": [
+            "M\u00e1laga",
+            "Sevilla",
+            "Granada",
+            "C\u00f3rdoba"
+          ]
+        }
+      ],
+      "Q_B": 0.5140454464975621,
+      "n_dests_active": 2429
+    },
+    "Spatial_grav": {
+      "n_comms_cities": 20,
+      "n_comms_ge5": 20,
+      "flow_inside_pct": 35.56876783476067,
+      "n_noncontig_strict": 18,
+      "n_noncontig_major": 14,
+      "mean_pieces": 18.45,
+      "diasp_dest_pct": 29.888843145327296,
+      "diasp_flow_pct": 29.457126600906136,
+      "roots_in_comm": 0.03774748067758816,
+      "roots_out_comm": 0.027015238267854444,
+      "roots_enrichment": 1.3972662503778122,
+      "nmi_ccaa": 0.40178226184254817,
+      "nmi_prov": 0.4752592157000457,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 1,
+          "n_dests": 10,
+          "n_pieces": 2,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 10.0,
+          "diasp_flow_pct": 0.6970053196461212,
+          "mean_diasp_km": 125.25553714249104,
+          "cities": [
+            "Segovia"
+          ],
+          "top_dests": [
+            "Hontanares de Eresma agregacion de municipios",
+            "Cantimpalos agregacion de municipios",
+            "Navalmanzano agregacion de municipios",
+            "Villacast\u00edn agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 12,
+          "n_dests": 186,
+          "n_pieces": 23,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 11.827956989247312,
+          "diasp_flow_pct": 4.2661310355367545,
+          "mean_diasp_km": 118.68971648421865,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Cornell\u00e0 de Llobregat",
+            "Hospitalet de Llobregat, L'",
+            "Prat de Llobregat, El"
+          ],
+          "top_dests": [
+            "Almer\u00eda",
+            "Ejido, El",
+            "N\u00edjar",
+            "Motril"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 6,
+          "n_dests": 100,
+          "n_pieces": 10,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 8.0,
+          "diasp_flow_pct": 1.694459213676013,
+          "mean_diasp_km": 125.58048304005399,
+          "cities": [
+            "Badalona",
+            "Granollers",
+            "Matar\u00f3",
+            "Mollet del Vall\u00e8s",
+            "Santa Coloma de Gramenet",
+            "C\u00f3rdoba"
+          ],
+          "top_dests": [
+            "Blanes",
+            "Matar\u00f3",
+            "Malgrat de Mar",
+            "Lloret de Mar"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 1,
+          "n_dests": 34,
+          "n_pieces": 7,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 17.647058823529413,
+          "diasp_flow_pct": 2.379650809305196,
+          "mean_diasp_km": 169.0160429683482,
+          "cities": [
+            "Valladolid"
+          ],
+          "top_dests": [
+            "Traspinedo agregacion de municipios",
+            "Geria agregacion de municipios",
+            "Villabr\u00e1gima agregacion de municipios",
+            "Quintanilla de On\u00e9simo agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 4,
+          "n_dests": 80,
+          "n_pieces": 15,
+          "n_major_pieces": 5,
+          "diasp_dest_pct": 30.0,
+          "diasp_flow_pct": 13.821979864567819,
+          "mean_diasp_km": 96.56375162484964,
+          "cities": [
+            "Burgos",
+            "Barakaldo",
+            "Bilbao",
+            "Zamora"
+          ],
+          "top_dests": [
+            "Valle de Valdebezana agregacion de municipios",
+            "Castro-Urdiales",
+            "Medina de Pomar agregacion de municipios",
+            "O\u00f1a agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 3,
+          "n_dests": 81,
+          "n_pieces": 16,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 19.753086419753085,
+          "diasp_flow_pct": 14.737718542817902,
+          "mean_diasp_km": 93.2168754199288,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Santiago de Compostela",
+            "Colmenar Viejo"
+          ],
+          "top_dests": [
+            "Paderne agregacion de municipios",
+            "Carballo",
+            "Ribeira",
+            "Betanzos"
+          ]
+        },
+        {
+          "comm": 6,
+          "n_cities": 2,
+          "n_dests": 31,
+          "n_pieces": 5,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 12.903225806451612,
+          "diasp_flow_pct": 0.9562502129310052,
+          "mean_diasp_km": 151.7320489338702,
+          "cities": [
+            "Castell\u00f3 de la Plana",
+            "Vila-real"
+          ],
+          "top_dests": [
+            "Benicasim/Benic\u00e0ssim",
+            "Borriana/Burriana",
+            "Castell\u00f3 de la Plana",
+            "Vila-real"
+          ]
+        },
+        {
+          "comm": 7,
+          "n_cities": 7,
+          "n_dests": 148,
+          "n_pieces": 16,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 10.135135135135135,
+          "diasp_flow_pct": 3.6483376898776347,
+          "mean_diasp_km": 195.82745360143045,
+          "cities": [
+            "Albacete",
+            "San Vicente del Raspeig/Sant Vicent del Raspeig",
+            "Ciudad Real",
+            "Cuenca",
+            "Guadalajara",
+            "Alcal\u00e1 de Henares"
+          ],
+          "top_dests": [
+            "Torrej\u00f3n de Ardoz",
+            "Albacete",
+            "Pozohondo agregacion de municipios",
+            "Villarrobledo"
+          ]
+        },
+        {
+          "comm": 8,
+          "n_cities": 7,
+          "n_dests": 147,
+          "n_pieces": 26,
+          "n_major_pieces": 7,
+          "diasp_dest_pct": 25.85034013605442,
+          "diasp_flow_pct": 23.71272646987694,
+          "mean_diasp_km": 105.22946188520015,
+          "cities": [
+            "Lleida",
+            "Alcal\u00e1 de Guada\u00edra",
+            "Dos Hermanas",
+            "Sevilla",
+            "Utrera",
+            "Gandia"
+          ],
+          "top_dests": [
+            "Val\u00e8ncia",
+            "Alcal\u00e1 de Guada\u00edra",
+            "Carmona",
+            "Almonte"
+          ]
+        },
+        {
+          "comm": 9,
+          "n_cities": 22,
+          "n_dests": 483,
+          "n_pieces": 93,
+          "n_major_pieces": 33,
+          "diasp_dest_pct": 56.7287784679089,
+          "diasp_flow_pct": 52.689543351763874,
+          "mean_diasp_km": 229.2041893733349,
+          "cities": [
+            "\u00c1vila",
+            "Castelldefels",
+            "Vilanova i la Geltr\u00fa",
+            "Girona",
+            "Ponferrada",
+            "Alcobendas"
+          ],
+          "top_dests": [
+            "Barcelona",
+            "Sevilla",
+            "M\u00e1laga",
+            "Zaragoza"
+          ]
+        },
+        {
+          "comm": 10,
+          "n_cities": 2,
+          "n_dests": 48,
+          "n_pieces": 7,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 16.666666666666668,
+          "diasp_flow_pct": 9.373063696919495,
+          "mean_diasp_km": 102.72020085739739,
+          "cities": [
+            "Ourense",
+            "Vigo"
+          ],
+          "top_dests": [
+            "Ourense",
+            "Cartelle agregacion de municipios",
+            "Ca\u00f1iza, A agregacion de municipios",
+            "Ponteareas"
+          ]
+        },
+        {
+          "comm": 11,
+          "n_cities": 39,
+          "n_dests": 490,
+          "n_pieces": 86,
+          "n_major_pieces": 25,
+          "diasp_dest_pct": 44.69387755102041,
+          "diasp_flow_pct": 39.45132092529364,
+          "mean_diasp_km": 86.20908593211918,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Alicante/Alacant",
+            "Benidorm",
+            "Elche/Elx",
+            "Elda",
+            "Orihuela"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Granada",
+            "Chiclana de la Frontera",
+            "Alp agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 12,
+          "n_cities": 2,
+          "n_dests": 17,
+          "n_pieces": 3,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 11.764705882352942,
+          "diasp_flow_pct": 22.123435118987967,
+          "mean_diasp_km": 42.579910665138875,
+          "cities": [
+            "Oviedo",
+            "Siero"
+          ],
+          "top_dests": [
+            "Llanes",
+            "Cangas del Narcea",
+            "Vald\u00e9s",
+            "Teverga agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 13,
+          "n_cities": 1,
+          "n_dests": 13,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Palencia"
+          ],
+          "top_dests": [
+            "Astudillo agregacion de municipios",
+            "Villarramiel agregacion de municipios",
+            "Paredes de Nava agregacion de municipios",
+            "Baltan\u00e1s agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 14,
+          "n_cities": 3,
+          "n_dests": 120,
+          "n_pieces": 5,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 5.0,
+          "diasp_flow_pct": 0.9927519701790477,
+          "mean_diasp_km": 220.26075631934586,
+          "cities": [
+            "Alcoy/Alcoi",
+            "Paterna",
+            "Val\u00e8ncia"
+          ],
+          "top_dests": [
+            "Torrent",
+            "Paterna",
+            "Ll\u00edria",
+            "Pobla de Vallbona, la"
+          ]
+        },
+        {
+          "comm": 15,
+          "n_cities": 6,
+          "n_dests": 96,
+          "n_pieces": 16,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 15.625,
+          "diasp_flow_pct": 2.2885053233643204,
+          "mean_diasp_km": 105.9305840354862,
+          "cities": [
+            "Collado Villalba",
+            "Rozas de Madrid, Las",
+            "M\u00e1laga",
+            "V\u00e9lez-M\u00e1laga",
+            "Reus",
+            "Tarragona"
+          ],
+          "top_dests": [
+            "Rinc\u00f3n de la Victoria agregacion de municipios",
+            "V\u00e9lez-M\u00e1laga",
+            "Alhaur\u00edn de la Torre",
+            "C\u00e1rtama"
+          ]
+        },
+        {
+          "comm": 16,
+          "n_cities": 4,
+          "n_dests": 96,
+          "n_pieces": 10,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 6.25,
+          "diasp_flow_pct": 4.502490424039885,
+          "mean_diasp_km": 187.05447564096087,
+          "cities": [
+            "Soria",
+            "Teruel",
+            "Sagunto/Sagunt",
+            "Zaragoza"
+          ],
+          "top_dests": [
+            "Biescas agregacion de municipios",
+            "Jaca",
+            "Huesca",
+            "Valle de Hecho agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 17,
+          "n_cities": 8,
+          "n_dests": 123,
+          "n_pieces": 19,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 12.195121951219512,
+          "diasp_flow_pct": 8.344224267493216,
+          "mean_diasp_km": 90.33547710861326,
+          "cities": [
+            "Manresa",
+            "Rub\u00ed",
+            "Sabadell",
+            "Terrassa",
+            "Huelva",
+            "Huesca"
+          ],
+          "top_dests": [
+            "Terrassa",
+            "Sabadell",
+            "Sant Cugat del Vall\u00e8s",
+            "Rub\u00ed"
+          ]
+        },
+        {
+          "comm": 18,
+          "n_cities": 6,
+          "n_dests": 98,
+          "n_pieces": 8,
+          "n_major_pieces": 3,
+          "diasp_dest_pct": 47.95918367346939,
+          "diasp_flow_pct": 22.61697108644812,
+          "mean_diasp_km": 65.4092041741244,
+          "cities": [
+            "Arganda del Rey",
+            "Cartagena",
+            "Lorca",
+            "Molina de Segura",
+            "Murcia",
+            "Pamplona/Iru\u00f1a"
+          ],
+          "top_dests": [
+            "Murcia",
+            "Molina de Segura",
+            "\u00c1guilas",
+            "Torre-Pacheco"
+          ]
+        },
+        {
+          "comm": 19,
+          "n_cities": 1,
+          "n_dests": 28,
+          "n_pieces": 1,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.0,
+          "diasp_flow_pct": 0.0,
+          "mean_diasp_km": 0.0,
+          "cities": [
+            "Lugo"
+          ],
+          "top_dests": [
+            "Foz",
+            "Pontenova, A agregacion de municipios",
+            "Pastoriza, A agregacion de municipios",
+            "Fonsagrada, A agregacion de municipios"
+          ]
+        }
+      ],
+      "Q_B": 0.13990205874964226,
+      "n_dests_active": 2429
+    }
+  },
+  "Feb_wd": {
+    "BiCM": {
+      "n_comms_cities": 5,
+      "n_comms_ge5": 5,
+      "flow_inside_pct": 52.45911502394688,
+      "n_noncontig_strict": 5,
+      "n_noncontig_major": 4,
+      "mean_pieces": 25.4,
+      "diasp_dest_pct": 6.041923551171394,
+      "diasp_flow_pct": 6.6413211867256585,
+      "roots_in_comm": 0.059148416286660135,
+      "roots_out_comm": 0.021483228779832587,
+      "roots_enrichment": 2.753236810575969,
+      "nmi_ccaa": 0.6101935762704247,
+      "nmi_prov": 0.4961658281429352,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 21,
+          "n_dests": 356,
+          "n_pieces": 21,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 7.584269662921348,
+          "diasp_flow_pct": 3.791764014976918,
+          "mean_diasp_km": 170.37479491857673,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Elche/Elx",
+            "Elda",
+            "Orihuela"
+          ],
+          "top_dests": [
+            "Elche/Elx",
+            "Cartagena",
+            "Molina de Segura",
+            "Orihuela"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 32,
+          "n_dests": 550,
+          "n_pieces": 24,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 4.7272727272727275,
+          "diasp_flow_pct": 2.722484179364635,
+          "mean_diasp_km": 309.71723733158456,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres"
+          ],
+          "top_dests": [
+            "Marbella",
+            "C\u00e1diz",
+            "Jerez de la Frontera",
+            "Chiclana de la Frontera"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 25,
+          "n_dests": 428,
+          "n_pieces": 14,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 2.102803738317757,
+          "diasp_flow_pct": 7.904219727449931,
+          "mean_diasp_km": 293.24640959727594,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Hospitalet de Llobregat, L'",
+            "Badalona",
+            "Terrassa"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 29,
+          "n_dests": 419,
+          "n_pieces": 47,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 14.797136038186158,
+          "diasp_flow_pct": 14.787267784198583,
+          "mean_diasp_km": 234.33724481272841,
+          "cities": [
+            "\u00c1vila",
+            "Ciudad Real",
+            "Guadalajara",
+            "Alcal\u00e1 de Henares",
+            "Alcobendas",
+            "Alcorc\u00f3n"
+          ],
+          "top_dests": [
+            "Getafe",
+            "Legan\u00e9s",
+            "Alcorc\u00f3n",
+            "M\u00f3stoles"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 30,
+          "n_dests": 680,
+          "n_pieces": 21,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 3.3823529411764706,
+          "diasp_flow_pct": 1.7794285260933962,
+          "mean_diasp_km": 165.1836987764439,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Benidorm",
+            "Burgos",
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela"
+          ],
+          "top_dests": [
+            "Coru\u00f1a, A",
+            "Donostia/San Sebasti\u00e1n",
+            "Vitoria-Gasteiz",
+            "Santiago de Compostela"
+          ]
+        }
+      ],
+      "Q_B": 0.26843963516376157,
+      "bicm_err": 9.98148465214399e-07,
+      "n_dests_active": 2433
+    },
+    "Barber_CM": {
+      "n_comms_cities": 6,
+      "n_comms_ge5": 6,
+      "flow_inside_pct": 58.31711490117999,
+      "n_noncontig_strict": 6,
+      "n_noncontig_major": 2,
+      "mean_pieces": 7.5,
+      "diasp_dest_pct": 1.9317714755445952,
+      "diasp_flow_pct": 1.6666568982278653,
+      "roots_in_comm": 0.06708568699583872,
+      "roots_out_comm": 0.02118977179623638,
+      "roots_enrichment": 3.1659466482670733,
+      "nmi_ccaa": 0.7359250931639953,
+      "nmi_prov": 0.5983085332166598,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 20,
+          "n_dests": 340,
+          "n_pieces": 3,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 0.5882352941176471,
+          "diasp_flow_pct": 0.25878515341314734,
+          "mean_diasp_km": 416.0666634204947,
+          "cities": [
+            "Albacete",
+            "Alcoy/Alcoi",
+            "Alicante/Alacant",
+            "Elche/Elx",
+            "Elda",
+            "Orihuela"
+          ],
+          "top_dests": [
+            "Val\u00e8ncia",
+            "Murcia",
+            "Alicante/Alacant",
+            "Elche/Elx"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 7,
+          "n_dests": 205,
+          "n_pieces": 4,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 1.4634146341463414,
+          "diasp_flow_pct": 0.9492741113461739,
+          "mean_diasp_km": 66.93683388083085,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Ferrol",
+            "Santiago de Compostela",
+            "Lugo",
+            "Ourense",
+            "Pontevedra"
+          ],
+          "top_dests": [
+            "Coru\u00f1a, A",
+            "Vigo",
+            "Santiago de Compostela",
+            "Ourense"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 30,
+          "n_dests": 388,
+          "n_pieces": 17,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 6.443298969072165,
+          "diasp_flow_pct": 5.3078093373289645,
+          "mean_diasp_km": 199.57591755847517,
+          "cities": [
+            "\u00c1vila",
+            "Ciudad Real",
+            "Cuenca",
+            "Guadalajara",
+            "Alcal\u00e1 de Henares",
+            "Alcobendas"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Getafe",
+            "Legan\u00e9s",
+            "Alcorc\u00f3n"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 25,
+          "n_dests": 559,
+          "n_pieces": 6,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 0.7155635062611807,
+          "diasp_flow_pct": 0.6068571632073054,
+          "mean_diasp_km": 154.9724389851823,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "Benidorm",
+            "Burgos",
+            "Irun",
+            "Donostia/San Sebasti\u00e1n",
+            "Huesca"
+          ],
+          "top_dests": [
+            "Gij\u00f3n",
+            "Bilbao",
+            "Oviedo",
+            "Donostia/San Sebasti\u00e1n"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 23,
+          "n_dests": 391,
+          "n_pieces": 6,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 1.278772378516624,
+          "diasp_flow_pct": 0.32491296521204055,
+          "mean_diasp_km": 168.71648579389142,
+          "cities": [
+            "Badalona",
+            "Barcelona",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat",
+            "Granollers",
+            "Hospitalet de Llobregat, L'"
+          ],
+          "top_dests": [
+            "Barcelona",
+            "Hospitalet de Llobregat, L'",
+            "Badalona",
+            "Terrassa"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 32,
+          "n_dests": 550,
+          "n_pieces": 9,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 1.4545454545454546,
+          "diasp_flow_pct": 0.2784211418029614,
+          "mean_diasp_km": 266.30900504466194,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Badajoz",
+            "M\u00e9rida",
+            "C\u00e1ceres"
+          ],
+          "top_dests": [
+            "M\u00e1laga",
+            "Sevilla",
+            "Granada",
+            "C\u00f3rdoba"
+          ]
+        }
+      ],
+      "Q_B": 0.3897154586656065,
+      "n_dests_active": 2433
+    },
+    "Spatial_grav": {
+      "n_comms_cities": 14,
+      "n_comms_ge5": 14,
+      "flow_inside_pct": 28.758248039936507,
+      "n_noncontig_strict": 14,
+      "n_noncontig_major": 11,
+      "mean_pieces": 49.42857142857143,
+      "diasp_dest_pct": 35.79942457870941,
+      "diasp_flow_pct": 25.209132877352765,
+      "roots_in_comm": 0.03933031673720783,
+      "roots_out_comm": 0.026806815599143087,
+      "roots_enrichment": 1.4671760094647373,
+      "nmi_ccaa": 0.3046087690402929,
+      "nmi_prov": 0.36174034268280825,
+      "details": [
+        {
+          "comm": 0,
+          "n_cities": 4,
+          "n_dests": 103,
+          "n_pieces": 39,
+          "n_major_pieces": 5,
+          "diasp_dest_pct": 50.48543689320388,
+          "diasp_flow_pct": 33.92768984672076,
+          "mean_diasp_km": 359.20764933840786,
+          "cities": [
+            "Alcal\u00e1 de Guada\u00edra",
+            "Dos Hermanas",
+            "Sevilla",
+            "Utrera"
+          ],
+          "top_dests": [
+            "Dos Hermanas",
+            "Alcal\u00e1 de Guada\u00edra",
+            "Carmona",
+            "Chipiona"
+          ]
+        },
+        {
+          "comm": 1,
+          "n_cities": 30,
+          "n_dests": 462,
+          "n_pieces": 127,
+          "n_major_pieces": 15,
+          "diasp_dest_pct": 34.1991341991342,
+          "diasp_flow_pct": 16.80326970820198,
+          "mean_diasp_km": 116.95097062920235,
+          "cities": [
+            "Vitoria-Gasteiz",
+            "\u00c1vila",
+            "Badajoz",
+            "M\u00e9rida",
+            "Castelldefels",
+            "Cornell\u00e0 de Llobregat"
+          ],
+          "top_dests": [
+            "Badajoz",
+            "Pinto",
+            "C\u00e1ceres",
+            "Illescas"
+          ]
+        },
+        {
+          "comm": 2,
+          "n_cities": 4,
+          "n_dests": 118,
+          "n_pieces": 18,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 17.796610169491526,
+          "diasp_flow_pct": 15.218203882556216,
+          "mean_diasp_km": 129.8176765676064,
+          "cities": [
+            "Coru\u00f1a, A",
+            "Santiago de Compostela",
+            "Ourense",
+            "Vigo"
+          ],
+          "top_dests": [
+            "Vigo",
+            "Ourense",
+            "Lugo",
+            "Cangas"
+          ]
+        },
+        {
+          "comm": 3,
+          "n_cities": 5,
+          "n_dests": 130,
+          "n_pieces": 28,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 20.0,
+          "diasp_flow_pct": 8.311321283850926,
+          "mean_diasp_km": 152.2826043953967,
+          "cities": [
+            "Manresa",
+            "Girona",
+            "Huelva",
+            "Lleida",
+            "Logro\u00f1o"
+          ],
+          "top_dests": [
+            "Agoncillo agregacion de municipios",
+            "Moguer",
+            "Palos de la Frontera",
+            "Cerro de And\u00e9valo, El agregacion de municipios"
+          ]
+        },
+        {
+          "comm": 4,
+          "n_cities": 18,
+          "n_dests": 212,
+          "n_pieces": 96,
+          "n_major_pieces": 13,
+          "diasp_dest_pct": 55.660377358490564,
+          "diasp_flow_pct": 20.248783130457255,
+          "mean_diasp_km": 102.91023473420805,
+          "cities": [
+            "Alicante/Alacant",
+            "Elche/Elx",
+            "Elda",
+            "San Vicente del Raspeig/Sant Vicent del Raspeig",
+            "Rub\u00ed",
+            "Sabadell"
+          ],
+          "top_dests": [
+            "Elche/Elx",
+            "Terrassa",
+            "Santa Pola",
+            "Sabadell"
+          ]
+        },
+        {
+          "comm": 5,
+          "n_cities": 1,
+          "n_dests": 37,
+          "n_pieces": 5,
+          "n_major_pieces": 2,
+          "diasp_dest_pct": 8.108108108108109,
+          "diasp_flow_pct": 0.9844652122796089,
+          "mean_diasp_km": 314.51616847555863,
+          "cities": [
+            "M\u00e1laga"
+          ],
+          "top_dests": [
+            "Rinc\u00f3n de la Victoria agregacion de municipios",
+            "V\u00e9lez-M\u00e1laga",
+            "Alhaur\u00edn de la Torre",
+            "C\u00e1rtama"
+          ]
+        },
+        {
+          "comm": 6,
+          "n_cities": 15,
+          "n_dests": 179,
+          "n_pieces": 63,
+          "n_major_pieces": 7,
+          "diasp_dest_pct": 30.726256983240223,
+          "diasp_flow_pct": 5.708025575103686,
+          "mean_diasp_km": 134.6757559216264,
+          "cities": [
+            "Algeciras",
+            "L\u00ednea de la Concepci\u00f3n, La",
+            "San Fernando",
+            "Castell\u00f3 de la Plana",
+            "Vila-real",
+            "Ferrol"
+          ],
+          "top_dests": [
+            "Murcia",
+            "Cartagena",
+            "Molina de Segura",
+            "\u00c1guilas"
+          ]
+        },
+        {
+          "comm": 7,
+          "n_cities": 2,
+          "n_dests": 35,
+          "n_pieces": 5,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 14.285714285714286,
+          "diasp_flow_pct": 10.524276308005327,
+          "mean_diasp_km": 109.40611371866721,
+          "cities": [
+            "Palencia",
+            "Santander"
+          ],
+          "top_dests": [
+            "Pi\u00e9lagos",
+            "Torrelavega",
+            "Camargo",
+            "Astillero, El"
+          ]
+        },
+        {
+          "comm": 8,
+          "n_cities": 11,
+          "n_dests": 246,
+          "n_pieces": 64,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 29.67479674796748,
+          "diasp_flow_pct": 10.724147971653258,
+          "mean_diasp_km": 168.35772100952957,
+          "cities": [
+            "Albacete",
+            "Ciudad Real",
+            "Cuenca",
+            "Guadalajara",
+            "Lugo",
+            "Alcal\u00e1 de Henares"
+          ],
+          "top_dests": [
+            "Alcal\u00e1 de Henares",
+            "Azuqueca de Henares",
+            "Torrej\u00f3n de Ardoz",
+            "Guadalajara"
+          ]
+        },
+        {
+          "comm": 9,
+          "n_cities": 2,
+          "n_dests": 98,
+          "n_pieces": 10,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 7.142857142857143,
+          "diasp_flow_pct": 1.5713773883470459,
+          "mean_diasp_km": 244.5138905525716,
+          "cities": [
+            "Alcoy/Alcoi",
+            "Val\u00e8ncia"
+          ],
+          "top_dests": [
+            "Torrent",
+            "Paterna",
+            "Riba-roja de T\u00faria agregacion de municipios",
+            "Pobla de Vallbona, la"
+          ]
+        },
+        {
+          "comm": 10,
+          "n_cities": 9,
+          "n_dests": 200,
+          "n_pieces": 42,
+          "n_major_pieces": 4,
+          "diasp_dest_pct": 24.0,
+          "diasp_flow_pct": 6.241340495918417,
+          "mean_diasp_km": 133.57125550625162,
+          "cities": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Granollers",
+            "Mollet del Vall\u00e8s",
+            "Granada"
+          ],
+          "top_dests": [
+            "Almer\u00eda",
+            "Roquetas de Mar",
+            "Ejido, El",
+            "Motril"
+          ]
+        },
+        {
+          "comm": 11,
+          "n_cities": 6,
+          "n_dests": 128,
+          "n_pieces": 59,
+          "n_major_pieces": 13,
+          "diasp_dest_pct": 78.90625,
+          "diasp_flow_pct": 54.57911147812979,
+          "mean_diasp_km": 112.56669161890633,
+          "cities": [
+            "Orihuela",
+            "C\u00e1diz",
+            "Madrid",
+            "Siero",
+            "Paterna",
+            "Getxo"
+          ],
+          "top_dests": [
+            "Barcelona",
+            "Val\u00e8ncia",
+            "Getafe",
+            "Legan\u00e9s"
+          ]
+        },
+        {
+          "comm": 12,
+          "n_cities": 27,
+          "n_dests": 404,
+          "n_pieces": 122,
+          "n_major_pieces": 25,
+          "diasp_dest_pct": 47.277227722772274,
+          "diasp_flow_pct": 39.59831529030584,
+          "mean_diasp_km": 97.59581938730695,
+          "cities": [
+            "Benidorm",
+            "Torrevieja",
+            "Badalona",
+            "Barcelona",
+            "Matar\u00f3",
+            "Santa Coloma de Gramenet"
+          ],
+          "top_dests": [
+            "Madrid",
+            "Hospitalet de Llobregat, L'",
+            "Badalona",
+            "C\u00f3rdoba"
+          ]
+        },
+        {
+          "comm": 13,
+          "n_cities": 3,
+          "n_dests": 81,
+          "n_pieces": 14,
+          "n_major_pieces": 1,
+          "diasp_dest_pct": 16.049382716049383,
+          "diasp_flow_pct": 3.664085836141917,
+          "mean_diasp_km": 234.38609339447706,
+          "cities": [
+            "Huesca",
+            "Teruel",
+            "Zaragoza"
+          ],
+          "top_dests": [
+            "Pedrola agregacion de municipios",
+            "Burgo de Ebro, El agregacion de municipios",
+            "Utebo",
+            "Huesca"
+          ]
+        }
+      ],
+      "Q_B": 0.1010373515963471,
+      "n_dests_active": 2433
+    }
+  }
+}
