@@ -1,0 +1,138 @@
+ine_code,name,prov,identifying,residents_2024,income_2024
+01059,Vitoria-Gasteiz,01,False,257407.0,18920.0
+02003,Albacete,02,False,174073.0,15503.0
+03009,Alcoi/Alcoy,03,True,60447.0,13888.0
+03014,Alacant/Alicante,03,True,358608.0,14361.0
+03031,Benidorm,03,True,74573.0,12962.0
+03065,Elx/Elche,03,True,242317.0,12552.0
+03066,Elda,03,True,53925.0,11703.0
+03099,Orihuela,03,True,83348.0,12288.0
+03122,Sant Vicent del Raspeig/San Vicente del Raspeig,03,True,60415.0,13812.0
+03133,Torrevieja,03,True,95760.0,10379.0
+04013,Almería,04,True,201946.0,14136.0
+04079,Roquetas de Mar,04,True,108348.0,12189.0
+04902,"Ejido, El",04,True,89462.0,10994.0
+05019,Ávila,05,False,59119.0,16059.0
+06015,Badajoz,06,True,151146.0,14812.0
+06083,Mérida,06,True,59894.0,14100.0
+08015,Badalona,08,True,226219.0,15266.0
+08019,Barcelona,08,True,1686208.0,20326.0
+08056,Castelldefels,08,True,69196.0,19799.0
+08073,Cornellà de Llobregat,08,True,91196.0,15644.0
+08096,Granollers,08,True,63897.0,17059.0
+08101,"Hospitalet de Llobregat, L'",08,True,282299.0,13794.0
+08113,Manresa,08,True,79737.0,15632.0
+08121,Mataró,08,True,130887.0,15322.0
+08124,Mollet del Vallès,08,True,52045.0,15862.0
+08169,"Prat de Llobregat, El",08,True,65910.0,16550.0
+08184,Rubí,08,True,81523.0,15512.0
+08187,Sabadell,08,True,221564.0,16463.0
+08200,Sant Boi de Llobregat,08,True,84588.0,16098.0
+08205,Sant Cugat del Vallès,08,True,98649.0,26306.0
+08245,Santa Coloma de Gramenet,08,True,120903.0,13118.0
+08266,Cerdanyola del Vallès,08,True,57831.0,18986.0
+08279,Terrassa,08,True,228294.0,16051.0
+08301,Viladecans,08,True,67179.0,16651.0
+08307,Vilanova i la Geltrú,08,True,70293.0,17477.0
+09059,Burgos,09,False,176551.0,17600.0
+10037,Cáceres,10,False,96448.0,15976.0
+11004,Algeciras,11,True,125047.0,13141.0
+11012,Cádiz,11,True,111180.0,16398.0
+11015,Chiclana de la Frontera,11,True,89805.0,12487.0
+11020,Jerez de la Frontera,11,True,214844.0,12991.0
+11022,"Línea de la Concepción, La",11,True,64987.0,12298.0
+11027,"Puerto de Santa María, El",11,True,90423.0,14117.0
+11031,San Fernando,11,True,93793.0,13606.0
+11032,Sanlúcar de Barrameda,11,True,69887.0,10930.0
+12040,Castelló de la Plana/Castellón de la Plana,12,True,179861.0,15237.0
+12135,Vila-real,12,True,52523.0,14625.0
+13034,Ciudad Real,13,False,75674.0,16680.0
+14021,Córdoba,14,False,324902.0,14947.0
+15030,"Coruña, A",15,True,249255.0,18040.0
+15036,Ferrol,15,True,64358.0,15850.0
+15078,Santiago de Compostela,15,True,99491.0,18490.0
+16078,Cuenca,16,False,53643.0,15730.0
+17079,Girona,17,False,106476.0,17794.0
+18087,Granada,18,True,233532.0,16893.0
+18140,Motril,18,True,59867.0,12214.0
+19130,Guadalajara,19,False,90878.0,16145.0
+20045,Irun,20,True,63298.0,17784.0
+20069,Donostia/San Sebastián,20,True,188487.0,23700.0
+21041,Huelva,21,False,143526.0,13976.0
+22125,Huesca,22,False,54664.0,16373.0
+23050,Jaén,23,True,111945.0,15577.0
+23055,Linares,23,True,55303.0,13048.0
+24089,León,24,True,122866.0,17623.0
+24115,Ponferrada,24,True,62957.0,15317.0
+25120,Lleida,25,False,144878.0,15836.0
+26089,Logroño,26,False,150845.0,17197.0
+27028,Lugo,27,False,99365.0,16008.0
+28005,Alcalá de Henares,28,True,199804.0,16532.0
+28006,Alcobendas,28,True,121446.0,23325.0
+28007,Alcorcón,28,True,174740.0,16534.0
+28013,Aranjuez,28,True,62508.0,15001.0
+28014,Arganda del Rey,28,True,59209.0,14881.0
+28022,Boadilla del Monte,28,True,65528.0,28382.0
+28045,Colmenar Viejo,28,True,56878.0,18946.0
+28047,Collado Villalba,28,True,67323.0,15505.0
+28049,Coslada,28,True,80688.0,16230.0
+28058,Fuenlabrada,28,True,190496.0,14321.0
+28065,Getafe,28,True,191560.0,16767.0
+28074,Leganés,28,True,193934.0,15370.0
+28079,Madrid,28,True,3422416.0,20861.0
+28080,Majadahonda,28,True,73547.0,25878.0
+28092,Móstoles,28,True,213268.0,14858.0
+28106,Parla,28,True,134876.0,12175.0
+28113,Pinto,28,True,55989.0,16162.0
+28115,Pozuelo de Alarcón,28,True,89123.0,32612.0
+28123,Rivas-Vaciamadrid,28,True,101637.0,19570.0
+28127,"Rozas de Madrid, Las",28,True,99193.0,26014.0
+28134,San Sebastián de los Reyes,28,True,94942.0,19901.0
+28148,Torrejón de Ardoz,28,True,141047.0,15331.0
+28161,Valdemoro,28,True,83582.0,16148.0
+29025,Benalmádena,29,True,78011.0,14100.0
+29051,Estepona,29,True,78590.0,13592.0
+29054,Fuengirola,29,True,85646.0,12956.0
+29067,Málaga,29,True,592346.0,14753.0
+29069,Marbella,29,True,159054.0,14080.0
+29070,Mijas,29,True,92211.0,12480.0
+29094,Vélez-Málaga,29,True,87300.0,12880.0
+29901,Torremolinos,29,True,70920.0,14679.0
+30016,Cartagena,30,True,219235.0,13902.0
+30024,Lorca,30,True,97769.0,12250.0
+30027,Molina de Segura,30,True,77012.0,14622.0
+30030,Murcia,30,True,471982.0,14716.0
+31201,Pamplona/Iruña,31,False,208243.0,18751.0
+32054,Ourense,32,False,104725.0,16019.0
+33004,Avilés,33,True,75663.0,16331.0
+33024,Gijón,33,True,270219.0,17103.0
+33044,Oviedo,33,True,220027.0,17757.0
+33066,Siero,33,True,52514.0,16787.0
+34120,Palencia,34,False,76578.0,16553.0
+36038,Pontevedra,36,True,83106.0,16472.0
+36057,Vigo,36,True,295523.0,16256.0
+37274,Salamanca,37,False,144458.0,16150.0
+39075,Santander,39,True,173635.0,17492.0
+39087,Torrelavega,39,True,51466.0,14399.0
+40194,Segovia,40,False,51388.0,16502.0
+41004,Alcalá de Guadaíra,41,True,77112.0,13093.0
+41038,Dos Hermanas,41,True,140463.0,14235.0
+41091,Sevilla,41,True,686741.0,15925.0
+41095,Utrera,41,True,52279.0,12117.0
+42173,Soria,42,False,40654.0,16992.0
+43123,Reus,43,True,109961.0,15074.0
+43148,Tarragona,43,True,141018.0,16536.0
+44216,Teruel,44,False,36465.0,17188.0
+45165,Talavera de la Reina,45,True,85138.0,12645.0
+45168,Toledo,45,True,86281.0,17525.0
+46131,Gandia,46,True,80001.0,12995.0
+46190,Paterna,46,True,74508.0,15209.0
+46220,Sagunt/Sagunto,46,True,71756.0,14646.0
+46244,Torrent,46,True,89456.0,13854.0
+46250,València,46,True,824340.0,16944.0
+47186,Valladolid,47,False,299816.0,17380.0
+48013,Barakaldo,48,True,101869.0,17345.0
+48020,Bilbao,48,True,347342.0,20598.0
+48044,Getxo,48,True,76155.0,26472.0
+49275,Zamora,49,False,59553.0,16030.0
+50297,Zaragoza,50,False,691037.0,17199.0

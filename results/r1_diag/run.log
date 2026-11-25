@@ -1,0 +1,614 @@
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/pipeline/r1_villages.py:754: RuntimeWarning: divide by zero encountered in log
+  outs = {"log_share_of_away": np.log(s_in / V), "net_bal": (s_in - s_out) / (s_in + s_out),
+pyfixest check {'pyfixest_coef': np.float64(0.4930445699179887), 'pyfixest_se': np.float64(0.10463256878281912), 'mine_coef': np.float64(0.4930445699179946), 'mine_se': 0.10461048275222355}
+done

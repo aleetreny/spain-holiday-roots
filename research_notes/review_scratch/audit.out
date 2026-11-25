@@ -1,0 +1,42 @@
+Nodes 2435 municipality memberships 7975 population 43869377.0 grouped 908 missing loss 56 n for R1 2376 quintiles [476, 475, 475, 475, 475]
+Aug coast wins 30 / 31 outside Aug inland losses [] / 149
+Aug coast wins 29 / 30 outside Aug inland losses [Timestamp('2024-08-01 00:00:00')] / 150
+calendar count 180 {2: 29, 3: 31, 8: 31, 10: 31, 11: 27, 12: 31}
+Nov missing [9, 10, 26]
+sisters by file and starting weekday [('2024-02-01', 'Thursday', 'Wednesday'), ('2024-02-06', 'Tuesday', 'Monday'), ('2024-02-07', 'Wednesday', 'Tuesday'), ('2024-02-08', 'Thursday', 'Wednesday'), ('2024-02-13', 'Tuesday', 'Monday'), ('2024-02-14', 'Wednesday', 'Tuesday'), ('2024-02-15', 'Thursday', 'Wednesday'), ('2024-02-20', 'Tuesday', 'Monday'), ('2024-02-21', 'Wednesday', 'Tuesday'), ('2024-02-22', 'Thursday', 'Wednesday'), ('2024-02-27', 'Tuesday', 'Monday'), ('2024-02-28', 'Wednesday', 'Tuesday'), ('2024-02-29', 'Thursday', 'Wednesday')]
+2024-02-14 full weight 2112733.477 far parts towns/cities/coast [np.float64(354391.155), np.float64(221370.96), np.float64(253033.758)] net receivers 993 Q5 114 Madrid balance 0.07044589899870132
+2024-03-29 full weight 6951627.119999999 far parts towns/cities/coast [np.float64(1935149.003), np.float64(478595.08800000005), np.float64(1438438.881)] net receivers 1663 Q5 468 Madrid balance -0.7075028228584642
+2024-08-15 full weight 8462110.144000001 far parts towns/cities/coast [np.float64(2073949.736), np.float64(289823.91000000003), np.float64(2170131.506)] net receivers 1589 Q5 470 Madrid balance -0.8013205142877582
+2024-11-01 full weight 4234580.144 far parts towns/cities/coast [np.float64(903086.5109999999), np.float64(377337.698), np.float64(453730.59900000005)] net receivers 1656 Q5 447 Madrid balance -0.277869587893494
+2024-12-25 full weight 6555519.528000001 far parts towns/cities/coast [np.float64(1479267.3520000002), np.float64(592708.089), np.float64(681999.621)] net receivers 1969 Q5 473 Madrid balance -0.4928954650822754
+2024-02-14 w10 kept 0.6885981695456421 arcs 35812 pairs 26465 dir/und densities 0.006042393943433123 0.008930635301740064 giant 2432 isolates 3 mean median max 21.737166324435318 11.0 1499 degree medians 7.0 7.0 Madrid out/in 1124 1324 Spearman 0.6908607280950712 coast top 50 in 18 reciprocity 0.5220037976097398 path 2.440529671566823 lstar 2.531110540377425 diameter 4 clustering 0.5539935244059422 r -0.1310254154893948 Ravg 0.00024185924660792964 phi50/121 0.8040816326530612 0.4431129476584022 prefix 17 touch top121 0.6452295484602305 kcore 37
+top 50 kinds, cities/coast 44 17
+2024-08-15 w10 kept 0.8264543377468 arcs 116028 pairs 101996 dir/und densities 0.019576870447577863 0.03441863133331871 giant 2435 isolates 0 mean median max 83.77494866529774 45.0 2233 degree medians 14.0 27.0 Madrid out/in 2203 995 Spearman 0.09191272085489265 coast top 50 in 40 reciprocity 0.2418726514289654 path 1.9969018642469194 lstar 1.7609453550396559 diameter 3 clustering 0.5458387540991188 r -0.21382855864351666 Ravg -0.2889685669093649 phi50/121 0.9648979591836735 0.778099173553719 prefix 17 touch top121 0.5829346248872505 kcore 84
+top 50 kinds, cities/coast 41 17
+2024-11-01 w10 kept 0.7606037284625777 arcs 64245 pairs 48698 dir/und densities 0.01083976317703175 0.01643317883711081 giant 2434 isolates 1 mean median max 39.99835728952772 22.0 2008 degree medians 10.0 16.0 Madrid out/in 1862 1482 Spearman 0.6320667244541659 coast top 50 in 18 reciprocity 0.4839909720600825 path 2.1629329126590995 lstar 2.1135171309526957 diameter 4 clustering 0.5931388534050319 r -0.1548812328413193 Ravg -0.1293640214326454 phi50/121 0.913469387755102 0.5889807162534435 prefix 22 touch top121 0.632366832313442 kcore 51
+top 50 kinds, cities/coast 41 13
+2024-08-15 equal_edges kept 0.6663563800334291 arcs 35812 pairs 31573 dir/und densities 0.006042393943433123 0.01065433396492874 giant 2422 isolates 13 mean median max 25.93264887063655 10.0 1829 degree medians 2.0 6.0 Madrid out/in 1817 459 Spearman 0.1378611318798863 coast top 50 in 44 reciprocity 0.23673628951189546 path 2.2505901602104625 lstar 2.38966371335927 diameter 4 clustering 0.6781706161476433 r -0.18654847689460527 Ravg -0.2430196736539066 phi50/121 0.8293877551020408 0.5410468319559228 prefix 9 touch top121 0.7406328191809457 kcore 48
+top 50 kinds, cities/coast 40 16
+bover1999migrations 554 01_question.tex:7
+clar2023rural 520 01_question.tex:7
+clauset2009power 751 03_method.tex:11
+garciagonzalez2024retorno 730 01_question.tex:52, 01_question.tex:56, 02_literature.tex:37, 05_discussion.tex:15
+garzon2026heritage 28 01_question.tex:56, 02_literature.tex:25, 02_literature.tex:37
+gonzalezleonardo2022rural 39 02_literature.tex:31, 02_literature.tex:37
+guo2009fingerprint 83 03_method.tex:28, 90_appendix.tex:10, 90_appendix.tex:15
+ine2023ecepov 462 01_question.tex:7, 05_discussion.tex:29
+ine2024etr3t 470 01_question.tex:7
+ine2025censo 742 01_question.tex:31, 03_method.tex:24
+kline2012score 762 03_method.tex:35
+li2016spring 7 01_question.tex:56, 02_literature.tex:7, 02_literature.tex:37, 05_discussion.tex:15
+luan2024different 18 02_literature.tex:13, 02_literature.tex:37
+mitms2024methodology 425 01_question.tex:22, 03_method.tex:5
+pinilla2017rural 499 01_question.tex:7
+wesolowski2017seasonal 49 02_literature.tex:19, 02_literature.tex:37
+zhou2004richclub 61 03_method.tex:28
+zhou2007structural 72 01_question.tex:45, 03_method.tex:11, 03_method.tex:28, 03_method.tex:28, 04_results.tex:10, 04_results.tex:14, 05_discussion.tex:29
+zhou2017second 95 03_method.tex:28
+keys total 19 missing []
+Crossref 10.1007/978-3-319-54241-6_1 ['Second-Order Assortative Mixing in Social Networks'] None 3-15 
+Crossref 10.1007/978-3-642-02469-6_45 ['Fingerprint for Network Topologies'] None 1666-1677 
+Crossref 10.3390/su18189683 ['Protected Heritage Stock and Population Redistribution in Spain: Multivariate Evidence from Four 2021 Mobile-Phone Mobility Snapshots'] 18 9683 This study examines tourism-relevant population redistribution across 3214 Spanish mobility areas on four dates in 2021 using aggregated mobile-phone indicators. Because travel purpose is unobserved, the dates are treated as mobility snapshots rather than as a normal-year tourism series. Two descriptive principal components explained 77.58% of the variance in five non-redundant indicators, and non-metric multidimensional scaling recovered similar geometry. A repeated-measures test showed a large joint date effect, F(15, 3194) = 1630.85, p &lt; 0.001, partial η2 = 0.885. A comparison of solutions for k = 2–4, based on 100 sub-sampling replications, supported three overlapping exploratory profiles: resident-dispersing (n = 873), broadly connected (n = 992), and summer-receiving (n = 1344). The original expert/AI-assisted heritage score failed external convergent validation and was withdrawn. For 2047 unambiguously mapped areas, it was replaced with a reproducible registry-linked stock of protected immovable heritage assets. In this mapped sub-sample, protected-asset stock was associated with greater summer retention, receiving connectivity, and net population gain. Partial redundancy analysis yielded an incremental R2 of 5.01% after population and autonomous-community controls (restricted-permutation p = 0.0005); this value fell to 4.07% with province controls and 3.57% with additional nonlinear and province-specific population adjustment. Because the crosswalk covered 63.8% of areas and disproportionately represented smaller areas, these estimates describe a modest, sample-conditional association rather than a national or causal effect; unmeasured confounding and local spatial dependence remain unresolved. The profiles suggest distinct monitoring priorities but require validation with denser, multi-year data beyond pandemic-affected 2021.

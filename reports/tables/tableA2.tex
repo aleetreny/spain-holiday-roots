@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Change in the pull of the roots, 14--15 August minus 13--14 February, under different treatments of empty city--province cells}
+\label{tab:zero}
+\begin{tabular}{lrrr}
+\toprule
+Treatment & Arrived before 1981 & Arrived 2016--2023 & Born in a village \\
+\midrule
+Add 0.5 to each count (main) & $+0.084$ & $-0.072$ & $+0.086$ \\
+Add 1 to each count & $+0.113$ & $-0.097$ & $+0.100$ \\
+Add 0.1 to each count & $+0.038$ & $-0.036$ & $+0.045$ \\
+Add $10^{-4}$ to each share & $+0.059$ & $-0.051$ & $+0.091$ \\
+Add $10^{-5}$ to each share & $+0.017$$^{\circ}$ & $-0.019$$^{\circ}$ & $+0.028$ \\
+$\operatorname{asinh}(1000\times\text{share})$ & $+0.141$ & $-0.120$ & $+0.202$ \\
+112 large cities, 22 provinces & $+0.082$ & $-0.135$ & $+0.098$ \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+All destinations; groups entered together as in Figure~\ref{fig:roots}. Between 46\,\% and 60\,\% of city--province cells have no sampled resident of a group, so the regressor needs a rule for empty cells. $^{\circ}$\,Wild cluster bootstrap $p\geq0.05$. Source: results/v1\_c1\_zero\_sensitivity.csv.
+\end{minipage}
+\end{table}

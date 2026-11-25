@@ -1,0 +1,56 @@
+% COMP0123 coursework report. Rules from the instructions: 11 pt, single line spacing,
+% one column, page numbers at the bottom centre, captions readable on their own.
+\usepackage[a4paper,margin=1in,headheight=14pt]{geometry}
+\usepackage[british]{babel}
+% XeTeX (Tectonic). Latin Modern throughout: the classic LaTeX article look.
+\usepackage{amsmath}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmathfont{latinmodern-math.otf}
+\usepackage[protrusion=true]{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs,array,tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[authoryear,round]{natbib}
+\usepackage[font=small,labelfont=bf,justification=justified,singlelinecheck=false,skip=6pt]{caption}
+\usepackage{placeins}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{xurl}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\graphicspath{{../figures/}}
+
+% Paragraphs: no indent, a small space between them.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\emergencystretch}{2em}
+\clubpenalty=10000
+\widowpenalty=10000
+
+% Floats: allow large figures near their first mention.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.8}
+
+% Page style: running head with a thin rule; page number bottom centre (required).
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Roots or beaches?}
+\fancyhead[R]{\small Alejandro Treny Ortega}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\setlength{\bibsep}{3pt}
+\renewcommand{\bibfont}{\small}
+\setlist{itemsep=2pt,topsep=4pt,leftmargin=1.6em}
+
+% Spanish words in italics, once explained.
+\newcommand{\es}[1]{\textit{#1}}
+% Draft notes for the author. Set \notesfalse to hide them all before submission.
+\newif\ifnotes \notestrue
+\newcommand{\authornote}[1]{\ifnotes{\color{Mahogany}\small[Author: #1]}\fi}
+
+\hypersetup{pdftitle={Roots or beaches? On holiday, do Spaniards go back to the villages their families left?},
+  pdfauthor={Alejandro Treny Ortega}}

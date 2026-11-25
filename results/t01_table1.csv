@@ -1,0 +1,89 @@
+section,row,column,date,backbone,cell,value,source
+Size,People sleeping away from home (millions),ordinary,2024-02-14,w10,2.11,2112733.477,b01_networks/manifest.csv[total_weight_full]
+Size,People sleeping away from home (millions),summer,2024-08-15,w10,8.46,8462110.144000001,b01_networks/manifest.csv[total_weight_full]
+Size,People sleeping away from home (millions),allsaints,2024-11-01,w10,4.23,4234580.144,b01_networks/manifest.csv[total_weight_full]
+Size,People sleeping away from home (millions),summer_eq,2024-08-15,equal_edges,8.46,8462110.144000001,b01_networks/manifest.csv[total_weight_full]
+Size,Share of them on kept links (%),ordinary,2024-02-14,w10,69,0.6885981695456421,b01_networks/manifest.csv[share_weight_retained]
+Size,Share of them on kept links (%),summer,2024-08-15,w10,83,0.8264543377468,b01_networks/manifest.csv[share_weight_retained]
+Size,Share of them on kept links (%),allsaints,2024-11-01,w10,76,0.7606037284625777,b01_networks/manifest.csv[share_weight_retained]
+Size,Share of them on kept links (%),summer_eq,2024-08-15,equal_edges,67,0.6663563800334291,b01_networks/manifest.csv[share_weight_retained]
+Size,Nodes N (in the giant component),ordinary,2024-02-14,w10,"2,435 (2,432)",2435.0,"b02_basic_properties.csv[giant_weak,real]"
+Size,Nodes N (in the giant component),summer,2024-08-15,w10,"2,435 (2,435)",2435.0,"b02_basic_properties.csv[giant_weak,real]"
+Size,Nodes N (in the giant component),allsaints,2024-11-01,w10,"2,435 (2,434)",2435.0,"b02_basic_properties.csv[giant_weak,real]"
+Size,Nodes N (in the giant component),summer_eq,2024-08-15,equal_edges,"2,435 (2,422)",2435.0,"b02_basic_properties.csv[giant_weak,real]"
+Size,Links L (undirected),ordinary,2024-02-14,w10,"26,465",26465.0,"b02_basic_properties.csv[E_und,real]"
+Size,Links L (undirected),summer,2024-08-15,w10,"101,996",101996.0,"b02_basic_properties.csv[E_und,real]"
+Size,Links L (undirected),allsaints,2024-11-01,w10,"48,698",48698.0,"b02_basic_properties.csv[E_und,real]"
+Size,Links L (undirected),summer_eq,2024-08-15,equal_edges,"31,573",31573.0,"b02_basic_properties.csv[E_und,real]"
+Size,Density (%),ordinary,2024-02-14,w10,0.89,0.008930635301740064,"b02_basic_properties.csv[density_und,real]"
+Size,Density (%),summer,2024-08-15,w10,3.44,0.03441863133331871,"b02_basic_properties.csv[density_und,real]"
+Size,Density (%),allsaints,2024-11-01,w10,1.64,0.016433178837110814,"b02_basic_properties.csv[density_und,real]"
+Size,Density (%),summer_eq,2024-08-15,equal_edges,1.07,0.01065433396492874,"b02_basic_properties.csv[density_und,real]"
+Degree,Mean degree ⟨k⟩,ordinary,2024-02-14,w10,21.7,21.737166324435318,"b02_basic_properties.csv[k_mean,real]"
+Degree,Mean degree ⟨k⟩,summer,2024-08-15,w10,83.8,83.77494866529774,"b02_basic_properties.csv[k_mean,real]"
+Degree,Mean degree ⟨k⟩,allsaints,2024-11-01,w10,40.0,39.99835728952772,"b02_basic_properties.csv[k_mean,real]"
+Degree,Mean degree ⟨k⟩,summer_eq,2024-08-15,equal_edges,25.9,25.93264887063655,"b02_basic_properties.csv[k_mean,real]"
+Degree,Median degree,ordinary,2024-02-14,w10,11,11.0,"b02_basic_properties.csv[k_median,real]"
+Degree,Median degree,summer,2024-08-15,w10,45,45.0,"b02_basic_properties.csv[k_median,real]"
+Degree,Median degree,allsaints,2024-11-01,w10,22,22.0,"b02_basic_properties.csv[k_median,real]"
+Degree,Median degree,summer_eq,2024-08-15,equal_edges,10,10.0,"b02_basic_properties.csv[k_median,real]"
+Degree,Maximum degree k_max (% of N),ordinary,2024-02-14,w10,"1,499 (62 %)",1499.0,"b02_basic_properties.csv[k_max,real]"
+Degree,Maximum degree k_max (% of N),summer,2024-08-15,w10,"2,233 (92 %)",2233.0,"b02_basic_properties.csv[k_max,real]"
+Degree,Maximum degree k_max (% of N),allsaints,2024-11-01,w10,"2,008 (82 %)",2008.0,"b02_basic_properties.csv[k_max,real]"
+Degree,Maximum degree k_max (% of N),summer_eq,2024-08-15,equal_edges,"1,829 (75 %)",1829.0,"b02_basic_properties.csv[k_max,real]"
+Degree,Median out-degree / in-degree,ordinary,2024-02-14,w10,7 / 7,,"b02_basic_properties.csv[kout_median,real]; b02_basic_properties.csv[kin_median,real]"
+Degree,Median out-degree / in-degree,summer,2024-08-15,w10,14 / 27,,"b02_basic_properties.csv[kout_median,real]; b02_basic_properties.csv[kin_median,real]"
+Degree,Median out-degree / in-degree,allsaints,2024-11-01,w10,10 / 16,,"b02_basic_properties.csv[kout_median,real]; b02_basic_properties.csv[kin_median,real]"
+Degree,Median out-degree / in-degree,summer_eq,2024-08-15,equal_edges,2 / 6,,"b02_basic_properties.csv[kout_median,real]; b02_basic_properties.csv[kin_median,real]"
+Degree,"Tail fit, in / out: power law vs log-normal",ordinary,2024-02-14,w10,tie / tie,,"b02_powerlaw.csv[R_pl_vs_lognormal,p_pl_vs_lognormal]"
+Degree,"Tail fit, in / out: power law vs log-normal",summer,2024-08-15,w10,log-normal / log-normal,,"b02_powerlaw.csv[R_pl_vs_lognormal,p_pl_vs_lognormal]"
+Degree,"Tail fit, in / out: power law vs log-normal",allsaints,2024-11-01,w10,tie / tie,,"b02_powerlaw.csv[R_pl_vs_lognormal,p_pl_vs_lognormal]"
+Degree,"Tail fit, in / out: power law vs log-normal",summer_eq,2024-08-15,equal_edges,log-normal / log-normal,,"b02_powerlaw.csv[R_pl_vs_lognormal,p_pl_vs_lognormal]"
+Small world,Average path length ℓ (rewired / ER),ordinary,2024-02-14,w10,2.44 (2.41 / 2.83),2.440529671566823,"b02_basic_properties.csv[L,real]; b02_basic_properties.csv[L,rew_und,null_mean]; b02_basic_properties.csv[L,er_und,null_mean]"
+Small world,Average path length ℓ (rewired / ER),summer,2024-08-15,w10,2.00 (1.98 / 2.02),1.9969018642469194,"b02_basic_properties.csv[L,real]; b02_basic_properties.csv[L,rew_und,null_mean]; b02_basic_properties.csv[L,er_und,null_mean]"
+Small world,Average path length ℓ (rewired / ER),allsaints,2024-11-01,w10,2.16 (2.11 / 2.49),2.1629329126590995,"b02_basic_properties.csv[L,real]; b02_basic_properties.csv[L,rew_und,null_mean]; b02_basic_properties.csv[L,er_und,null_mean]"
+Small world,Average path length ℓ (rewired / ER),summer_eq,2024-08-15,equal_edges,2.25 (2.24 / 2.74),2.2505901602104625,"b02_basic_properties.csv[L,real]; b02_basic_properties.csv[L,rew_und,null_mean]; b02_basic_properties.csv[L,er_und,null_mean]"
+Small world,ℓ* = ln N / ln⟨k⟩,ordinary,2024-02-14,w10,2.53,2.531110540377425,b02_zhou_table.csv[l_star]
+Small world,ℓ* = ln N / ln⟨k⟩,summer,2024-08-15,w10,1.76,1.7609453550396559,b02_zhou_table.csv[l_star]
+Small world,ℓ* = ln N / ln⟨k⟩,allsaints,2024-11-01,w10,2.11,2.1135171309526957,b02_zhou_table.csv[l_star]
+Small world,ℓ* = ln N / ln⟨k⟩,summer_eq,2024-08-15,equal_edges,2.39,2.38966371335927,b02_zhou_table.csv[l_star]
+Small world,Diameter (rewired),ordinary,2024-02-14,w10,4 (5.1),4.0,"b02_basic_properties.csv[diameter,real]; b02_basic_properties.csv[diameter,rew_und,null_mean]"
+Small world,Diameter (rewired),summer,2024-08-15,w10,3† (3.2),3.0,"b02_basic_properties.csv[diameter,real]; b02_basic_properties.csv[diameter,rew_und,null_mean]"
+Small world,Diameter (rewired),allsaints,2024-11-01,w10,4† (4.0),4.0,"b02_basic_properties.csv[diameter,real]; b02_basic_properties.csv[diameter,rew_und,null_mean]"
+Small world,Diameter (rewired),summer_eq,2024-08-15,equal_edges,4† (4.9),4.0,"b02_basic_properties.csv[diameter,real]; b02_basic_properties.csv[diameter,rew_und,null_mean]"
+Small world,Clustering ⟨C⟩ (rewired / ER),ordinary,2024-02-14,w10,0.554 (0.247 / 0.009),0.5539935244059422,"b02_basic_properties.csv[C_avg,real]; b02_basic_properties.csv[C_avg,rew_und,null_mean]; b02_basic_properties.csv[C_avg,er_und,null_mean]"
+Small world,Clustering ⟨C⟩ (rewired / ER),summer,2024-08-15,w10,0.546† (0.387 / 0.034),0.5458387540991188,"b02_basic_properties.csv[C_avg,real]; b02_basic_properties.csv[C_avg,rew_und,null_mean]; b02_basic_properties.csv[C_avg,er_und,null_mean]"
+Small world,Clustering ⟨C⟩ (rewired / ER),allsaints,2024-11-01,w10,0.593 (0.298 / 0.016),0.5931388534050319,"b02_basic_properties.csv[C_avg,real]; b02_basic_properties.csv[C_avg,rew_und,null_mean]; b02_basic_properties.csv[C_avg,er_und,null_mean]"
+Small world,Clustering ⟨C⟩ (rewired / ER),summer_eq,2024-08-15,equal_edges,0.678 (0.436 / 0.011),0.6781706161476433,"b02_basic_properties.csv[C_avg,real]; b02_basic_properties.csv[C_avg,rew_und,null_mean]; b02_basic_properties.csv[C_avg,er_und,null_mean]"
+Mixing,Degree assortativity r (rewired),ordinary,2024-02-14,w10,−0.131 (−0.140),-0.13102541548939475,"b02_basic_properties.csv[r_und,real]; b02_basic_properties.csv[r_und,rew_und,null_mean]"
+Mixing,Degree assortativity r (rewired),summer,2024-08-15,w10,−0.214 (−0.217),-0.2138285586435167,"b02_basic_properties.csv[r_und,real]; b02_basic_properties.csv[r_und,rew_und,null_mean]"
+Mixing,Degree assortativity r (rewired),allsaints,2024-11-01,w10,−0.155 (−0.161),-0.15488123284131927,"b02_basic_properties.csv[r_und,real]; b02_basic_properties.csv[r_und,rew_und,null_mean]"
+Mixing,Degree assortativity r (rewired),summer_eq,2024-08-15,equal_edges,−0.187 (−0.186),-0.18654847689460524,"b02_basic_properties.csv[r_und,real]; b02_basic_properties.csv[r_und,rew_und,null_mean]"
+Mixing,"Range of r allowed by P(k) [r_min, r_max]",ordinary,2024-02-14,w10,"[−0.221, −0.092]",,b02_structural_constraints.csv[r_min_maxdisassortative]; b02_structural_constraints.csv[r_max_maxassortative]
+Mixing,"Range of r allowed by P(k) [r_min, r_max]",summer,2024-08-15,w10,"[−0.424, −0.114]",,b02_structural_constraints.csv[r_min_maxdisassortative]; b02_structural_constraints.csv[r_max_maxassortative]
+Mixing,"Range of r allowed by P(k) [r_min, r_max]",allsaints,2024-11-01,w10,"[−0.274, −0.098]",,b02_structural_constraints.csv[r_min_maxdisassortative]; b02_structural_constraints.csv[r_max_maxassortative]
+Mixing,"Range of r allowed by P(k) [r_min, r_max]",summer_eq,2024-08-15,equal_edges,"[−0.271, −0.148]",,b02_structural_constraints.csv[r_min_maxdisassortative]; b02_structural_constraints.csv[r_max_maxassortative]
+Mixing,"Reciprocity (rewired, directed)",ordinary,2024-02-14,w10,0.52 (0.13),0.5220037976097398,"b02_basic_properties.csv[reciprocity,real]; b02_basic_properties.csv[reciprocity,rew_dir,null_mean]"
+Mixing,"Reciprocity (rewired, directed)",summer,2024-08-15,w10,0.24 (0.09),0.2418726514289654,"b02_basic_properties.csv[reciprocity,real]; b02_basic_properties.csv[reciprocity,rew_dir,null_mean]"
+Mixing,"Reciprocity (rewired, directed)",allsaints,2024-11-01,w10,0.48 (0.15),0.4839909720600825,"b02_basic_properties.csv[reciprocity,real]; b02_basic_properties.csv[reciprocity,rew_dir,null_mean]"
+Mixing,"Reciprocity (rewired, directed)",summer_eq,2024-08-15,equal_edges,0.24 (0.07),0.23673628951189546,"b02_basic_properties.csv[reciprocity,real]; b02_basic_properties.csv[reciprocity,rew_dir,null_mean]"
+Mixing,2nd-order mixing R_avg (null keeping P(k) and φ),ordinary,2024-02-14,w10,0.000 (−0.023),0.00024185924660856295,b02_structural_constraints.csv[rcpres_R_avg_real]; b02_structural_constraints.csv[rcpres_R_avg_mean]
+Mixing,2nd-order mixing R_avg (null keeping P(k) and φ),summer,2024-08-15,w10,−0.289 (−0.252),-0.2889685669093645,b02_structural_constraints.csv[rcpres_R_avg_real]; b02_structural_constraints.csv[rcpres_R_avg_mean]
+Mixing,2nd-order mixing R_avg (null keeping P(k) and φ),allsaints,2024-11-01,w10,−0.129 (−0.127),-0.12936402143264641,b02_structural_constraints.csv[rcpres_R_avg_real]; b02_structural_constraints.csv[rcpres_R_avg_mean]
+Mixing,2nd-order mixing R_avg (null keeping P(k) and φ),summer_eq,2024-08-15,equal_edges,−0.243 (−0.191),-0.24301967365390592,b02_structural_constraints.csv[rcpres_R_avg_real]; b02_structural_constraints.csv[rcpres_R_avg_mean]
+Rich club and core,"Rich club φ, top 50 zones (rewired)",ordinary,2024-02-14,w10,0.80 (0.66),0.8040816326530612,"b02_basic_properties.csv[phi_top50,real]; b02_basic_properties.csv[phi_top50,rew_und,null_mean]"
+Rich club and core,"Rich club φ, top 50 zones (rewired)",summer,2024-08-15,w10,0.96 (0.92),0.9648979591836735,"b02_basic_properties.csv[phi_top50,real]; b02_basic_properties.csv[phi_top50,rew_und,null_mean]"
+Rich club and core,"Rich club φ, top 50 zones (rewired)",allsaints,2024-11-01,w10,0.91 (0.81),0.913469387755102,"b02_basic_properties.csv[phi_top50,real]; b02_basic_properties.csv[phi_top50,rew_und,null_mean]"
+Rich club and core,"Rich club φ, top 50 zones (rewired)",summer_eq,2024-08-15,equal_edges,0.83† (0.81),0.8293877551020408,"b02_basic_properties.csv[phi_top50,real]; b02_basic_properties.csv[phi_top50,rew_und,null_mean]"
+Rich club and core,Rich-club clique size (rewired),ordinary,2024-02-14,w10,17 (5.8),17.0,"b02_basic_properties.csv[n_clique,real]; b02_basic_properties.csv[n_clique,rew_und,null_mean]"
+Rich club and core,Rich-club clique size (rewired),summer,2024-08-15,w10,17† (9.2),17.0,"b02_basic_properties.csv[n_clique,real]; b02_basic_properties.csv[n_clique,rew_und,null_mean]"
+Rich club and core,Rich-club clique size (rewired),allsaints,2024-11-01,w10,22 (7.1),22.0,"b02_basic_properties.csv[n_clique,real]; b02_basic_properties.csv[n_clique,rew_und,null_mean]"
+Rich club and core,Rich-club clique size (rewired),summer_eq,2024-08-15,equal_edges,9† (7.9),9.0,"b02_basic_properties.csv[n_clique,real]; b02_basic_properties.csv[n_clique,rew_und,null_mean]"
+Rich club and core,Links touching the top 5 % of nodes (%),ordinary,2024-02-14,w10,65,0.6452295484602305,b02_zhou_table.csv[share_l_top5_any]
+Rich club and core,Links touching the top 5 % of nodes (%),summer,2024-08-15,w10,58,0.5829346248872505,b02_zhou_table.csv[share_l_top5_any]
+Rich club and core,Links touching the top 5 % of nodes (%),allsaints,2024-11-01,w10,63,0.632366832313442,b02_zhou_table.csv[share_l_top5_any]
+Rich club and core,Links touching the top 5 % of nodes (%),summer_eq,2024-08-15,equal_edges,74,0.7406328191809457,b02_zhou_table.csv[share_l_top5_any]
+Rich club and core,Maximum k-core (rewired / ER),ordinary,2024-02-14,w10,37 (30 / 15),37.0,"b02_basic_properties.csv[kcore_max,real]; b02_basic_properties.csv[kcore_max,rew_und,null_mean]; b02_basic_properties.csv[kcore_max,er_und,null_mean]"
+Rich club and core,Maximum k-core (rewired / ER),summer,2024-08-15,w10,84 (83 / 67),84.0,"b02_basic_properties.csv[kcore_max,real]; b02_basic_properties.csv[kcore_max,rew_und,null_mean]; b02_basic_properties.csv[kcore_max,er_und,null_mean]"
+Rich club and core,Maximum k-core (rewired / ER),allsaints,2024-11-01,w10,51 (45 / 30),51.0,"b02_basic_properties.csv[kcore_max,real]; b02_basic_properties.csv[kcore_max,rew_und,null_mean]; b02_basic_properties.csv[kcore_max,er_und,null_mean]"
+Rich club and core,Maximum k-core (rewired / ER),summer_eq,2024-08-15,equal_edges,48 (43 / 18),48.0,"b02_basic_properties.csv[kcore_max,real]; b02_basic_properties.csv[kcore_max,rew_und,null_mean]; b02_basic_properties.csv[kcore_max,er_und,null_mean]"

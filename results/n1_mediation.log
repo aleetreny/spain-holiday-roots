@@ -1,0 +1,20 @@
+[    0.0s] Starting n1_new_data.py stages: ['mediation']
+[    0.0s] STAGE 1: Building true mainland municipality node table + Censo 2021 housing...
+[    0.4s]   mun nodes N=7,974, matched area=7,974, matched 59525=7,974, matched 59531=2,988; MITMA zones matched 59525=2434/2435
+[    0.4s] STAGE 6: Testing second-home mediation (Censo 2021) + household 'casa del pueblo' (ECEPOV)...
+[   60.6s]   Saved n1_second_home_mediation.csv (27 specs)
+[   62.1s]   Saved n1_ecepov_casa_del_pueblo.csv:
+                 subgroup  n_hh  match_g1  match_parent  match_any  null_any_mean  lift_any_over_null  p_perm_any
+           all_cross_ccaa  9421  0.455678      0.544989   0.583822       0.201152            2.902387    0.000999
+         inland_dest_ccaa  4241  0.594803      0.726235   0.773701       0.382817            2.021072    0.000999
+        coastal_dest_ccaa  5180  0.319376      0.367422   0.397797       0.154781            2.570062    0.000999
+            origin_Madrid  3478  0.454945      0.573038   0.602282       0.204223            2.949148    0.000999
+          origin_Cataluna   792  0.638570      0.743455   0.795314       0.200657            3.963553    0.000999
+         origin_PaisVasco  1088  0.363035      0.454042   0.486202       0.217928            2.231028    0.000999
+  origin_Madrid_to_inland  1758  0.597155      0.771320   0.806561       0.400460            2.014086    0.000999
+origin_Cataluna_to_inland   410  0.617997      0.763570   0.817861       0.265915            3.075651    0.000999
+                days_lt15  1135  0.466428      0.554619   0.610169       0.219586            2.778730    0.000999
+               days_15_29  2143  0.455103      0.579668   0.617930       0.196746            3.140750    0.000999
+               days_30_59  3168  0.437868      0.528772   0.563161       0.198966            2.830436    0.000999
+              days_60plus  2975  0.471281      0.534547   0.572525       0.217293            2.634807    0.000999
+[   62.1s] ALL REQUESTED STAGES COMPLETE.

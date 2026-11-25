@@ -1,0 +1,38 @@
+[    0.7s] city set: 137 mainland cities, 112 identifying in 22 provinces
+[    1.9s] b01 edge lists match b00.build_edges on the three main nights
+[    8.3s] flows built for 49 nights incl. 2 means; built here with b00.build_edges: ['2024-03-29', '2024-10-01', '2024-10-02', '2024-10-03', '2024-10-08', '2024-10-09', '2024-10-10', '2024-10-15', '2024-10-16', '2024-10-17', '2024-10-22', '2024-10-23', '2024-10-24', '2024-10-29', '2024-10-30', '2024-11-03', '2024-12-25']
+[    9.2s] pyfixest check 2024-02-14: beta own 0.532359 pf 0.532359; se own 0.0760 pf 0.0764
+[    9.7s] pyfixest check 2024-08-15: beta own 0.628720 pf 0.628720; se own 0.0521 pf 0.0524
+[    9.9s] pyfixest check 2024-11-01: beta own 0.584109 pf 0.584109; se own 0.0536 pf 0.0538
+[   10.3s] pyfixest check 2024-12-25: beta own 0.597708 pf 0.597708; se own 0.0676 pf 0.0680
+[   10.7s] pyfixest check 2024-03-29: beta own 0.566327 pf 0.566327; se own 0.0552 pf 0.0555
+[   62.6s] single nights done: all/main
+[   83.0s] single nights done: all/road
+[   85.8s] single nights done: all/noinc
+[   86.5s] single nights done: all/legacy
+[  151.4s] single nights done: inland/main
+[  167.1s] single nights done: coastal/main
+[  191.3s] single nights done: inlandprov/main
+[  191.9s] stacked check: delta 0.096361 = 0.628720 - 0.532359
+[  370.4s] differences done: all/main
+[  376.9s] differences done: all/road
+[  377.6s] differences done: all/noinc
+[  520.0s] differences done: inland/main
+[  546.5s] differences done: coastal/main
+[  564.8s] differences done: inlandprov/main
+[  610.6s] jackknife done
+[  610.9s] gravity residuals done; max margin error 9.937003850812156e-10
+[  615.3s] QAP done
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/lib/python3.12/site-packages/pyfixest/estimation/formula/model_matrix.py:346: UserWarning: 1325 singleton fixed effect(s) dropped from the model.
+  warnings.warn(f"{n_dropped} {reason} dropped from the model.")
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/lib/python3.12/site-packages/pyfixest/estimation/formula/model_matrix.py:346: UserWarning: 1325 singleton fixed effect(s) dropped from the model.
+  warnings.warn(f"{n_dropped} {reason} dropped from the model.")
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/lib/python3.12/site-packages/pyfixest/estimation/formula/model_matrix.py:346: UserWarning: 1325 singleton fixed effect(s) dropped from the model.
+  warnings.warn(f"{n_dropped} {reason} dropped from the model.")
+/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/lib/python3.12/site-packages/pyfixest/estimation/formula/model_matrix.py:346: UserWarning: 1325 singleton fixed effect(s) dropped from the model.
+  warnings.warn(f"{n_dropped} {reason} dropped from the model.")
+[  616.1s] legacy reproduction done
+[  629.0s] echo / SCI appendix done
+[  630.1s] roots index reproduces p_daily_metrics on 47 nights, max abs diff 9.99e-16
+[  632.5s] index reconciliation done
+[  632.5s] R2 finished

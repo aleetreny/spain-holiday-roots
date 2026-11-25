@@ -4,6 +4,8 @@
 
 Coursework for UCL COMP0123 *Complex Networks*, to be followed by a journal paper.
 
+**Report:** [`reports/manuscript/output/main.pdf`](reports/manuscript/output/main.pdf) (LaTeX sources in `reports/manuscript/`). **Agents and collaborators: start with [`AGENTS.md`](AGENTS.md).**
+
 ## Three networks over the same ~2,500 Spanish municipal zones
 1. **Everyday network**: overnight stays and trips on ordinary days (MITMA Big Data mobility study).
 2. **Holiday network**: where residents sleep in mid-August, at Easter, on All Saints' Day and at Christmas (MITMA *pernoctaciones*, 2022–2024).

@@ -1,0 +1,56 @@
+\section{The research question}\label{sec:question}
+
+\subsection{Background: two pulls on the same nights}
+
+On an ordinary weekday night in February 2024, about 2.1 million residents of mainland Spain slept in a zone other than their own. On the night of 14 to 15 August, 8.5 million did. Groups of at least 10 residents of Madrid slept in 2,203 of the other 2,434 zones that night, against 1,124 in February. Many of the places that received them are villages that lose people to the cities for most of the year. Where all these people go, and why, is the subject of this report.
+
+Between 1950 and 1975 Spain went through what historians call its \emph{rural exodus}: a mass move from the villages of the interior to the cities. About two million people left the countryside in the 1960s alone \citep[p.~225]{clar2023rural}. Municipalities under 2,000 inhabitants were home to more than 11 million people in the 1950s and to about 7 million in 2017 \citep[p.~5]{pinilla2017rural}. The emigrants came mainly from Andalusia, Extremadura and the two Castiles, and settled in Madrid, Catalonia and the Basque Country \citep{bover1999migrations}. Many kept a house in the village, and in Spain people still talk of \es{volver al pueblo}, going back to the village, in August. About 15.5\,\% of Spanish households had a second home in 2021 \citep{ine2023ecepov}, and in the third quarter of 2024, 28.3\,\% of the trips made by residents were visits to relatives or friends \citep{ine2024etr3t}.
+
+The same nights also belong to the beach. Figure~\ref{fig:calendar} shows how strong both pulls are. Outside August, on every night of 2024 with data but one, more of the people who sleep at least 100\,km from home do so in inland towns and villages than on the coast. In August the two are level: on the night of 14 to 15 August, 2.2 million people slept far from home on the coast and 2.1 million in inland towns and villages.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig1_option2_calendar.pdf}
+\caption{\textbf{Where people sleep when they are far from home.} \textbf{a}, People sleeping at least 100\,km from their home zone on each night of 2024 with data, in inland towns and villages (terracotta) and in coastal zones (blue); the shading marks which received more. Dashed lines mark the five nights studied; gaps are months without data. \textbf{b}, The five nights, in millions of people, with inland cities of more than 100,000 people in grey. Data: MITMA overnight-stay estimates for 2,435 mainland zones.}
+\label{fig:calendar}
+\end{figure}
+
+So both pulls are large, and the answer to the question is not obvious. Volume alone cannot settle it: a person sleeping in an inland village in August may be visiting the family home or hiking in the mountains. The generation that left in the 1960s is now old, and their children and grandchildren were born in the cities. The ties to the village may have faded, or moved to an apartment by the sea. Holidays may also just make the network denser everywhere, with no preference for any destination. What would show the trace of the exodus is not how many people travel but \emph{who goes where}: whether the residents of a city sleep, on holiday, in the provinces and villages its population came from.
+
+\subsection{The networks studied}
+
+The data are the overnight-stay estimates of the Spanish Ministry of Transport \citep{mitms2024methodology}. For each night, they estimate from mobile-phone records how many residents of each zone slept in each other zone, scaled up to the whole population. A zone is a municipality, or a group of small neighbouring municipalities: the 2,435 zones of mainland Spain cover 7,975 municipalities and 43.9 million residents. I build one network per night:
+\begin{itemize}
+\item \textbf{Nodes:} the 2,435 zones.
+\item \textbf{Links:} a directed link from zone $i$ to zone $j$ when at least 10 residents of $i$ sleep in $j$ that night. The number of people is kept as the link weight.
+\end{itemize}
+The threshold removes the many links carried by one or two estimated people. It keeps between 69\,\% and 83\,\% of the people who sleep away from home, and leaves networks with 0.9--3.4\,\% of all possible undirected links (Section~\ref{sec:method}).
+
+I use single nights, not averages over a holiday period, because an average mixes the people who leave with those who come back. The three main networks are an ordinary weekday (the night of 13 to 14 February), the summer holiday (14 to 15 August) and All Saints (31 October to 1 November), a family holiday when the coast pulls less. Christmas Eve and Easter appear where they help. Each main night is checked against its neighbouring nights, its \emph{sister nights}, and against the same dates in 2022 and 2023.
+
+The third network describes where people come from. For each municipality with more than 10,000 residents, the 2024 census records how many of its residents were born in each province, when they arrived in their current province, and how large their municipality of birth was \citep{ine2025censo}. This gives a \emph{roots network}: a link from a municipality to a province, weighted by the number of its residents born there. Both networks share the same origins, so they can be compared link by link.
+
+\subsection{The research question and tasks}
+
+The question is:
+
+\begin{quote}
+\emph{On holiday, do Spaniards go back to the villages their families left?}
+\end{quote}
+
+In network terms: compared with an ordinary night, does the overnight-stay network of the holidays lean towards the provinces where the residents of each city were born, and towards the emptied villages, beyond what distance, income and the coast explain? I answer it through four tasks.
+
+\begin{enumerate}[label=\textbf{T\arabic*.}]
+\item \textbf{Describe the networks.} Measure their basic properties (degree distribution, path length, clustering, mixing, rich club) and compare them with random networks that keep the same number of links per zone.
+\item \textbf{Compare holiday and ordinary nights.} Find out whether the holiday network changes shape, and whether the change is more than what its new degrees force, using the rewiring methods of \citet{zhou2007structural}.
+\item \textbf{Compare the overnight network with the roots network.} Test whether a city sends more of its residents to the provinces where more of them were born, comparing neighbouring cities so that distance and destination cancel out, and whether that pull grows on holiday and for which generation.
+\item \textbf{Look at the villages.} Test whether the most emptied zones switch from sending people away to receiving them.
+\end{enumerate}
+
+\subsection{Why this question is worth studying}
+
+The question matters beyond curiosity. The villages emptied by the exodus have few registered residents, and much of what is known about them comes from that register. People who sleep in a family home or a second home may also escape hotel statistics. \citet{garciagonzalez2024retorno} measured this \emph{return tourism} with phone data in one region, Castilla-La Mancha. A national picture of who comes back, from where and when, describes a part of rural Spain that the usual statistics miss.
+
+The question also suits network science, for three reasons. First, it is about links, not places: the same number of visitors to a village can come from its emigrants or from strangers, and only the origin--destination structure tells them apart. Second, it compares networks on the same nodes, holiday against ordinary and overnight against roots, which is the comparison network methods are built for. Third, the holiday network is much denser than the ordinary one, so any of its properties could change just because of its size. Random networks that keep each zone's number of links separate what the new degrees force from what they do not.
+
+The closest earlier work is a study of the Chinese Spring Festival, which compared travel between 31 provinces with the census network of where migrants come from \citep{li2016spring}. With 31 provinces that network is almost complete, so it says little about structure, and the comparison has no control for distance. Studies of Spanish phone data have described seasonal changes in population \citep{garzon2026heritage} and return tourism in one region \citep{garciagonzalez2024retorno}, but without birthplaces or networks. To my knowledge, this is the first study to measure the structure of the network of where Spaniards sleep on holiday, across 2,435 zones and against degree-preserving null models, and to compare its flows from cities to provinces with where the cities' residents were born. Section~\ref{sec:literature} discusses these and other works in detail.

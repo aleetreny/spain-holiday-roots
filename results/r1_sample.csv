@@ -1,0 +1,9 @@
+sample,n,n_provinces
+all,2376,47.0
+single_mun,1473,47.0
+inland,2053,47.0
+m2_complete,2183,47.0
+excluded_missing_loss,56,27.0
+excluded_missing_loss_single_mun,54,
+excluded_artefact_zones,3,
+big_city_zones_pop_ge_100k,58,

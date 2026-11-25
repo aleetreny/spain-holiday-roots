@@ -1,0 +1,13 @@
+step,slice,n_nights,beta,se,se_type
+"L0/L1 151 cities, 50 dest provinces, legacy sum/count(distinct date) [C3 bug]",Feb weekday,12,0.6334503837902655,0.04439247074541618,CRV1 city
+"L0/L1 151 cities, 50 dest provinces, correct sum/n_nights",Feb weekday,12,0.644396604252913,0.044802874606887595,CRV1 city
+"L0/L1 151 cities, 50 dest provinces, legacy sum/count(distinct date) [C3 bug]",mid-Aug,9,0.721308816867834,0.022706407368877177,CRV1 city
+"L0/L1 151 cities, 50 dest provinces, correct sum/n_nights",mid-Aug,9,0.7215564611563249,0.022719227310578755,CRV1 city
+"L2 137 mainland cities, 47 mainland provinces, correct window mean",Feb weekday,12,0.6506714917597517,0.04747626368053142,CRV1 city
+"L2 137 mainland cities, 47 mainland provinces, correct window mean",mid-Aug,9,0.7200821134141074,0.023898215941178646,CRV1 city
+"L3 137 cities, single night, legacy spec",Feb 14,1,0.6503084703654245,0.043362246639749476,CRV1 city
+"L4 main spec (log share, log km + sq, income x dest, CRV1 origin prov)",Feb 14,1,0.5323590291995608,0.07601924905005339,CRV1 origin province
+"L3 137 cities, single night, legacy spec",Aug 15,1,0.731289251699004,0.022066101654191716,CRV1 city
+"L4 main spec (log share, log km + sq, income x dest, CRV1 origin prov)",Aug 15,1,0.628720187405124,0.052139324579306014,CRV1 origin province
+"L3 137 cities, single night, legacy spec",Nov 1,1,0.7134727704512036,0.03604989012053425,CRV1 city
+"L4 main spec (log share, log km + sq, income x dest, CRV1 origin prov)",Nov 1,1,0.584108583528325,0.05358075446275115,CRV1 origin province

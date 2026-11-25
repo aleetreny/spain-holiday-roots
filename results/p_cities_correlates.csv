@@ -1,0 +1,10 @@
+x,score,spearman,n
+log_pop,beach_share_med,0.0834188959620662,137
+log_pop,emptied_share_med,-0.013310433662516098,137
+log_pop,roots_partial_med,0.028235667481845163,137
+city_is_coastal,beach_share_med,0.11025819122341934,137
+city_is_coastal,emptied_share_med,-0.2522397918514716,137
+city_is_coastal,roots_partial_med,-0.4124043222602281,137
+share_born_other_prov,beach_share_med,-0.37562305150559105,137
+share_born_other_prov,emptied_share_med,0.28939925700524577,137
+share_born_other_prov,roots_partial_med,0.3118431123639554,137

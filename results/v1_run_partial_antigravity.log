@@ -1,0 +1,19 @@
+[    0.5s] === PART 1: C1 & C2 (Censo Anual 2024 10% microdata + MITMA single nights) ===
+[    0.6s] Censo 2024 verified: 4,861,970 rows (unweighted 10% extract), 35 cols; distinct VARANOP=['0001', '0002', '0003', '0004', '0005', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '7777', '8888']
+[    0.7s] Municipality mapping: 711 mainland >10k -> 32 in _AM, 1 split (['03015']), 678 strict single-zone -> 675 identifying in 44 provs (dropped single-city provs: ['05', '34', '42'])
+[    0.7s] 10% sample rate check vs Censo 68545 (137 cities): min=0.09761, median=0.09996, max=0.10375
+[    4.8s] Loaded MITMA flows for 47 single nights + 2 window means
+[    7.1s] Fast slope-HDFE solver verified against pyfixest on Feb 14 & Aug 15 (|diff| < 1e-6 on beta and exact CRV1 SE)
+[   34.5s] C1 zero-cell & complete-partition sensitivity done
+[  104.3s] Single-night fits completed for cohort_joint
+[  174.2s] Single-night fits completed for birthsize_joint
+[  174.4s] Stacked two-night unrestricted identity verified: delta == beta_h - beta_o to < 1e-7
+[  635.1s] Main contrasts with WCR 95% CIs completed
+[  864.4s] Sister grid done: summer_x_feb_all (9x13=117 pairs)
+[ 1084.4s] Sister grid done: summer_x_feb_inland (9x13=117 pairs)
+[ 1820.6s] Sister grid done: summer_x_feb_coastal (9x13=117 pairs)
+[ 1845.7s] Sister grid done: summer_x_oct_all (1x15=15 pairs)
+[ 1918.1s] Sister grid done: allsaints_x_feb_all (3x13=39 pairs)
+[ 1938.3s] Sister grid done: christmas_x_feb_all (1x13=13 pairs)
+[ 1961.9s] Sister grid done: goodfriday_x_feb_all (1x13=13 pairs)
+[ 1961.9s] Running C2(e) Age Confound battery...

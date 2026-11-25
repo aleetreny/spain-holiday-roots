@@ -1,0 +1,138 @@
+city,name,roots_comm
+01059,Vitoria-Gasteiz,2
+02003,Albacete,0
+03009,Alcoy/Alcoi,1
+03014,Alicante/Alacant,4
+03031,Benidorm,1
+03065,Elche/Elx,1
+03066,Elda,4
+03099,Orihuela,0
+03122,San Vicente del Raspeig/Sant Vicent del Raspeig,4
+03133,Torrevieja,0
+04013,Almería,0
+04079,Roquetas de Mar,0
+04902,"Ejido, El",1
+05019,Ávila,2
+06015,Badajoz,0
+06083,Mérida,0
+08015,Badalona,1
+08019,Barcelona,3
+08056,Castelldefels,1
+08073,Cornellà de Llobregat,1
+08096,Granollers,1
+08101,"Hospitalet de Llobregat, L'",1
+08113,Manresa,1
+08121,Mataró,1
+08124,Mollet del Vallès,1
+08169,"Prat de Llobregat, El",1
+08184,Rubí,1
+08187,Sabadell,1
+08200,Sant Boi de Llobregat,1
+08205,Sant Cugat del Vallès,0
+08245,Santa Coloma de Gramenet,1
+08266,Cerdanyola del Vallès,1
+08279,Terrassa,1
+08301,Viladecans,1
+08307,Vilanova i la Geltrú,1
+09059,Burgos,2
+10037,Cáceres,0
+11004,Algeciras,0
+11012,Cádiz,0
+11015,Chiclana de la Frontera,0
+11020,Jerez de la Frontera,0
+11022,"Línea de la Concepción, La",0
+11027,"Puerto de Santa María, El",0
+11031,San Fernando,0
+11032,Sanlúcar de Barrameda,0
+12040,Castelló de la Plana,4
+12135,Vila-real,1
+13034,Ciudad Real,0
+14021,Córdoba,0
+15030,"Coruña, A",3
+15036,Ferrol,0
+15078,Santiago de Compostela,0
+16078,Cuenca,0
+17079,Girona,1
+18087,Granada,0
+18140,Motril,0
+19130,Guadalajara,0
+20045,Irun,2
+20069,Donostia/San Sebastián,2
+21041,Huelva,0
+22125,Huesca,0
+23050,Jaén,0
+23055,Linares,0
+24089,León,0
+24115,Ponferrada,0
+25120,Lleida,1
+26089,Logroño,0
+27028,Lugo,0
+28005,Alcalá de Henares,1
+28006,Alcobendas,0
+28007,Alcorcón,1
+28013,Aranjuez,1
+28014,Arganda del Rey,1
+28022,Boadilla del Monte,0
+28045,Colmenar Viejo,0
+28047,Collado Villalba,0
+28049,Coslada,1
+28058,Fuenlabrada,1
+28065,Getafe,1
+28074,Leganés,1
+28079,Madrid,0
+28080,Majadahonda,0
+28092,Móstoles,1
+28106,Parla,1
+28113,Pinto,1
+28115,Pozuelo de Alarcón,0
+28123,Rivas-Vaciamadrid,0
+28127,"Rozas de Madrid, Las",0
+28134,San Sebastián de los Reyes,1
+28148,Torrejón de Ardoz,1
+28161,Valdemoro,1
+29025,Benalmádena,0
+29051,Estepona,0
+29054,Fuengirola,0
+29067,Málaga,0
+29069,Marbella,0
+29070,Mijas,0
+29094,Vélez-Málaga,0
+29901,Torremolinos,0
+30016,Cartagena,0
+30024,Lorca,0
+30027,Molina de Segura,0
+30030,Murcia,0
+31201,Pamplona/Iruña,2
+32054,Ourense,3
+33004,Avilés,1
+33024,Gijón,2
+33044,Oviedo,0
+33066,Siero,0
+34120,Palencia,2
+36038,Pontevedra,0
+36057,Vigo,3
+37274,Salamanca,2
+39075,Santander,2
+39087,Torrelavega,2
+40194,Segovia,2
+41004,Alcalá de Guadaíra,0
+41038,Dos Hermanas,0
+41091,Sevilla,5
+41095,Utrera,0
+42173,Soria,0
+43123,Reus,1
+43148,Tarragona,1
+44216,Teruel,0
+45165,Talavera de la Reina,0
+45168,Toledo,4
+46131,Gandia,1
+46190,Paterna,1
+46220,Sagunto/Sagunt,4
+46244,Torrent,1
+46250,València,4
+47186,Valladolid,2
+48013,Barakaldo,2
+48020,Bilbao,2
+48044,Getxo,2
+49275,Zamora,0
+50297,Zaragoza,3

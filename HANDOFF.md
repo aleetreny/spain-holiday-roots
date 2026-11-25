@@ -1,3 +1,5 @@
+> **Superseded (2026-11-25):** this is the 2026-11-24 handoff. The current state is in `AGENTS.md` and `.planning/2026-11-24-consolidation/decisions.md`. Several results below were later dropped (k-core ×4.5, summer territories).
+
 # Handoff (2026-11-24): start here
 
 This project was split from `~/Proyectos/Spain-Mobility`, which keeps question A (do the 1833 provincial borders still shape mobility?). A is developed separately. **This folder is only question B.** The user writes in Spanish.

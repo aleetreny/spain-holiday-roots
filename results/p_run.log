@@ -1,0 +1,8 @@
+[p_patterns] stage daily
+[p_patterns] stage zones
+[p_patterns] stage hubs
+[p_patterns] stage cities
+[p_patterns] stage holidays
+[p_patterns] stage distance
+[p_patterns] stage panel
+[p_patterns] stage plots

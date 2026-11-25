@@ -13,3 +13,30 @@ __pycache__/
 *.npy
 *.pkl
 .DS_Store
+results/r3_diag/cache/
+
+# --- 2026-11-25 clean repo ---
+.serena/
+.pytest_cache/
+# drafts and rejected figure options (kept locally only)
+reports/figures_drafts/
+reports/figures/fig1_option1_bars.*
+reports/figures/fig1_where_people_sleep.*
+reports/figures/fig3_roots_generation_slopes.*
+reports/figures/fig4_option_*
+results/_archive_pre_rerun/
+# agent scratch: keep code and notes, drop dumps and screenshots
+research_notes/*_scratch/**/*.txt
+research_notes/*_scratch/**/*.png
+research_notes/*_scratch/**/*.log
+# LaTeX build files
+reports/manuscript/output/*
+!reports/manuscript/output/main.pdf
+# figures and the report PDF are needed to compile and read the report
+!reports/figures/*.pdf
+reports/figures/fig1_option1_bars.*
+reports/figures/fig1_where_people_sleep.*
+reports/figures/fig3_roots_generation_slopes.*
+reports/figures/fig4_option_*
+reports/critica_prof_zhou.md
+research_notes/review_manuscript_v1.md

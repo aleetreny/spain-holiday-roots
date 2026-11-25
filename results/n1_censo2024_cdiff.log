@@ -1,0 +1,20 @@
+[    0.0s] Loading Censo Anual 2024 10% microdata (4.86M rows)...
+[    0.8s] Expanded >10k single-zone municipalities with ADRH income: 678 total, 675 identifying in 44 provinces (vs 112 in 22 in R2)!
+[    1.3s]   Within-FE corr(pre81, rec16)=0.205; corr(village<=2k, urban>10k)=0.159; zero rates: all=20.3%, pre81=46.0%, rec16=51.1%
+[   33.1s]   cdiff MITMA_Aug15_vs_Feb14_all pre1981_exodus: delta=+0.0836 [+0.0428, +0.1194] p_wcr=0.0020
+[   67.2s]   cdiff MITMA_Aug15_vs_Feb14_all recent_2016_2024: delta=-0.0716 [-0.1164, -0.0165] p_wcr=0.0144
+[   97.8s]   cdiff MITMA_Aug15_vs_Feb14_all born_village_le2k: delta=+0.0865 [+0.0601, +0.1107] p_wcr=0.0004
+[  134.0s]   cdiff MITMA_Aug15_vs_Feb14_all born_urban_gt10k: delta=-0.0616 [-0.1194, -0.0055] p_wcr=0.0304
+[  166.2s]   cdiff MITMA_Aug15_vs_Feb14_inland pre1981_exodus: delta=+0.1544 [+0.1093, +0.1923] p_wcr=0.0002
+[  201.3s]   cdiff MITMA_Aug15_vs_Feb14_inland recent_2016_2024: delta=-0.0737 [-0.1245, -0.0150] p_wcr=0.0182
+[  233.8s]   cdiff MITMA_Aug15_vs_Feb14_inland born_village_le2k: delta=+0.1235 [+0.0928, +0.1515] p_wcr=0.0002
+[  268.1s]   cdiff MITMA_Aug15_vs_Feb14_inland born_urban_gt10k: delta=-0.0433 [-0.1089, +0.0157] p_wcr=0.1740
+[  291.2s]   cdiff MITMA_Dec25_vs_Feb14_all pre1981_exodus: delta=+0.0258 [-0.0021, +0.0507] p_wcr=0.0652
+[  316.6s]   cdiff MITMA_Dec25_vs_Feb14_all recent_2016_2024: delta=+0.0007 [-0.0303, +0.0485] p_wcr=0.9730
+[  341.5s]   cdiff MITMA_Dec25_vs_Feb14_all born_village_le2k: delta=+0.0291 [+0.0104, +0.0493] p_wcr=0.0048
+[  366.3s]   cdiff MITMA_Dec25_vs_Feb14_all born_urban_gt10k: delta=+0.0250 [-0.0099, +0.0727] p_wcr=0.1586
+[  389.3s]   cdiff INE53000_Aug_vs_Feb pre1981_exodus: delta=+0.0359 [+0.0073, +0.0625] p_wcr=0.0170
+[  413.1s]   cdiff INE53000_Aug_vs_Feb recent_2016_2024: delta=-0.0192 [-0.0388, +0.0011] p_wcr=0.0658
+[  437.4s]   cdiff INE53000_Aug_vs_Feb born_village_le2k: delta=+0.0489 [+0.0302, +0.0673] p_wcr=0.0006
+[  460.7s]   cdiff INE53000_Aug_vs_Feb born_urban_gt10k: delta=-0.0230 [-0.0566, +0.0083] p_wcr=0.1506
+[  460.7s] Saved n1_censo2024_cohort_diffs.csv
