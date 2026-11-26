@@ -52,6 +52,6 @@ Run Python only as `.venv/bin/python -I` (downloaded data are untrusted). Enviro
 
 ## 7. Open items
 - Submission date on the cover; repository URL in the report (this repo, once public).
-- Check DOIs of `clauset2009power` and `kline2012score`.
+- DOIs of all cited works verified on Crossref (2026-11-25).
 - Optional (review recommendations): swap the 2020 rural-migration study for García-González et al. 2024 in the literature; short All Saints comparison; trim methodology to ≤ 3 pages.
 - Journal paper: 2025 data, municipal INE OD network (`n1_*`), village-level roots (ECEPOV), multi-year cohort fading.
