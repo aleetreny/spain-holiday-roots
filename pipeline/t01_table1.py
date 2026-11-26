@@ -187,7 +187,7 @@ NOTE_FULL = (
     "degree sequence (degree-preserving rewiring, 10 swaps per link) and, where shown, of 50 Erdős–Rényi networks "
     "with the same N and L. [r_min, r_max]: the most disassortative and most assortative networks reachable by "
     "rewiring that keeps P(k) and a single connected component (Zhou & Mondragón 2007). R_avg: second-order mixing "
-    "(Zhou, Cox & Hansen), null keeping P(k) and φ(k). Rich-club clique: the largest n such that the n "
+    "(Zhou, Cox & Hansen 2017), null keeping P(k) and φ(k). Rich-club clique: the largest n such that the n "
     "best-connected zones are all linked to one another (Zhou & Mondragón 2007). Tail fit: Clauset–Shalizi–Newman likelihood-ratio test; "
     "'tie' means p ≥ 0.05. † The change from the ordinary night does not keep its direction in every pair of "
     "sister nights (117 summer pairs, 39 All Saints pairs). 1 Nov is the quietest of its three sister nights. "

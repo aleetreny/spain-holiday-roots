@@ -282,7 +282,7 @@ def fig3():
     # b: the age test
     axb = fig.add_subplot(gs[1, 0])
     arows = [("pre1981_ge65", "Arrived before 1981,\naged 65+"), ("pre1981_lt65_age43_64", "Arrived before 1981,\naged 43–64"),
-             ("post1981_ge65", "Arrived after 1981,\naged 65+"), ("recent2016_lt65", "Arrived 2016–2023,\nunder 65")]
+             ("post1981_ge65", "Arrived 1981 or later,\naged 65+"), ("recent2016_lt65", "Arrived 2016–2023,\nunder 65")]
     for k, (t, lab) in enumerate(arows):
         r = ag[ag.term == t].iloc[0]; yk = len(arows) - 1 - k
         axb.plot([r.ci_wcr_lo, r.ci_wcr_hi], [yk] * 2, color=INK, lw=1.4)
