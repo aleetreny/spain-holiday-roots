@@ -551,7 +551,7 @@ def figbosam():
                    extent=(n - top, n, 0, 1), rasterized=True)
         axs.set_yticks([]); axs.set_xticks([])
         if c == 1:
-            ax.set_xlabel("All 2,435 zones, sorted by degree (BOSAM order), least connected first", labelpad=2)
+            ax.set_xlabel("2,425 of 2,435 zones in BOSAM order (degree, then neighbours), least connected first", labelpad=2)
             axs.set_xlabel(f"Its {top} best-connected zones (outlined square above), same order", labelpad=3)
         panel_letter(ax, "abc"[c], x=-0.04 if c else -0.22, y=1.13)
         panel_letter(az, "def"[c], x=-0.04 if c else -0.22, y=1.09)

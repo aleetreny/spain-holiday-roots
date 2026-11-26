@@ -151,7 +151,7 @@ def row_defs():
     add("Small world", "Clustering ⟨C⟩ (rewired / ER)", realnull("C_avg", ["rew_und", "er_und"], 3))
     # --- mixing
     add("Mixing", "Degree assortativity r (rewired)", realnull("r_und", ["rew_und"], 3))
-    add("Mixing", "Range of r allowed by P(k) [r_min, r_max]",
+    add("Mixing", "Range of r reached by rewiring [r_min, r_max]",
         lambda c: (f"[{f(S(c, 'r_min_maxdisassortative')[0], 3)}, {f(S(c, 'r_max_maxassortative')[0], 3)}]",
                    S(c, "r_min_maxdisassortative")[1] + "; " + S(c, "r_max_maxassortative")[1], None))
     add("Mixing", "Reciprocity (rewired, directed)", realnull("reciprocity", ["rew_dir"], 2))
@@ -163,7 +163,7 @@ def row_defs():
     add("Rich club and core", "Rich-club clique size (rewired)", realnull("n_clique", ["rew_und"], 0, null_nd=1))
     add("Rich club and core", "Links touching the top 5 % of nodes (%)",
         lambda c: (f(100 * Z(c, "share_l_top5_any")[0], 0) + dagger(c, "l_top5_any"), Z(c, "share_l_top5_any")[1], Z(c, "share_l_top5_any")[0]))
-    add("Rich club and core", "Maximum k-core (rewired / ER)", realnull("kcore_max", ["rew_und", "er_und"], 0))
+    add("Rich club and core", "Largest k of a non-empty k-core (rewired / ER)", realnull("kcore_max", ["rew_und", "er_und"], 0))
     return R
 
 
@@ -185,8 +185,8 @@ NOTE_FULL = (
     "to the same number of directed links as the ordinary night, 35,812, by keeping the heaviest). Properties are "
     "computed on the undirected projection unless marked directed. In brackets: mean of 50 networks with the same "
     "degree sequence (degree-preserving rewiring, 10 swaps per link) and, where shown, of 50 Erdős–Rényi networks "
-    "with the same N and L. [r_min, r_max]: the most disassortative and most assortative networks reachable by "
-    "rewiring that keeps P(k) and a single connected component (Zhou & Mondragón 2007). R_avg: second-order mixing "
+    "with the same N and L. [r_min, r_max]: the most disassortative and most assortative values reached by "
+    "a heuristic rewiring search that keeps P(k) and a single connected component (Zhou & Mondragón 2007). R_avg: second-order mixing "
     "(Zhou, Cox & Hansen 2017), null keeping P(k) and φ(k). Rich-club clique: the largest n such that the n "
     "best-connected zones are all linked to one another (Zhou & Mondragón 2007). Tail fit: Clauset–Shalizi–Newman likelihood-ratio test; "
     "'tie' means p ≥ 0.05. † The change from the ordinary night does not keep its direction in every pair of "
