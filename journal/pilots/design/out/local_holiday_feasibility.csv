@@ -1,0 +1,17 @@
+population_max,window,coverage,events,villages,provinces,events_with_strict_parent_tie,distinct_window_days_not_local
+2000,main_plus_minus_7,matched_names_and_zones,0,0,0,0,0
+2000,main_plus_minus_7,no_other_holiday_or_DANA,0,0,0,0,0
+2000,main_plus_minus_7,complete_rss_windows,0,0,0,0,0
+2000,main_plus_minus_7,complete_local_windows,0,0,0,0,0
+2000,main_and_lead_placebo,matched_names_and_zones,0,0,0,0,0
+2000,main_and_lead_placebo,no_other_holiday_or_DANA,0,0,0,0,0
+2000,main_and_lead_placebo,complete_rss_windows,0,0,0,0,0
+2000,main_and_lead_placebo,complete_local_windows,0,0,0,0,0
+5000,main_plus_minus_7,matched_names_and_zones,46,23,9,44,83
+5000,main_plus_minus_7,no_other_holiday_or_DANA,32,18,7,30,83
+5000,main_plus_minus_7,complete_rss_windows,32,18,7,30,83
+5000,main_plus_minus_7,complete_local_windows,1,1,1,1,0
+5000,main_and_lead_placebo,matched_names_and_zones,46,23,9,44,92
+5000,main_and_lead_placebo,no_other_holiday_or_DANA,31,18,7,29,92
+5000,main_and_lead_placebo,complete_rss_windows,31,18,7,29,92
+5000,main_and_lead_placebo,complete_local_windows,0,0,0,0,0
