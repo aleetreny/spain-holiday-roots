@@ -24,7 +24,7 @@ COLS = [
     ("ordinary", "2024-02-14", "w10", "Ordinary weekday", "13–14 Feb"),
     ("summer", "2024-08-15", "w10", "Summer holiday", "14–15 Aug"),
     ("allsaints", "2024-11-01", "w10", "All Saints", "31 Oct–1 Nov"),
-    ("summer_eq", "2024-08-15", "equal_edges", "Summer, same links as Feb", "14–15 Aug"),
+    ("summer_eq", "2024-08-15", "equal_edges", "Summer, same directed link count", "14–15 Aug"),
 ]
 GROUP = {"ordinary": "ordinary", "summer": "summer", "allsaints": "allsaints", "summer_eq": "summer"}
 
@@ -195,9 +195,9 @@ NOTE_FULL = (
 )
 NOTE_MAIN = (
     "One network per night of 2024. Node: one of 2,435 zones of mainland Spain; link i→j: at least 10 residents "
-    "of i sleep in j. Undirected projection except the median out- / in-degree and reciprocity; N, ℓ and ℓ* refer to the giant component. In brackets: mean of 50 random networks in which "
+    "of i sleep in j. Undirected projection of all 2,435 zones (links, density) except the median out- / in-degree and reciprocity; N, ℓ and ℓ* refer to its giant component. In brackets: mean of 50 random networks in which "
     "every zone keeps its number of links (degree-preserving rewiring); for clustering, also 50 Erdős–Rényi "
-    "networks. ℓ* = ln N / ln⟨k⟩ is the path length expected in a random graph (Zhou & Mondragón 2007). "
+    "networks. ℓ* = ln N / ln⟨k⟩ approximates the path length of a random graph (Zhou & Mondragón 2007). Rich-club clique: the largest n such that the n best-connected zones are all linked to one another. "
     "† The change from the ordinary night does not keep its direction on every pair of similar nights. "
     "Full version, with the summer night cut to the same number of links as February: Table A1."
 )

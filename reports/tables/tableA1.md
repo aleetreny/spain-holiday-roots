@@ -1,6 +1,6 @@
 # Table A1. Basic properties of the overnight-stay networks, full version
 
-| | Ordinary weekday<br>13–14 Feb | Summer holiday<br>14–15 Aug | All Saints<br>31 Oct–1 Nov | Summer, same links as Feb<br>14–15 Aug |
+| | Ordinary weekday<br>13–14 Feb | Summer holiday<br>14–15 Aug | All Saints<br>31 Oct–1 Nov | Summer, same directed link count<br>14–15 Aug |
 |---|---:|---:|---:|---:|
 | **Size** | | | | |
 | People sleeping away from home (millions) | 2.11 | 8.46 | 4.23 | 8.46 |

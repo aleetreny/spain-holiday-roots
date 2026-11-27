@@ -210,9 +210,9 @@ def fig2():
                         arrowprops=dict(arrowstyle="-", color=INK, lw=0.5, shrinkA=1, shrinkB=2))
     axa.set_ylabel("In-degree + 1")
     axb.tick_params(axis="y", labelleft=False)
-    axb.text(0.97, 0.05, "senders:\nsend far more\nthan they receive", transform=axb.transAxes, ha="right",
+    axb.text(0.97, 0.05, "senders: residents sleep\nin far more zones than\nthe zones sending people here", transform=axb.transAxes, ha="right",
              va="bottom", fontsize=7.5, color=MUTED)
-    axb.text(0.04, 0.96, "receivers:\nreceive far more\nthan they send", transform=axb.transAxes, ha="left",
+    axb.text(0.04, 0.96, "receivers: host people\nfrom many more zones\nthan they send to", transform=axb.transAxes, ha="left",
              va="top", fontsize=7.5, color=MUTED)
     from matplotlib.lines import Line2D
     gh = [Line2D([], [], marker="o", ls="", color=c, mec="white", mew=0.5, ms=m_, label=lab)
@@ -231,7 +231,7 @@ def fig2():
         axc.scatter([r.r_real], [yk], s=30, color=INK, zorder=3, edgecolor="white", lw=0.8)
     axc.set_yticks(range(len(rows))[::-1], [n_ for _, n_ in rows]); axc.tick_params(axis="y", length=0)
     axc.set_ylim(-0.7, len(rows) - 0.3); axc.set_xlim(-0.45, -0.05)
-    axc.set_xlabel("Degree assortativity $r$ (below 0: hubs link mainly to small zones)")
+    axc.set_xlabel("Degree assortativity $r$ (below 0: hubs link mainly to lower-degree zones)")
     from matplotlib.lines import Line2D
     hh = [Line2D([], [], color=STONE, lw=6, label="range reached by rewiring, same degrees"),
           Line2D([], [], color=MUTED, lw=1.2, label="random rewiring (mean of 50)"),
@@ -252,7 +252,7 @@ def fig3():
     mc = pd.read_csv(RES / "v1_c2_main_contrasts.csv").query("contrast == 'Aug15_vs_Feb14'")
     ag = pd.read_csv(RES / "v1_c2_age_confound.csv").query("spec == 'E2a_split65_4way_exclusive' and sample == 'all'")
     sp = pd.read_csv(RES / "v1_c2_sister_pairs.csv").query("grid == 'summer_x_feb_all'")
-    XLAB = "Extra pull of the home province on 14–15 Aug vs 13–14 Feb\n(change in elasticity; +0.1 ≈ 7% more travellers per doubling of the group)"
+    XLAB = "Change in the pull of the province of birth, 14–15 Aug vs 13–14 Feb\n(+0.1 ≈ 7% larger expected flow for twice the group's share)"
     fig = plt.figure(figsize=(TEXTWIDTH, 5.6))
     gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1], width_ratios=[1, 1], hspace=0.72, wspace=0.62)
     gtop = gs[0, :].subgridspec(1, 2, wspace=0.06)
