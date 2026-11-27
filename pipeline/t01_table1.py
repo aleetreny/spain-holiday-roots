@@ -191,7 +191,7 @@ NOTE_FULL = (
     "best-connected zones are all linked to one another (Zhou & Mondragón 2007). Tail fit: Clauset–Shalizi–Newman likelihood-ratio test; "
     "'tie' means p ≥ 0.05. † The change from the ordinary night does not keep its direction in every pair of "
     "sister nights (117 summer pairs, 39 All Saints pairs). 1 Nov is the quietest of its three sister nights. "
-    "Source of every cell: results/t01_table1.csv."
+    ""
 )
 NOTE_MAIN = (
     "Undirected networks of 2,435 zones, one per night of 2024; median degrees and reciprocity use the "
@@ -214,7 +214,7 @@ MAIN_ROWS = [
     ("Rich club φ, top 50 zones (rewired)", "Rich club φ, top 50 (rewired)", True),
     ("Rich-club clique size (rewired)", "Rich-club clique n_clique", False),
     ("Average path length ℓ (rewired / ER)", "Average path length ℓ", False),
-    ("ℓ* = ln N / ln⟨k⟩", "Expected in a random graph ℓ*", True),
+    ("ℓ* = ln N / ln⟨k⟩", "Random-graph estimate ℓ* = ln N / ln⟨k⟩", True),
     ("Clustering ⟨C⟩ (rewired / ER)", "Clustering ⟨C⟩ (rewired / random)", True),
 ]
 

@@ -13,7 +13,7 @@
 | Rich club φ, top 50 (rewired) | 0.80 (0.66) | 0.96 (0.92) | 0.91 (0.81) |
 | Rich-club clique n_clique | 17 | 17† | 22 |
 | Average path length ℓ | 2.44 | 2.00 | 2.16 |
-| Expected in a random graph ℓ* | 2.53 | 1.76 | 2.11 |
+| Random-graph estimate ℓ* = ln N / ln⟨k⟩ | 2.53 | 1.76 | 2.11 |
 | Clustering ⟨C⟩ (rewired / random) | 0.554 (0.247 / 0.009) | 0.546† (0.387 / 0.034) | 0.593 (0.298 / 0.016) |
 
 Undirected networks of 2,435 zones, one per night of 2024; median degrees and reciprocity use the directed links. In brackets: mean of 50 degree-preserving rewirings (for clustering, also 50 Erdős–Rényi graphs). † The direction of the change is not the same on every pair of sister nights. Definitions and the full version: Table A1.
