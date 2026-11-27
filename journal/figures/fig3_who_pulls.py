@@ -7,8 +7,8 @@ from matplotlib.lines import Line2D
 import pandas as pd
 
 from style import (
-    A, A2, B, COAST, EXODUS, HERE, INLAND, NEUTRAL, OUT, RECENT,
-    figure, forest, interval, panel, read, save,
+    A, A2, B, COAST, EXODUS, HERE, INLAND, MARK, NEUTRAL, OUT, RECENT, TEXT,
+    decimals, figure, forest, interval, panel, place, read, save,
 )
 
 GROUPS = {
@@ -18,6 +18,7 @@ GROUPS = {
     "urban": ("Birthplace > 10,000", RECENT),
     "S6": ("Pre-1981 minus recent", NEUTRAL),
 }
+LEFT, RIGHT = 2.0, 92.0   # mm: panel-letter columns
 BASELINES = {"Aug15_vs_Feb14": ("o", -.16, "13–14 February"),
              "Aug15_vs_OctMean12": ("s", .16, "October weekdays")}
 
@@ -44,22 +45,22 @@ def cohort_data():
 
 
 def draw_cohorts(ax, data):
-    panel(ax, "a", "Arrival cohort and birthplace size", x=-.61)
+    panel(ax, "a", "Arrival cohort and birthplace size", at=LEFT)
     forest(ax, [pair[0] for pair in GROUPS.values()], (-.087, .166), [-.05, 0, .05, .10, .15])
     for row in data.itertuples():
         i = list(GROUPS).index(row.hypothesis)
         filled = row.period != "2025"
         interval(ax, i + (-.16 if filled else .16), row.est, row.ci_lo, row.ci_hi,
                  color=GROUPS[row.hypothesis][1], filled=filled)
-    ax.set_xlabel("August vs ordinary nights")
+    ax.set_xlabel("Change in roots elasticity\nAugust vs ordinary nights")
     ax.legend(handles=[
-        Line2D([], [], ls="", marker="o", color=NEUTRAL, label="2022–24 confirmation"),
-        Line2D([], [], ls="", marker="o", mfc="white", color=NEUTRAL, label="2025 hold-out"),
-    ], loc="upper center", bbox_to_anchor=(.32, -1.165), ncol=2, columnspacing=1, handletextpad=.25)
+        Line2D([], [], ls="", marker="o", ms=MARK, color=NEUTRAL, label="2022–24 confirmation"),
+        Line2D([], [], ls="", marker="o", ms=MARK, mfc="white", color=NEUTRAL, label="2025 hold-out"),
+    ], loc="upper center", bbox_to_anchor=(.5, -.33), ncol=2)
 
 
 def draw_destinations(ax, data):
-    panel(ax, "b", "By destination type in 2024", x=-.41)
+    panel(ax, "b", "By destination type in 2024", at=RIGHT)
     kinds = {"all": ("All", NEUTRAL), "inland": ("Inland", INLAND),
              "coastal": ("Coastal", COAST), "common_19_provs": ("Inland − coastal", NEUTRAL)}
     group_names = ["pre1981", "born_village_le2k"]
@@ -69,27 +70,24 @@ def draw_destinations(ax, data):
     ax.set_yticks(positions, [kinds[kind][0] for _, kind in rows])
     ax.set_ylim(8.36, -1.10)
     for pos, text in [(-.76, "Arrived before 1981"), (4.03, "Birthplace ≤ 2,000")]:
-        ax.text(-.092, pos, text, ha="right", va="center", weight="bold", fontsize=7)
+        ax.annotate(text, (0, pos), xycoords=("axes fraction", "data"), xytext=(-2, 0),
+                    textcoords="offset points", ha="right", va="center", weight="bold", fontsize=TEXT)
     for row in data.itertuples():
         y = positions[rows.index((row.group, row.dest_type))]
         marker, shift, _ = BASELINES[row.baseline]
         interval(ax, y + shift, row.point, row.ci_lo, row.ci_hi,
                  color=kinds[row.dest_type][1], marker=marker)
-    ax.set_xlabel("August vs February or October")
-    ax.legend(handles=[
-        Line2D([], [], ls="", marker=shape, color=NEUTRAL, label=label)
-        for shape, _, label in BASELINES.values()
-    ], loc="upper center", bbox_to_anchor=(.31, -.17), ncol=2, columnspacing=1, handletextpad=.25)
+    ax.set_xlabel("Change in roots elasticity\nAugust vs February or October")
 
 
 def draw_age(ax, data):
-    panel(ax, "c", "Within-age arrival gap", x=-.61)
+    panel(ax, "c", "Within-age arrival gap", at=LEFT)
     forest(ax, ["Aged 43–64", "Aged 65+"], (-.087, .166), [-.05, 0, .05, .10, .15])
     for row in data.itertuples():
         marker, shift, _ = BASELINES[row.contrast]
         position = 0 if row.term.startswith("within_43_64") else 1
         interval(ax, position + shift, row.delta, row.ci_wcr_lo, row.ci_wcr_hi, marker=marker)
-    ax.set_xlabel("August vs February or October")
+    ax.set_xlabel("Change in roots elasticity\nAugust vs February or October")
 
 
 def main():
@@ -104,11 +102,15 @@ def main():
         "spec == 'A2_age_matched_binary_43_64_and_65plus' and sample == 'all' and is_within_band_diff"
     )
     assert (len(cohorts), len(destinations), len(age)) == (10, 16, 4)
-    fig = figure(110)
-    draw_cohorts(fig.add_axes([.196, .533, .282, .357]), cohorts)
-    draw_destinations(fig.add_axes([.646, .23, .324, .66]), destinations)
-    draw_age(fig.add_axes([.196, .23, .282, .148]), age)
-    fig.text(.5, .042, "Change in roots elasticity", ha="center", fontsize=8, weight="bold")
+    fig = figure(119)
+    draw_cohorts(place(fig, 40, 10, 46, 44), cohorts)
+    draw_destinations(place(fig, 122, 10, 46, 86), destinations)
+    draw_age(place(fig, 40, 80, 46, 16), age)
+    for ax in fig.axes:
+        ax.xaxis.set_major_formatter(decimals(2))
+    fig.legend(handles=[Line2D([], [], ls="", marker=shape, ms=MARK, color=NEUTRAL, label=label)
+                        for shape, _, label in BASELINES.values()],
+               loc="upper center", bbox_to_anchor=(.5, 1 - 111.5 / 119), ncol=2)
     save(fig, 3, cohorts.assign(panel="a"), destinations.assign(panel="b"), age.assign(panel="c"))
 
 

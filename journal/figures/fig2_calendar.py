@@ -2,14 +2,18 @@
 
 import numpy as np
 import pandas as pd
+from matplotlib import patheffects
+from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
 
 from fig1_design import HOLIDAYS
 from style import (
-    A, A2, BAND, EXODUS, MUTED, NEUTRAL, ORDINARY, RECENT,
-    across_years, figure, interval, panel, read, reference, save,
+    A, A2, BAND, EXODUS, GRID, INK, LABEL, MARK, NEUTRAL, ORDINARY, RECENT, SMALL, TEXT,
+    across_years, decimals, figure, interval, panel, place, read, reference, save,
 )
 
 BRIDGE = pd.Timestamp("2025-07-01")
+HALO = [patheffects.withStroke(linewidth=2.2, foreground="white")]
 
 
 def nightly(name):
@@ -20,64 +24,74 @@ def nightly(name):
     return data.sort_values("date")
 
 
+LEFT, AX_LEFT, AX_WIDTH = 2.0, 20.0, 138.0   # mm
+ROW_TOP, ROW_HEIGHT, ROW_GAP = 11.0, 16.0, 3.2
+
+
+def title_legend(ax, handles, ncol):
+    """Key on the panel-title baseline, right-aligned with the axes."""
+    ax.legend(handles=handles, loc="lower right", bbox_to_anchor=(1, 1), ncol=ncol,
+              borderaxespad=.55, handlelength=1.2, columnspacing=1.1)
+
+
 def pooled_calendar(fig, data):
     means = []
     labelled = set()
+    starts = pd.date_range("2024-01-01", periods=12, freq="MS")
     for i, (year, rows) in enumerate(data.groupby("year")):
-        ax = fig.add_axes([.122, .807 - i * .094, .846, .084])
+        ax = place(fig, AX_LEFT, ROW_TOP + i * (ROW_HEIGHT + ROW_GAP), AX_WIDTH, ROW_HEIGHT)
         plot = rows.set_index("calendar_day").reindex(range(366))
         x = plot.index
-        ax.fill_between(x, plot.ci_lo, plot.ci_hi, color=BAND, alpha=.72, lw=0)
+        ax.fill_between(x, plot.ci_lo, plot.ci_hi, color=BAND, alpha=.8, lw=0)
         changing = plot.klass.ne("O")
-        ax.plot(x, plot.beta.where(changing), color=NEUTRAL, lw=.78)
+        ax.plot(x, plot.beta.where(changing), color=NEUTRAL, lw=.75)
         ordinary = rows.query("klass == 'O'")
         ax.plot(ordinary.calendar_day, ordinary.beta, linestyle="none", marker="o",
-                ms=3.5, mfc="white" if year == 2025 else ORDINARY, mec=ORDINARY, mew=.55)
+                ms=SMALL, mfc="white" if year == 2025 else ORDINARY, mec=ORDINARY, mew=.55)
         avg = ordinary.beta.mean()
         means.append({"year": year, "ordinary_mean": avg, "n_ordinary": len(ordinary)})
         reference(ax, avg)
         aug = rows.query("klass == 'AUG'")
-        ax.plot(aug.calendar_day, aug.beta, linestyle="none", marker="o", ms=3.6,
-                mec=NEUTRAL, mew=.7, mfc="white" if year == 2025 else NEUTRAL)
+        ax.plot(aug.calendar_day, aug.beta, linestyle="none", marker="o", ms=MARK,
+                mec=INK, mew=.7, mfc="white" if year == 2025 else INK, zorder=5)
         for klass, (mark, label) in HOLIDAYS.items():
             holidays = rows.loc[rows.klass.eq(klass)]
-            ax.plot(holidays.calendar_day, holidays.beta, marker=mark, ms=4.0,
-                    linestyle="none", mec=NEUTRAL, mew=.7,
-                    mfc="white" if year == 2025 else NEUTRAL, zorder=5)
+            ax.plot(holidays.calendar_day, holidays.beta, marker=mark, ms=MARK,
+                    linestyle="none", mec=INK, mew=.7,
+                    mfc="white" if year == 2025 else INK, zorder=5)
             if len(holidays) and klass not in labelled:
                 anchor = holidays.iloc[0]
-                offsets = {"EASTER": (5, 6), "ALLSAINTS": (-4, 7), "XMAS": (-6, 7)}
-                dx, dy = offsets[klass]
-                ax.annotate(label, (anchor.calendar_day, anchor.beta),
-                            xytext=(dx, dy), textcoords="offset points",
-                            ha="right" if dx < 0 else "left", fontsize=7, zorder=6,
-                            bbox={"fc": "white", "ec": "none", "alpha": .9, "pad": .6})
+                ax.annotate(label, (anchor.calendar_day, anchor.beta), xytext=(0, 6),
+                            textcoords="offset points", ha="center", va="bottom",
+                            fontsize=TEXT, zorder=6, path_effects=HALO)
                 labelled.add(klass)
-        ax.set(xlim=(0, 365), ylim=(.27, .96), yticks=[.4, .7])
-        ax.text(-.045, .53, str(year), transform=ax.transAxes, ha="right", va="center", fontsize=7)
-        ax.tick_params(axis="y", pad=2)
-        # Place the year outside the tick labels.
-        ax.yaxis.set_ticks_position("right")
-        ax.tick_params(axis="y", labelright=False, right=False)
-        ax.text(1.008, (.4 - .27) / (.96 - .27), "0.4", transform=ax.transAxes, va="center", fontsize=7)
-        ax.text(1.008, (.7 - .27) / (.96 - .27), "0.7", transform=ax.transAxes, va="center", fontsize=7)
-        ax.spines["left"].set_visible(False)
+        ax.set(xlim=(0, 366), ylim=(.27, .9), yticks=[.4, .6, .8])
+        ax.yaxis.set_major_formatter(decimals(1))
+        ax.text(1.012, .5, str(year), transform=ax.transAxes, ha="left", va="center",
+                fontsize=LABEL, weight="bold")
+        ax.set_xticks(starts.day_of_year - 1, starts.strftime("%b") if year == 2025 else [])
+        ax.tick_params(axis="x", length=2 if year == 2025 else 0)
         if year == 2025:
             ax.axvline(182, color=NEUTRAL, linestyle=":", lw=.75)
-            ax.text(185, .91, "1 July: new method", va="top", fontsize=7)
-            starts = pd.date_range("2024-01-01", periods=12, freq="MS")
-            ax.set_xticks(starts.day_of_year - 1, starts.strftime("%b"))
-        else:
-            ax.set_xticks([])
+            ax.text(185, .86, "1 July 2025: new MITMA method", va="top", fontsize=TEXT,
+                    path_effects=HALO)
         if i == 0:
-            panel(ax, "a", x=-.125, y=1.13)
-            ax.text(0, 1.16, "Nightly roots elasticity", transform=ax.transAxes,
-                    fontsize=8.5, va="bottom")
+            panel(ax, "a", "Nightly roots elasticity", at=LEFT)
+            title_legend(ax, [
+                Line2D([], [], ls="", marker="o", ms=SMALL, mfc=ORDINARY, mec=ORDINARY, label="Ordinary night"),
+                Line2D([], [], ls="", marker="o", ms=MARK, color=INK, label="August window"),
+                Line2D([], [], color=NEUTRAL, lw=.75, label="Other nights"),
+                Patch(color=BAND, label="95% CI"),
+            ], ncol=4)
+        if i == 1:
+            first = ax
+    fig.text(7 / 170, (first.get_position().y0 + first.get_position().y1) / 2 - .5 * (ROW_HEIGHT + ROW_GAP) / fig.get_figheight() / 25.4,
+             "Roots elasticity", rotation=90, ha="center", va="center", fontsize=LABEL)
     return pd.DataFrame(means).assign(panel="a", series="ordinary reference")
 
 
 def august_test(ax):
-    panel(ax, "b", "August premium and ordinary-night placebos", x=-.125)
+    panel(ax, "b", "August premium and ordinary-night placebos", at=LEFT)
     confirmed = read(A, "preregistered_tests").query("hypothesis == 'P1' and split == 'confirmation_O'")
     holdout = read(A2, "preregistered_tests").query("hypothesis == 'P1'")
     tests = pd.concat([confirmed, holdout], ignore_index=True)
@@ -94,51 +108,65 @@ def august_test(ax):
     rng = np.random.default_rng(20261124)
     placebos["jittered_x"] = placebos.x + rng.uniform(-.15, .15, len(placebos))
     ax.plot(placebos.jittered_x, placebos.delta_P1, linestyle="none", marker="o",
-            color=ORDINARY, alpha=.61, ms=3.5, mew=0)
+            color=ORDINARY, alpha=.7, ms=SMALL, mew=0)
     for row in tests.itertuples():
-        interval(ax, row.x, row.est, row.lo, row.hi, horizontal=False, filled=row.label != "2025")
+        interval(ax, row.x, row.est, row.lo, row.hi, horizontal=False, filled=row.label != "2025",
+                 color=INK)
         annual = placebos.loc[placebos.year.astype(str).eq(row.label), "delta_P1"]
         assert annual.empty or row.est > annual.max()
     reference(ax)
+    ax.axvline(2.575, color=GRID, lw=.6, zorder=0)
     ax.set(xlim=(-.42, 4.72), ylim=(min(-.09, placebos.delta_P1.min() - .01), .25),
-           yticks=[-.05, .05, .15, .25])
-    ax.set_ylabel("Change in roots elasticity\nAugust vs ordinary nights", fontsize=7.2)
-    ax.yaxis.set_label_coords(-.085, .46)
+           yticks=[-.05, 0, .05, .10, .15, .20, .25])
+    ax.yaxis.set_major_formatter(decimals(2))
+    ax.set_ylabel("Change in roots elasticity")
+    ax.yaxis.set_label_coords(-13 / AX_WIDTH, .5)
     ax.set_xticks(list(positions.values()), ["2022", "2023", "2024", "Pooled 2022–24", "2025 hold-out"])
-    ax.text(2.76, -.047, "Grey dots: ordinary-night placebos", fontsize=7, color=MUTED)
+    ax.tick_params(axis="x", length=0, pad=4)
+    title_legend(ax, [
+        Line2D([], [], ls="", marker="o", ms=MARK, color=INK, label="August vs ordinary, 2022–24"),
+        Line2D([], [], ls="", marker="o", ms=MARK, mfc="white", mec=INK, label="2025 hold-out"),
+        Line2D([], [], ls="", marker="o", ms=SMALL, color=ORDINARY, label="Ordinary-night placebo"),
+    ], ncol=3)
     return tests.assign(panel="b", series="August contrast"), placebos.assign(panel="b", series="placebo")
 
 
 def cohort_calendar(ax, data):
-    panel(ax, "c", "Roots elasticity by arrival cohort", x=-.125)
+    panel(ax, "c", "Roots elasticity by arrival cohort", at=LEFT)
     spans = []
     for year in range(2022, 2026):
         spans.extend([(f"{year}-08-10", f"{year}-08-19", "August window"),
                       (f"{year - 1}-12-25", f"{year}-01-07", "Christmas to Epiphany")])
     spans = pd.DataFrame(spans, columns=["start", "end", "series"])
     for row in spans.itertuples():
-        ax.axvspan(pd.Timestamp(row.start), pd.Timestamp(row.end), facecolor=BAND, alpha=.55, lw=0)
+        ax.axvspan(pd.Timestamp(row.start), pd.Timestamp(row.end), facecolor=BAND, lw=0, zorder=0)
     groups = {"pre1981": (EXODUS, "Arrived before 1981"),
               "recent_2016_2023": (RECENT, "Arrived 2016–2023")}
-    for i, (term, (colour, label)) in enumerate(groups.items()):
+    for term, (colour, label) in groups.items():
         rows = data.loc[data.term.eq(term)]
         train = rows.loc[rows.year.lt(2025)]
         holdout = rows.loc[rows.year.eq(2025)]
         ax.plot(train.date, train.beta, linestyle="none", marker="o",
-                color=colour, alpha=.14, ms=3.5, mew=0)
-        ax.plot(holdout.date, holdout.beta, linestyle="none", marker="o", ms=3.5,
-                mfc="none", mec=colour, mew=.5, alpha=.32)
+                color=colour, alpha=.16, ms=SMALL, mew=0)
+        ax.plot(holdout.date, holdout.beta, linestyle="none", marker="o", ms=SMALL,
+                mfc="none", mec=colour, mew=.5, alpha=.35)
         for _, segment in rows.groupby("segment"):
-            ax.plot(segment.date, segment.rolling_median, color=colour, lw=.85)
-        x = .44 + i * .26
-        ax.plot([x, x + .035], [1.14] * 2, color=colour, transform=ax.transAxes, clip_on=False)
-        ax.text(x + .049, 1.14, label, transform=ax.transAxes, va="center", fontsize=7)
+            ax.plot(segment.date, segment.rolling_median, color=colour, lw=1.0)
+    title_legend(ax, [Line2D([], [], color=c, lw=1.0, label=l) for c, l in groups.values()]
+                 + [Patch(color=BAND, label="August window; Christmas–Epiphany")], ncol=3)
     ax.axvline(BRIDGE, color=NEUTRAL, linestyle=":", lw=.75)
+    ax.text(BRIDGE + pd.Timedelta(days=6), .315, "New method", va="top", fontsize=TEXT,
+            path_effects=HALO)
     ax.set_xlim(pd.Timestamp("2022-01-01"), pd.Timestamp("2026-01-01"))
-    ax.set_ylim(-.03, .33)
+    ax.set_ylim(-.01, .33)
     ax.set_yticks([0, .1, .2, .3])
-    ax.set_xticks(pd.to_datetime([f"{y}-01-01" for y in range(2022, 2026)]),
-                  ["2022", "2023", "2024", "2025"])
+    ax.yaxis.set_major_formatter(decimals(1))
+    ax.set_ylabel("Cohort term")
+    ax.yaxis.set_label_coords(-13 / AX_WIDTH, .5)
+    ax.set_xticks(pd.to_datetime([f"{y}-01-01" for y in range(2022, 2027)]),
+                  ["2022", "2023", "2024", "2025", "2026"])
+    ax.set_xticks(pd.to_datetime([f"{y}-07-01" for y in range(2022, 2026)]), minor=True)
+    ax.tick_params(axis="x", which="minor", length=1.5, width=.5)
     return spans.assign(panel="c")
 
 
@@ -153,11 +181,10 @@ def main():
             lambda series: series.rolling(7, center=True, min_periods=7).median()
         )
 
-    fig = figure(150)
+    fig = figure(182)
     refs = pooled_calendar(fig, pooled)
-    contrasts, placebos = august_test(fig.add_axes([.122, .258, .846, .179]))
-    ax = fig.add_axes([.122, .062, .846, .125])
-    spans = cohort_calendar(ax, cohorts)
+    contrasts, placebos = august_test(place(fig, AX_LEFT, 101, AX_WIDTH, 34))
+    spans = cohort_calendar(place(fig, AX_LEFT, 150, AX_WIDTH, 24), cohorts)
     save(fig, 2, pooled.assign(panel="a", series="nightly pooled"), refs, contrasts, placebos,
          cohorts.assign(panel="c", series="nightly cohort"), spans)
 

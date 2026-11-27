@@ -27,23 +27,37 @@ INLAND, COAST = "#c0623b", "#2b6f9e"
 EXODUS, RECENT = "#7b3fa0", "#0f8f7a"
 SENDER, MAP_ZERO, RECEIVER = "#7b3fa0", "#efefef", "#1b7837"
 ORDINARY, BAND, GRID = "#bdbdbd", "#e6e6e6", "#ececec"
+MARK = 4.0         # point-estimate marker size (pt)
+SMALL = 3.5        # background/observation marker size (pt)
+
+# Type scale (pt) used by every figure: ticks, annotations and legends; axis labels;
+# panel titles; panel letters.
+TEXT, LABEL, TITLE, LETTER = 7, 7.5, 8.5, 10
+MM = 1 / 25.4
+LETTER_GAP = 4.2   # mm from a panel letter to its title
+TITLE_RISE = 3.2   # mm from the axes top to the letter/title baseline
 
 FONTS = Path("/System/Library/Fonts/Supplemental")
-for name in ("Arial.ttf", "Arial Bold.ttf"):
+for name in ("Arial.ttf", "Arial Bold.ttf", "Arial Italic.ttf"):
     font_manager.fontManager.addfont(FONTS / name)
 mpl.rcParams.update({
-    "font.family": "Arial", "font.size": 8, "pdf.fonttype": 42,
-    "axes.titlesize": 8.5, "axes.labelsize": 8, "axes.linewidth": 0.5,
+    "font.family": "Arial", "font.size": TEXT, "pdf.fonttype": 42,
+    "axes.titlesize": TITLE, "axes.labelsize": LABEL, "axes.linewidth": 0.5,
     "axes.spines.top": False, "axes.spines.right": False,
     "axes.grid": True, "axes.grid.axis": "y", "axes.axisbelow": True,
     "grid.color": GRID, "grid.linewidth": 0.5,
-    "xtick.labelsize": 7, "ytick.labelsize": 7,
+    "xtick.labelsize": TEXT, "ytick.labelsize": TEXT,
+    "xtick.major.pad": 2.5, "ytick.major.pad": 2.5, "axes.labelpad": 3,
     "xtick.major.width": 0.5, "ytick.major.width": 0.5,
     "xtick.major.size": 2.5, "ytick.major.size": 2.5,
     "xtick.color": INK, "ytick.color": INK, "axes.labelcolor": INK,
     "axes.edgecolor": NEUTRAL, "text.color": INK,
     "lines.linewidth": 0.85, "lines.markersize": 3.8,
-    "legend.fontsize": 7, "legend.frameon": False,
+    "legend.fontsize": TEXT, "legend.frameon": False, "legend.handletextpad": .35,
+    "legend.columnspacing": 1.4, "legend.handlelength": 1.4, "legend.borderaxespad": 0,
+    "legend.borderpad": 0,
+    "mathtext.fontset": "custom", "mathtext.rm": "Arial", "mathtext.it": "Arial:italic",
+    "mathtext.bf": "Arial:bold",
     "savefig.dpi": 300, "figure.facecolor": "white", "savefig.facecolor": "white",
 })
 
@@ -57,14 +71,34 @@ def across_years(name):
 
 
 def figure(height, width=170):
-    return plt.figure(figsize=(width / 25.4, height / 25.4))
+    return plt.figure(figsize=(width * MM, height * MM))
 
 
-def panel(ax, letter, title=None, x=-0.045, y=1.03):
-    ax.text(x, y, letter, transform=ax.transAxes, fontsize=10, fontweight="bold",
-            va="bottom", ha="left")
+def place(fig, left, top, width, height, **kwargs):
+    """Add axes from millimetres measured from the figure's top-left corner."""
+    W, H = fig.get_figwidth() / MM, fig.get_figheight() / MM
+    return fig.add_axes([left / W, 1 - (top + height) / H, width / W, height / H], **kwargs)
+
+
+def panel(ax, letter, title=None, *, at, rise=TITLE_RISE):
+    """Panel letter at `at` mm from the figure's left edge and the title beside it.
+
+    Both sit on one baseline `rise` mm above the axes top, so every panel letter in a
+    column shares its x position and every panel in a row shares its baseline.
+    """
+    fig = ax.figure
+    x = at / (fig.get_figwidth() / MM)
+    kwargs = dict(xycoords=(fig.transFigure, ax.transAxes), textcoords="offset points",
+                  va="baseline", ha="left", annotation_clip=False)
+    ax.annotate(letter, (x, 1), xytext=(0, rise * 72 * MM),
+                fontsize=LETTER, fontweight="bold", **kwargs)
     if title:
-        ax.set_title(title, loc="left", pad=6)
+        ax.annotate(title, (x, 1), xytext=(LETTER_GAP * 72 * MM, rise * 72 * MM),
+                    fontsize=TITLE, **kwargs)
+
+
+def legend(ax, handles, *, loc="upper left", anchor=(0, 1), ncol=1, **kwargs):
+    return ax.legend(handles=handles, loc=loc, bbox_to_anchor=anchor, ncol=ncol, **kwargs)
 
 
 def reference(ax, value=0, *, vertical=False):
@@ -73,7 +107,7 @@ def reference(ax, value=0, *, vertical=False):
 
 
 def interval(ax, position, point, lo, hi, *, horizontal=True, color=NEUTRAL,
-             marker="o", filled=True, size=4.2):
+             marker="o", filled=True, size=MARK):
     if horizontal:
         ax.hlines(position, lo, hi, color=color, lw=0.85, zorder=3)
         x, y = point, position
@@ -130,3 +164,9 @@ def map_geometry():
 def map_axes(ax):
     ax.set(xlim=(-30_000, 1_150_000), ylim=(3_960_000, 4_880_000), aspect="equal")
     ax.set_axis_off()
+
+
+def decimals(n):
+    """Tick formatter with a fixed number of decimals and a true minus sign."""
+    from matplotlib.ticker import FuncFormatter
+    return FuncFormatter(lambda value, _: f"{value:.{n}f}".replace("-", "−"))

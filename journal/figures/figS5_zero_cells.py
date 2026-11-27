@@ -2,7 +2,9 @@
 
 from matplotlib.lines import Line2D
 
-from style import B, EXODUS, NEUTRAL, RECENT, figure, forest, interval, panel, read, save
+from style import (
+    B, EXODUS, MARK, NEUTRAL, RECENT, decimals, figure, forest, interval, panel, place, read, save,
+)
 
 RULES = {
     "haldane_0.5_main": "Add 0.5 to count",
@@ -25,26 +27,26 @@ BASELINES = {"Aug15_vs_Feb14": ("o", -.15, "13–14 February"),
 
 def main():
     data = read(B, "b5_zero_cells_common_scale").query("sample == 'all' and term in @TERMS and not model.str.contains('complete')").copy()
-    fig = figure(121)
+    fig = figure(116)
     estimate = "pct_flow_1sd_rawshare_fw"
     extrema = min(data[f"{estimate}_ci_lo"]), max(data[f"{estimate}_ci_hi"])
     for i, (term, (title, colour)) in enumerate(TERMS.items()):
         x, y = i % 2, i // 2
-        ax = fig.add_axes([.245 + x * .39, .554 - y * .418, .341, .324])
-        panel(ax, "abcd"[i], title, x=-.65 if x == 0 else -.105)
-        forest(ax, list(RULES.values()) if x == 0 else [""] * len(RULES),
-               (extrema[0] - 1, extrema[1] + 1), [-10, 0, 10, 20])
+        ax = place(fig, 42 + x * 84, 10 + y * 47, 40, 34)
+        panel(ax, "abcd"[i], title, at=2 + x * 84)
+        forest(ax, list(RULES.values()), (extrema[0] - 1, extrema[1] + 1), [-10, 0, 10, 20])
+        ax.xaxis.set_major_formatter(decimals(0))
+        if y == 1:
+            ax.set_xlabel("August change in predicted flow (%)\nper one-SD rise in raw birth share")
         rows = data.loc[data.term.eq(term)].set_index(["rule", "contrast"])
         for j, rule in enumerate(RULES):
             for contrast, (marker, shift, _) in BASELINES.items():
                 row = rows.loc[(rule, contrast)]
                 interval(ax, j + shift, row[estimate], row[f"{estimate}_ci_lo"], row[f"{estimate}_ci_hi"],
-                         color=colour, marker=marker, size=3.8)
-    fig.text(.56, .072, "August change in predicted flow (%) for a one-SD rise in raw birth share",
-             ha="center", fontsize=8)
-    fig.legend(handles=[Line2D([], [], ls="", marker=mark, color=NEUTRAL, label=label)
+                         color=colour, marker=marker)
+    fig.legend(handles=[Line2D([], [], ls="", marker=mark, ms=MARK, color=NEUTRAL, label=label)
                         for mark, _, label in BASELINES.values()],
-               loc="lower center", bbox_to_anchor=(.56, .014), ncol=2)
+               loc="upper center", bbox_to_anchor=(.5, 1 - 110 / 116), ncol=2)
     save(fig, "S5", data.assign(panel=data.term.map(dict(zip(TERMS, "abcd")))))
 
 

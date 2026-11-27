@@ -3,17 +3,19 @@
 import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq
-from matplotlib import cm
+from matplotlib import cm, patheffects
+from matplotlib.patches import Patch
 from matplotlib.lines import Line2D
 from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 from matplotlib.patches import FancyArrowPatch
 from matplotlib.ticker import PercentFormatter
 
 from style import (
-    A, C, HEAVY, MAP_ZERO, MUTED, NEUTRAL, ORDINARY, RECEIVER, SENDER,
-    across_years, figure, map_axes, map_geometry, nodes, panel, read, save,
+    A, C, HEAVY, INK, LABEL, MAP_ZERO, MUTED, NEUTRAL, ORDINARY, RECEIVER, SENDER, SMALL, TEXT,
+    across_years, figure, map_axes, map_geometry, nodes, panel, place, read, save,
 )
 
+TICKS = {"O": "#a8a8a8", "AUG": INK, "other": "#e4e4e4"}
 HOLIDAYS = {"EASTER": ("D", "Good Friday"), "ALLSAINTS": ("s", "All Saints"),
             "XMAS": ("^", "Christmas Eve")}
 
@@ -52,93 +54,133 @@ def map_data(manifest, provinces):
     return balance, corridors
 
 
+HALO = [patheffects.withStroke(linewidth=2.2, foreground="white")]
+LEFT, RIGHT = 2.0, 108.0      # mm: panel-letter columns
+
+
+def arrow_width(excess, max_flow):
+    return 2.4 * excess / max_flow
+
+
 def draw_map(fig, ax, balance, corridors, provinces):
-    panel(ax, "a", x=-.02, y=1.015)
-    ax.text(.032, 1.026, "Overnight balance and excess August flows",
-            fontsize=8.5, transform=ax.transAxes, va="bottom")
+    panel(ax, "a", "Overnight balance and excess August flows", at=LEFT)
     cmap = LinearSegmentedColormap.from_list("balance", [SENDER, MAP_ZERO, RECEIVER])
     magnitude = np.ceil(balance.net_per_resident.abs().max() * 10) / 10
     norm = TwoSlopeNorm(vmin=-magnitude, vcenter=0, vmax=magnitude)
     provinces.join(balance).plot(ax=ax, column="net_per_resident", cmap=cmap, norm=norm,
-                                edgecolor=ORDINARY, linewidth=0.35)
+                                edgecolor="white", linewidth=0.45)
     map_axes(ax)
     max_flow = corridors.excess_persons.max()
     for row in corridors.sort_values("excess_persons").itertuples():
-        arrow = FancyArrowPatch((row.x, row.y), (row.dest_x, row.dest_y),
-                                connectionstyle="arc3,rad=0.18", arrowstyle="-|>",
-                                mutation_scale=5, linewidth=1.65 * row.excess_persons / max_flow,
-                                color=NEUTRAL, alpha=0.78, shrinkA=1, shrinkB=1, zorder=3)
-        ax.add_patch(arrow)
-
-    offsets = {"Madrid": (-5, 6), "Barcelona": (-9, 7), "València": (5, -6),
-               "Valencia": (5, -6), "Sevilla": (-3, -8), "Zaragoza": (-5, 6),
-               "Bilbao": (-4, 6)}
-    labels = (corridors.groupby("name").excess_persons.sum().nlargest(3).index)
+        width = arrow_width(row.excess_persons, max_flow)
+        ax.add_patch(FancyArrowPatch(
+            (row.x, row.y), (row.dest_x, row.dest_y), connectionstyle="arc3,rad=0.18",
+            arrowstyle="-|>,head_length=0.55,head_width=0.32", mutation_scale=3 + 1.5 * width,
+            linewidth=width, color=INK, shrinkA=2, shrinkB=1, zorder=3, joinstyle="miter",
+            path_effects=[patheffects.withStroke(linewidth=width + 1.3, foreground="white"),
+                          patheffects.Normal()],
+        ))
+    offsets = {"Madrid": (6, 5, "left"), "Barcelona": (-5, 6, "right"), "Sevilla": (-5, -6, "right"),
+               "Valencia": (6, 0, "left"), "València": (6, 0, "left")}
+    labels = corridors.groupby("name").excess_persons.sum().nlargest(3).index
     for row in corridors.drop_duplicates("name").query("name in @labels").itertuples():
-        dx, dy = offsets.get(row.name, (4, 4))
-        ax.plot(row.x, row.y, "o", color=NEUTRAL, ms=3.6, zorder=4)
+        dx, dy, ha = offsets.get(row.name, (5, 5, "left"))
+        ax.plot(row.x, row.y, "o", color=INK, ms=4.2, mec="white", mew=.7, zorder=6)
         ax.annotate(row.name, (row.x, row.y), xytext=(dx, dy), textcoords="offset points",
-                    ha="right" if dx < 0 else "left", va="center", fontsize=7, zorder=5,
-                    bbox={"fc": "white", "ec": "none", "alpha": .87, "pad": .65})
-    ax.plot([4_000, 204_000], [4_023_000] * 2, color=NEUTRAL, lw=0.85)
-    ax.text(104_000, 3_997_000, "200 km", ha="center", va="top", fontsize=7)
+                    ha=ha, va="center", fontsize=TEXT, zorder=7, path_effects=HALO)
+    ax.plot([20_000, 220_000], [4_000_000] * 2, color=NEUTRAL, lw=0.85, solid_capstyle="butt")
+    ax.text(120_000, 4_012_000, "200 km", ha="center", va="bottom", fontsize=TEXT)
+    return cmap, norm, magnitude, max_flow
 
-    cax = fig.add_axes([.106, .135, .36, .018])
+
+def map_keys(fig, cmap, norm, magnitude, max_flow):
+    """Colour bar and arrow-width key on one row below the map."""
+    cax = place(fig, 8, 93, 42, 2.2)
     colorbar = fig.colorbar(
-        cm.ScalarMappable(norm=norm, cmap=cmap), cax=cax,
-        orientation="horizontal", ticks=[-magnitude, 0, magnitude], format=PercentFormatter(1),
+        cm.ScalarMappable(norm=norm, cmap=cmap), cax=cax, orientation="horizontal",
+        ticks=np.linspace(-magnitude, magnitude, 5), format=PercentFormatter(1, decimals=0),
     )
     colorbar.solids.set_rasterized(False)
-    cax.set_xlabel("Net overnight balance per resident")
-    fig.text(.285, .034, "Arrows show the 12 largest excess flows", ha="center", fontsize=7)
+    colorbar.outline.set_linewidth(.4)
+    cax.tick_params(length=2, width=.5)
+    cax.set_title("Net overnight balance per resident", fontsize=TEXT, pad=3, loc="left")
+    key = place(fig, 60, 93, 40, 6.5)
+    key.set(xlim=(0, 1), ylim=(0, 1))
+    key.set_axis_off()
+    key.set_title("Excess people per night", fontsize=TEXT, pad=3, loc="left")
+    for x, value in ((0, 40_000), (.5, 80_000)):
+        width = arrow_width(value, max_flow)
+        key.add_patch(FancyArrowPatch(
+            (x, .72), (x + .2, .72), arrowstyle="-|>,head_length=0.55,head_width=0.32",
+            mutation_scale=3 + 1.5 * width, linewidth=width, color=INK, shrinkA=0, shrinkB=0,
+        ))
+        key.text(x + .24, .72, f"{value:,}", va="center", fontsize=TEXT)
 
 
 def draw_dyad(ax):
-    panel(ax, "b", "One city, two destination provinces", x=-.08)
+    panel(ax, "b", "One city, two destination provinces", at=RIGHT)
     ax.set(xlim=(0, 1), ylim=(0, 1))
     ax.set_axis_off()
-    box = {"boxstyle": "round,pad=0.34,rounding_size=0.18", "fc": "white", "ec": NEUTRAL, "lw": .55}
-    ax.text(.045, .63, "City", ha="center", va="center", bbox=box, zorder=4)
-    for y, province in ((.77, "Province p"), (.48, "Province q")):
-        ax.text(.98, y, province, ha="right", va="center", bbox=box, zorder=4)
-        for rad, ls, colour in ((.085, "--", MUTED), (-.085, "-", NEUTRAL)):
-            ax.add_patch(FancyArrowPatch((.105, .63), (.73, y), connectionstyle=f"arc3,rad={rad}",
-                                        arrowstyle="-|>", linestyle=ls, color=colour, lw=.85,
-                                        mutation_scale=6, shrinkA=0, shrinkB=0))
-    ax.plot([.05, .16], [.985, .985], "--", color=MUTED, lw=.85)
-    ax.text(.19, .985, "City residents born there", fontsize=7, va="center")
-    ax.plot([.05, .16], [.87, .87], color=NEUTRAL, lw=.85)
-    ax.text(.19, .87, "City residents sleeping there", fontsize=7, va="center")
-    ax.text(.01, .26, "Flow ~ birth share", weight="bold", fontsize=8, va="top")
-    ax.text(.01, .16, "Compare cities of the same province against\n"
-            "the same destination, with distance and income.", fontsize=7, va="top")
+    box = {"boxstyle": "round,pad=0.38,rounding_size=0.15", "fc": "white", "ec": NEUTRAL, "lw": .6}
+    origin, ends = (.08, .76), ((.70, .97), (.70, .55))
+    ax.text(*origin, "City", ha="center", va="center", bbox=box, zorder=4, fontsize=LABEL)
+    for (x, y), name in zip(ends, ("p", "q")):
+        ax.text(x + .015, y, f"Province $\\it{{{name}}}$", ha="left", va="center", bbox=box,
+                zorder=4, fontsize=LABEL)
+        for rad, ls, colour in ((.10, (0, (3, 2)), MUTED), (-.10, "-", INK)):
+            ax.add_patch(FancyArrowPatch((origin[0] + .07, origin[1]), (x - .01, y),
+                                         connectionstyle=f"arc3,rad={rad}",
+                                         arrowstyle="-|>,head_length=0.5,head_width=0.25",
+                                         linestyle=ls, color=colour, lw=.85,
+                                         mutation_scale=7, shrinkA=0, shrinkB=0))
+    for y, ls, colour, text in ((.33, (0, (3, 2)), MUTED, "City residents born there (census)"),
+                                (.21, "-", INK, "City residents sleeping there (MITMA)")):
+        ax.plot([0, .09], [y, y], ls=ls, color=colour, lw=.85)
+        ax.text(.12, y, text, fontsize=TEXT, va="center")
+    ax.text(0, .04, "Flow ~ birth share", weight="bold", fontsize=LABEL, va="baseline")
+    ax.text(0, -.03, "Compare cities of the same province against\n"
+            "the same destination, with distance and income.", fontsize=TEXT, va="top")
 
 
-def draw_coverage(ax, manifest, months):
-    panel(ax, "c", "Coverage by source", x=-.08)
-    ax.set(xlim=(0, 366), ylim=(-.95, 3.62))
-    ax.set_yticks([3, 2, 1, 0], ["2022", "2023", "2024", "2025"])
+def draw_coverage(fig, ax, manifest, months):
+    panel(ax, "c", "Coverage by source", at=RIGHT)
+    ax.set(xlim=(0, 366), ylim=(3.45, -.5))
+    ax.set_yticks([0, 1, 2, 3], ["2022", "2023", "2024", "2025"])
     starts = pd.date_range("2024-01-01", periods=12, freq="MS").day_of_year - 1
-    ax.set_xticks(starts[::2], ["Jan", "Mar", "May", "Jul", "Sep", "Nov"])
-    ax.spines[["left", "bottom"]].set_visible(False)
-    ax.tick_params(length=0, pad=3)
+    mids = starts + pd.date_range("2024-01-01", periods=12, freq="MS").days_in_month / 2
+    ax.set_xticks(mids, list("JFMAMJJASOND"))
+    ax.set_xticks(list(starts) + [366], minor=True)
+    ax.tick_params(axis="x", which="major", length=0, pad=2)
+    ax.tick_params(axis="x", which="minor", length=2, width=.5)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
     ax.grid(False)
-    ax.fill_betweenx([-.12, .13], 182, 366, facecolor="#f5f5f5",
-                     edgecolor=ORDINARY, linewidth=.35, hatch="////", zorder=0)
+    ax.fill_between([182, 366], 3 - .2, 3 + .3, facecolor="none", edgecolor=ORDINARY,
+                    linewidth=0, hatch="//////", zorder=0)
     for year, nights in manifest.loc[manifest.file_present].groupby("year"):
-        y = 2025 - year
+        y = year - 2022
         for klass, subset in nights.groupby("coverage_class"):
             if klass in HOLIDAYS:
-                ax.plot(subset.day, [y] * len(subset), linestyle="none", marker=HOLIDAYS[klass][0],
-                        ms=3.7, color=NEUTRAL, zorder=5)
+                ax.plot(subset.day, [y - .02] * len(subset), linestyle="none", marker=HOLIDAYS[klass][0],
+                        ms=SMALL, color=INK, mec="white", mew=.4, zorder=5)
             else:
-                col = NEUTRAL if klass == "AUG" else ORDINARY if klass == "O" else "#dedede"
-                width = .42 if klass in ("AUG", "O") else .25
-                ax.vlines(subset.day, y - .105, y + .105, color=col, linewidth=width)
+                col = TICKS[klass] if klass in TICKS else TICKS["other"]
+                ax.vlines(subset.day, y - .2, y + .16, color=col, linewidth=.45)
         available = months.loc[months.year.eq(year)]
-        ax.hlines(np.full(len(available), y - .27), available.start, available.end - 3, color=MUTED, lw=.8)
-    ax.text(362, .28, "New method", ha="right", fontsize=7, color=MUTED)
-    ax.text(0, -.75, "Daily ticks   MITMA     Monthly bars   INE", fontsize=7, color=MUTED)
+        ax.hlines(np.full(len(available), y + .3), available.start + 1.5, available.end - 1.5,
+                  color=MUTED, lw=1.1)
+    handles = [
+        Line2D([], [], ls="", marker="|", ms=6, mew=.9, color=TICKS["O"], label="Ordinary night"),
+        Line2D([], [], ls="", marker="|", ms=6, mew=.9, color=TICKS["AUG"], label="August window"),
+        Line2D([], [], ls="", marker="|", ms=6, mew=.9, color=TICKS["other"], label="Other MITMA night"),
+        Line2D([], [], color=MUTED, lw=1.1, label="INE month"),
+    ] + [Line2D([], [], ls="", marker=mark, ms=SMALL, color=INK, label=label)
+         for mark, label in HOLIDAYS.values()] + [
+        Patch(facecolor="white", edgecolor=ORDINARY, hatch="//////", lw=0, label="New MITMA method"),
+    ]
+    order = [0, 1, 2, 3, 4, 5, 6, 7]
+    ax.legend(handles=[handles[i] for i in order], loc="upper left", bbox_to_anchor=(-.1, -.2),
+              ncol=2, handlelength=1.1, columnspacing=1.0, labelspacing=.5)
 
 
 def main():
@@ -152,23 +194,11 @@ def main():
     months["start"] = pd.to_datetime("2024-" + months.month.str[-2:] + "-01").dt.day_of_year - 1
     months["end"] = months.start + pd.to_datetime(months.month).dt.days_in_month
     balance, corridors = map_data(manifest, provinces)
-    fig = figure(120)
-    draw_map(fig, fig.add_axes([.028, .185, .52, .695]), balance, corridors, provinces)
-    draw_dyad(fig.add_axes([.604, .555, .366, .34]))
-    draw_coverage(fig.add_axes([.604, .196, .366, .272]), manifest, months)
-    x = .604
-    for mark, label, width, col in (
-        ("|", "Ordinary", .125, ORDINARY), ("|", "August window", .20, NEUTRAL),
-        ("D", "Good Friday", .142, NEUTRAL), ("s", "All Saints", .118, NEUTRAL),
-        ("^", "Christmas Eve", .16, NEUTRAL),
-    ):
-        y = .118 if mark == "|" else .069
-        if mark == "D":
-            x = .604
-        fig.add_artist(Line2D([x, x], [y, y], transform=fig.transFigure, linestyle="none",
-                              marker=mark, color=col, ms=3.7, mew=.65))
-        fig.text(x + .017, y, label, fontsize=7, va="center")
-        x += width
+    fig = figure(106)
+    keys = draw_map(fig, place(fig, 4, 10, 98, 76.4), balance, corridors, provinces)
+    map_keys(fig, *keys)
+    draw_dyad(place(fig, 110, 10, 57, 34))
+    draw_coverage(fig, place(fig, 110, 59, 57, 26), manifest, months)
     save(fig, 1, balance.reset_index().assign(panel="a", series="province balance"),
          corridors.assign(panel="a", series="excess corridor"),
          manifest.loc[manifest.file_present, ["file_date", "year", "day", "is_valid", "coverage_class", "method"]]

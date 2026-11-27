@@ -3,18 +3,22 @@
 import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq
-from matplotlib.patches import Rectangle
+from matplotlib import patheffects
+from matplotlib.lines import Line2D
+from matplotlib.patches import Patch
 from matplotlib.ticker import PercentFormatter
 
 from style import (
-    A, D, HEAVY, MAP_ZERO, MUTED, NEUTRAL, ORDINARY, RECEIVER, SENDER,
-    figure, map_axes, map_geometry, panel, read, save,
+    A, D, GRID, HEAVY, INK, LABEL, MAP_ZERO, MARK, MUTED, NEUTRAL, RECEIVER, SENDER, SMALL, TEXT,
+    decimals, figure, map_axes, map_geometry, panel, place, read, save,
 )
 
 NIGHTS = {"feb14": ("2024-02-14", "13–14 February"), "aug15": ("2024-08-15", "14–15 August"),
           "dec25": ("2024-12-25", "Christmas Eve")}
-CLASSES = ["Ordinary", "Fri–Sun", "August\nwindow", "Other\nAugust",
-           "Christmas\nEve", "Other\nholidays", "Other\nnights"]
+CLASSES = ["Ordinary", "Fri–Sun", "August window", "Other August",
+           "Christmas Eve", "Other holidays", "Other nights"]
+LEFT, RIGHT = 2.0, 106.0   # mm: panel-letter columns
+HALO = [patheffects.withStroke(linewidth=2.2, foreground="white")]
 
 
 def draw_maps(fig, zone_results):
@@ -22,27 +26,31 @@ def draw_maps(fig, zone_results):
     q5 = zone_results.query("loss_q == 5")
     rows = []
     for i, (stub, (date, label)) in enumerate(NIGHTS.items()):
-        ax = fig.add_axes([.035 + i * .315, .535, .301, .318])
+        ax = place(fig, 4 + i * 56.5, 18, 53, 41.3)
         metric = f"imp_{stub}"
         data = geo.merge(q5[["id", metric]], on="id", how="left", validate="one_to_one")
         data["receives"] = data[metric].map({1.: "Net receiver", 0.: "Net sender"})
         for mask, colour in [(data.receives.isna(), MAP_ZERO),
                              (data.receives.eq("Net sender"), SENDER),
                              (data.receives.eq("Net receiver"), RECEIVER)]:
-            data.loc[mask].plot(ax=ax, color=colour)
-        provinces.boundary.plot(ax=ax, color=ORDINARY, linewidth=.34)
+            data.loc[mask].plot(ax=ax, color=colour, linewidth=0)
+        provinces.boundary.plot(ax=ax, color="white", linewidth=.4)
         map_axes(ax)
         share = q5[metric].mean()
-        ax.set_title(f"{label}   {share:.1%}", pad=2)
+        ax.annotate(label, (.5, 1), xycoords="axes fraction", xytext=(0, 10.5),
+                    textcoords="offset points", ha="center", va="baseline", fontsize=LABEL)
+        ax.annotate(f"{share:.1%} net receivers", (.5, 1), xycoords="axes fraction",
+                    xytext=(0, 2.5), textcoords="offset points", ha="center", va="baseline",
+                    fontsize=TEXT, color=MUTED)
+        if i == 0:
+            panel(ax, "a", "Net receivers in the most emptied fifth", at=LEFT, rise=10.5)
         rows.append(data[["id", "receives"]].assign(date=date, share_net_receiver=share,
                                                    panel="a", series="zone map"))
-    fig.text(.017, .938, "a", fontsize=10, weight="bold")
-    fig.text(.045, .941, "Net receivers in the most emptied fifth", fontsize=8.5)
-    for x, colour, text in [(.19, RECEIVER, "Net receiver"), (.43, SENDER, "Net sender"),
-                            (.65, MAP_ZERO, "Other zones")]:
-        fig.patches.append(Rectangle(
-            (x, .517), .019, .016, transform=fig.transFigure, color=colour, linewidth=0))
-        fig.text(x + .025, .525, text, fontsize=7, va="center")
+    ax.legend(handles=[Patch(color=c, label=t) for c, t in
+                       [(RECEIVER, "Net receiver"), (SENDER, "Net sender"), (MAP_ZERO, "Other zones")]],
+              loc="upper center", bbox_to_anchor=(.5, 0), bbox_transform=fig.transFigure, ncol=3,
+              handlelength=1.1, handleheight=.9, columnspacing=1.8)
+    ax.get_legend().set_bbox_to_anchor((.5, 1 - 61 / fig.get_figheight() / 25.4), fig.transFigure)
     return pd.concat(rows, ignore_index=True)
 
 
@@ -74,14 +82,14 @@ def calendar_data(zones):
 
 
 def draw_calendar(ax, data, boot):
-    panel(ax, "b", "Net receiver share across nights", x=-.17)
+    panel(ax, "b", "Net receiver share across nights", at=LEFT)
     rng = np.random.default_rng(475)
     data["jitter"] = rng.uniform(-.125, .125, len(data))
     for prop, shift, face, edge, alpha in (
-        ("q5_share_net_receiver", -.16, NEUTRAL, NEUTRAL, .25),
-        ("single_mun_share", .16, "none", MUTED, .32),
+        ("q5_share_net_receiver", -.17, NEUTRAL, NEUTRAL, .25),
+        ("single_mun_share", .17, "none", MUTED, .35),
     ):
-        ax.scatter(data.class_index + shift + data.jitter, data[prop], s=3.5 ** 2,
+        ax.scatter(data[prop], data.class_index + shift + data.jitter, s=SMALL ** 2,
                    facecolor=face, edgecolor=edge, linewidth=.5, alpha=alpha)
     baselines = boot.query(
         "mode == 'level' and cls == 'Q5' and sample == 'all' and metric == 'share_net_importer' "
@@ -89,42 +97,64 @@ def draw_calendar(ax, data, boot):
     ).copy()
     lo, hi = baselines["mean"].min(), baselines["mean"].max()
     assert len(baselines) == 4
-    ax.vlines(-.49, lo, hi, color=NEUTRAL, lw=.8)
-    ax.hlines([lo, hi], -.55, -.44, color=NEUTRAL, lw=.8)
-    for y, align in [(lo, "top"), (hi, "bottom")]:
-        ax.text(-.49, y, f"{y:.0%}", ha="center", va=align, fontsize=7, color=NEUTRAL,
-                bbox={"fc": "white", "ec": "none", "pad": .25})
-    ax.set_xticks(range(len(CLASSES)), CLASSES)
-    ax.tick_params(axis="x", length=0)
-    ax.set(xlim=(-.81, 6.55), ylim=(0, 1.07), yticks=[0, .25, .5, .75, 1])
-    ax.yaxis.set_major_formatter(PercentFormatter(1, decimals=0))
-    ax.text(.97, -.27, "●  All 475 zones    ○  Single-municipality zones",
-            transform=ax.transAxes, ha="right", fontsize=7, va="top")
-    ax.text(.97, -.38, "Bracket: selected ordinary baselines", color=MUTED,
-            transform=ax.transAxes, ha="right", fontsize=7, va="top")
+    y = -.58
+    ax.hlines(y, lo, hi, color=INK, lw=.8)
+    ax.vlines([lo, hi], y - .12, y + .12, color=INK, lw=.8)
+    ax.text(hi + .02, y, f"Ordinary baselines {lo * 100:.0f}–{hi:.0%}", va="center",
+            fontsize=TEXT)
+    ax.set_yticks(range(len(CLASSES)), CLASSES)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    ax.grid(axis="y", visible=False)
+    ax.grid(axis="x", visible=True)
+    ax.set(ylim=(6.5, -.85), xlim=(0, 1.02), xticks=[0, .25, .5, .75, 1])
+    ax.xaxis.set_major_formatter(PercentFormatter(1, decimals=0))
+    ax.set_xlabel("Zones receiving more people than they send")
+    ax.legend(handles=[
+        Line2D([], [], ls="", marker="o", ms=SMALL, color=NEUTRAL, alpha=.6, label="All 475 zones"),
+        Line2D([], [], ls="", marker="o", ms=SMALL, mfc="none", mec=MUTED, label="84 single-municipality zones"),
+    ], loc="upper center", bbox_to_anchor=(.5, -.25), ncol=2)
     return baselines.assign(panel="b", series="selected ordinary baseline")
 
 
-def draw_flows(ax, flows, controlled):
-    panel(ax, "c", "Arrivals and departures per resident", x=-.17)
+def draw_flows(ax, flows):
+    panel(ax, "c", "Arrivals and departures per resident", at=RIGHT)
     for row in flows.itertuples():
         j = [x[0] for x in NIGHTS.values()].index(row.period)
         arriving = row.metric == "arrivals_per_res"
-        x = j + (-.12 if arriving else .12)
+        x = j + (-.13 if arriving else .13)
         ax.errorbar(x, row.point, yerr=[[row.point - row.ci_lo], [row.ci_hi - row.point]],
-                    fmt="o" if arriving else "s", color=NEUTRAL, ms=3.5, mew=.7,
-                    elinewidth=.85, capsize=2.7, capthick=.65, zorder=3)
+                    fmt="o" if arriving else "s", color=NEUTRAL, ms=MARK, mew=.7,
+                    elinewidth=.85, capsize=0, zorder=3)
+        if j == 1:
+            ax.annotate("Arrivals" if arriving else "Departures", (x, row.point),
+                        xytext=(-6 if arriving else 6, 0), textcoords="offset points",
+                        ha="right" if arriving else "left", va="center", fontsize=TEXT)
     ax.set_xticks(range(3), ["13–14 Feb", "14–15 Aug", "Christmas Eve"])
-    ax.set(xlim=(-.45, 2.42), ylim=(0, .82), yticks=[0, .2, .4, .6, .8])
-    ax.text(.045, .92, "●  Arrivals\n■  Departures", transform=ax.transAxes, va="top", fontsize=7)
+    ax.tick_params(axis="x", length=0, pad=4)
+    ax.set(xlim=(-.5, 2.5), ylim=(0, .8), yticks=[0, .2, .4, .6, .8])
+    ax.yaxis.set_major_formatter(decimals(1))
+    ax.set_ylabel("Per resident")
+
+
+def draw_inland(ax, controlled):
+    """Adjusted inland changes as an aligned table under panel c."""
+    ax.set_axis_off()
+    ax.set(xlim=(0, 1), ylim=(0, 1))
     lookup = controlled.set_index(["period", "outcome"]).coef
-    for j, (period, day) in enumerate([("Aug15_minus_Feb14", "August"), ("Dec25_minus_Feb14", "Christmas Eve")]):
-        arrivals = lookup.loc[period, "arrivals_per_res_diff"]
-        departures = lookup.loc[period, "departures_per_res_diff"]
-        ax.text(.0, -.38 - j * .14, f"{day}   {arrivals:+.3f} arrivals, {departures:+.3f} departures",
-                transform=ax.transAxes, fontsize=7)
-    ax.text(.0, -.24, "Inland change vs February, adjusted for covariates",
-            transform=ax.transAxes, fontsize=7, weight="bold")
+    ax.text(0, 1, "Inland zones, adjusted for covariates", fontsize=TEXT, va="top", weight="bold")
+    columns = (.62, .95)
+    ax.text(0, .74, "Change vs 13–14 Feb", fontsize=TEXT, va="top", color=MUTED)
+    for x, head in zip(columns, ("Arrivals", "Departures")):
+        ax.text(x, .74, head, ha="right", va="top", fontsize=TEXT, color=MUTED)
+    ax.plot([0, .95], [.5, .5], color=GRID, lw=.6)
+    for k, (period, day) in enumerate([("Aug15_minus_Feb14", "14–15 Aug"),
+                                       ("Dec25_minus_Feb14", "Christmas Eve")]):
+        y = .42 - k * .25
+        ax.text(0, y, day, va="top", fontsize=TEXT)
+        for x, outcome in zip(columns, ("arrivals_per_res_diff", "departures_per_res_diff")):
+            value = lookup.loc[period, outcome]
+            ax.text(x, y, f"{value:+.3f}".replace("-", "−"), ha="right", va="top", fontsize=TEXT)
 
 
 def main():
@@ -140,11 +170,11 @@ def main():
         "and outcome in ['arrivals_per_res_diff', 'departures_per_res_diff']"
     )
     data = calendar_data(zones)
-    fig = figure(120)
+    fig = figure(134)
     maps = draw_maps(fig, zones)
-    baselines = draw_calendar(fig.add_axes([.083, .174, .435, .259]), data,
-                              read(D, "d_quintiles_main_boot"))
-    draw_flows(fig.add_axes([.599, .174, .369, .259]), flows, controlled)
+    baselines = draw_calendar(place(fig, 26, 78, 70, 38), data, read(D, "d_quintiles_main_boot"))
+    draw_flows(place(fig, 118, 78, 50, 26), flows)
+    draw_inland(place(fig, 110.2, 111, 58, 17), controlled)
     save(fig, 4, maps, data.assign(panel="b", series="nightly net receiver shares"), baselines,
          flows.assign(panel="c", series="zone means"), controlled.assign(panel="c", series="inland adjusted"))
 
