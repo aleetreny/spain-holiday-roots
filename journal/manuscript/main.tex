@@ -1,0 +1,248 @@
+%% EPJ Data Science, Regular Article. Springer Nature LaTeX template v3.1 (sn-jnl), numbered references.
+%% Draft compiled with Tectonic (XeTeX); source kept pdfLaTeX-compatible for submission (single file, no fontspec).
+\documentclass[pdflatex,sn-mathphys-num,referee,lineno]{sn-jnl}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[title]{appendix}
+\usepackage{url}
+\graphicspath{{../figures/out/}}
+
+
+\raggedbottom
+
+\begin{document}
+
+\title[Roots or beaches?]{Roots or beaches? Historical internal migration and holiday mobility in Spain}
+
+\author*{\fnm{Alejandro} \sur{Treny Ortega}}\email{[corresponding author e-mail]}
+
+\affil*{\orgname{University College London}, \orgaddress{\city{London}, \country{United Kingdom}}}
+
+\abstract{Every August millions of Spaniards leave the cities. Some go to the coast; others go to the inland villages that lost most of their people in the rural exodus of 1950--1975. I ask whether the geography of that exodus is visible in where people sleep on holiday. I link mobile-phone estimates of overnight stays between 2,435 zones of mainland Spain on 1,275 nights from 2022 to 2025 to census counts of city residents by province of birth. For each night I estimate how strongly a city's overnight flows to each other province follow the share of its residents born there, comparing cities of the same province that send people to the same destination and accounting for distance and income. The hypotheses and tests were registered before I opened 779 new nights, and a final test used 2025 nights that nobody had analysed. On ordinary weekday nights the flow--birthplace elasticity averages 0.52. On mid-August nights it rises by 0.13 (95\% confidence interval 0.04--0.23) in the 2025 hold-out. The rise is carried by residents who arrived in their province before 1981 and by those born in villages of up to 2,000 people, while residents who arrived after 2015 move the other way. Christmas Eve and All Saints show smaller rises. On every August night, 97--99\% of the most depopulated zones receive more visitors than they send residents away. The data link places, not travellers, but they show that the map of a migration that ended fifty years ago still shapes where the population spends its holidays.}
+
+\keywords{human mobility, mobile phone data, internal migration, holidays, gravity model, pre-registration, rural depopulation}
+
+\maketitle
+
+%% ============================================================
+\section{Introduction}\label{sec:intro}
+
+On an ordinary weekday night in February 2024, about 2.1 million residents of mainland Spain slept in a zone other than their own. On the night of 14 to 15 August, 8.5 million did. Groups of at least ten residents of Madrid slept in 2,203 of the other 2,434 zones of the mainland that night, against 1,124 in February. Many of the places that received them are villages that lost most of their population in the twentieth century. Between 1950 and 1975 Spain went through a rural exodus: about two million people left the countryside in the 1960s alone \cite{clar2023rural}, mostly from the interior towards Madrid, Catalonia and the Basque Country \cite{bover1999migrations,collantes2011peaceful}. Municipalities of fewer than 2,000 inhabitants held more than 11 million people in the 1950s and about 7 million in 2017 \cite{pinilla2017rural}. Many emigrants kept a house in the village, and \emph{volver al pueblo}, going back to the village, is still a common way to describe the summer.
+
+The same nights also belong to the beach. In August a person sleeping in an inland village may be visiting the family home, or hiking, or renting a cheap room near a lake. The generation that left in the 1960s is now old; their children and grandchildren were born in cities, and their ties to the village may have faded or moved to an apartment by the sea. Counting how many people sleep in rural areas cannot tell these stories apart. What can tell them apart is \emph{who goes where}: whether the residents of a city sleep, on holiday, in the places its population came from.
+
+Mobile-phone data have made seasonal population and mobility visible at national scale \cite{deville2014dynamic,silm2010seasonal,batistaesilva2020uncovering,blondel2015survey}. Holidays reorganise national travel networks \cite{wesolowski2017seasonal,li2020exploring,wen2026reframing,he2026spatiotemporal}, homecoming festivals bend the usual decline of flows with distance \cite{luan2024different,zhao2025effective}, and Spain's interior visibly fills up in summer \cite{garzon2026heritage,garciagonzalez2024retorno}. Separately, social ties and migrant stocks are known to predict travel and tourism between places \cite{cho2011friendship,bailey2018social,bailey2020europe,etzo2014migration,santanagallego2022tourism,prietocuriel2024diaspora}. The closest precedent to the question here correlated travel during the Chinese Spring Festival with the census network of migrants across 31 provinces \cite{li2016spring}. That design cannot separate migration ties from distance, because both networks decline with distance; it has no ordinary-day baseline; and its reference is recent labour migration, not a movement two generations old. In Spain, phone-based studies of return tourism infer the return from visitor counts in one region and do not know where the visitors' families come from \cite{garciagonzalez2024retorno}.
+
+I link the two kinds of data directly. The Spanish transport ministry publishes, for every night, estimates of how many residents of each of 2,435 mainland zones slept in each other zone. The census records, for each large city, how many of its residents were born in each province, and for a 10\% sample of residents when they arrived and how large their birthplace was. For each night I ask how strongly a city's overnight flows to each province follow the share of its residents born there. The comparison holds the destination fixed and compares cities of the same province, so that anything shared by a pair of provinces cancels out, and it models the distance and income of each city. Repeating this on 1,275 nights from 2022 to 2025 turns a single coefficient into a calendar. Because an earlier version of this analysis had already looked at some of these nights, I registered the hypotheses and tests before opening the rest, and I kept a final set of 2025 nights, on both sides of the comparison, that nobody had analysed.
+
+The result is a seasonal signature of migration history. On ordinary weekday nights, cities already send more visitors to the provinces where more of their residents were born. On mid-August nights this alignment strengthens, and the increase is carried by residents who arrived in their province before 1981 and by those born in villages, the groups that most resemble the exodus generation. Residents who arrived recently move the other way in August and peak instead at Christmas. On every August night nearly all of the most depopulated zones receive more visitors than they send away. The data describe places and groups of residents, not individual travellers, so they cannot show that a given person returns to a given village. What they show is that, at the scale of a country, holiday mobility retraces the map of an old migration.
+
+This paper makes four contributions. First, it measures a quantity that mobility models usually omit, the dependence of flows on where the origin's residents were born, every night for four years. Second, it shows which residents carry the holiday increase, separating two migrations that pull in opposite directions. Third, it describes the receiving end of these flows in the most depopulated places across the calendar. Fourth, it tests the main claims with a pre-registered design and an untouched hold-out on public digital-trace data, and it shows in the Supplementary Information that most of the apparent reorganisation of the holiday network's structure follows from its higher density. Section~\ref{sec:data} describes the data, Section~\ref{sec:methods} the methods, Section~\ref{sec:results} the results, and Section~\ref{sec:discussion} discusses them.
+
+%% ============================================================
+\section{Data}\label{sec:data}
+
+Table~\ref{tab:data} lists the sources, what each measures and how it is used. Figure~\ref{fig:design} shows the study area, the comparison and the coverage of each source.
+
+\begin{table}[t]
+\caption{\textbf{Data sources.} Units, coverage and role of each source in the analysis.}\label{tab:data}
+\footnotesize
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}p{2.6cm}p{4.0cm}p{2.9cm}p{2.4cm}}
+\toprule
+Source & What it measures & Coverage & Role \\
+\midrule
+MITMA overnight stays \cite{mitms2024methodology} & Residents of zone $i$ who sleep in zone $j$ on one night, estimated from one operator's phones and scaled to the population & 2,435 mainland zones; 1,079 valid nights 2022--2024 and 196 in 2025 & Outcome (flows) \\
+Census, table 68545 \cite{ine2026table68545} & Residents of each large city by province of birth, 1 January 2024 & 137 mainland cities, 47 provinces & Roots share, pooled model \\
+Census 10\% sample \cite{ine2025censo} & Province of birth, year of arrival in the province, size of the birth municipality & 675 municipalities $>$10,000 inhabitants & Roots shares by group \\
+Historical census series \cite{ine2026intercensal} & Population of each municipality 1900--2021 & All mainland municipalities & Depopulation rank \\
+Income \cite{ine2026adrh}; housing \cite{ine2023viviendas} & Net income per person 2024; non-primary dwellings 2021 & Municipalities & Controls; SI \\
+INE phone tourism matrices \cite{ine2026turismomoviles,gonzalezolmos2024measuring}; ECEPOV 2021 \cite{ine2023ecepovmicro} & Monthly trips between municipalities (three operators); birth municipality of respondents' parents & 2019--2026; 137 cities & Validation; SI \\
+\botrule
+\end{tabular*}
+\end{table}
+
+\subsection{Overnight stays}
+
+The overnight-stay data come from the ministry's big-data mobility study \cite{mitms2024methodology,kotov2026spanishoddata}. Each phone of one mobile operator is assigned a home zone, where it usually spends the night, and a zone for each night; counts are expanded to the resident population. A zone is a municipality or, for small municipalities, a group of neighbours: the 2,435 zones of mainland Spain cover 7,975 municipalities and 43.9 million residents, and they are grouped into 47 provinces. A file dated $d$ holds the night that ends on the morning of $d$, so I name each night by both dates, as in ``14--15 August''. I use every daily file from January 2022 to December 2024, and every file of 2025. Seventeen dates of 2022--2024 are missing or excluded by quality rules fixed in advance: eleven files were never published, three dates are on the ministry's incident list, and three nights fall in the flood of 29--31 October 2024 in Valencia. This leaves 1,079 nights in 2022--2024 and 196 in 2025.
+
+On 1 July 2025 the ministry changed how it filters static devices \cite{mitms2025methodchange}. The ministry recalculated six earlier dates with the new method. On these six dates the quantity I estimate changes by 0.014 on average, well within the tolerance I fixed before looking (Section~\ref{sec:prereg}), so 2025 nights from both sides of the change enter the same comparison.
+
+Single-operator estimates can be biased in ways that vary across places \cite{wesolowski2013impact,pappalardo2021evaluation,dennijs2026tale}. As a check, the province-to-province overnight totals agree with the national statistics office's three-operator estimates at $r=0.90$--$0.99$ in every month of 2024 with both sources (Supplementary Section~S1).
+
+\subsection{Where residents were born}
+
+The census table of residents by province of birth \cite{ine2026table68545} covers 137 large cities of the mainland, each a zone of its own. Of these, 112 lie in the 22 provinces that contain at least two such cities, which is what the comparison needs. The 10\% census sample \cite{ine2025censo} adds three facts for each resident of the 675 municipalities with more than 10,000 inhabitants that form a zone of their own: province of birth, year of arrival in the current province, and the size of the birth municipality. I group residents by arrival, before 1981 or 2016--2023, and by birthplace, a municipality of up to 2,000 inhabitants or one of more than 10,000. Arrival before 1981 is a marker of the exodus generation, not a definition of it: it records arrival in the province, not in the city, and includes people who moved for other reasons. For brevity I call all 675 municipalities \emph{cities}, although many are towns.
+
+\subsection{Depopulation and other variables}
+
+For each zone I measure how much of its population it lost as one minus the ratio of its 2021 population to the largest population it had between 1900 and 1960 \cite{ine2026intercensal}. The fifth of zones with the largest losses (475 zones) are the \emph{most depopulated} zones below. A zone is \emph{coastal} if it touches the sea. Income per person comes from the national income atlas \cite{ine2026adrh}. Distances are straight lines from each city to the population-weighted centre of the destination province.
+
+%% ============================================================
+\section{Methods}\label{sec:methods}
+
+\subsection{The roots elasticity}
+
+For the residents of city $c$ who sleep in a mainland zone of another province $p$ on night $t$, $y_{cpt}$, I fit a Poisson pseudo-maximum likelihood (PPML) model \cite{santossilva2006log,correia2020fast,weidner2021bias}:
+\begin{equation}
+\mathrm{E}[\,y_{cpt}\,] = \exp\!\big(\beta_t \log s_{cp} + \alpha_{ct} + \gamma_{o(c)pt} + f_t(d_{cp}) + \lambda_{pt}\log \mathrm{inc}_c\big),
+\label{eq:ppml}
+\end{equation}
+where $s_{cp}$ is the share of the city's residents born in $p$, $\alpha_{ct}$ a term for each city (how much its residents travel at all that night), $\gamma_{o(c)pt}$ a term for each pair of origin province $o(c)$ and destination province $p$, $f_t$ a quadratic in log distance, and $\lambda_{pt}$ lets income matter differently for each destination. PPML keeps the zero flows, which are common for small cities and distant provinces.
+
+The pair term is what makes the comparison fair. Two cities of the same province sending people to the same destination share the distance between the provinces, the destination's coast and climate, its hotels and its prices; all of that is absorbed by $\gamma$. What is left to explain is why one of the two cities sends relatively more people there, and the model asks whether the answer follows the share of its residents born there. I call $\beta_t$ the \emph{roots elasticity}: with everything else fixed, a city with twice the share of residents born in $p$ sends $2^{\beta_t}$ times as many people to $p$ on night $t$. The outcome counts all of the city's residents sleeping anywhere in $p$, so it cannot say who they are; Section~\ref{sec:discussion} returns to this.
+
+To see who carries the elasticity, I replace $\log s_{cp}$ by the shares of two groups of residents at a time in the 675-city sample: arrived before 1981 and arrived in 2016--2023 in one model; born in a village of up to 2,000 inhabitants and born in a municipality of more than 10,000 in another. Many city--province cells are empty for a group in a 10\% sample, so I add one half to each group count before taking shares; five other rules for empty cells give the same signs (Supplementary Section~S4).
+
+\subsection{Holiday contrasts}
+
+A holiday premium is a difference between nights. I classify every night by its evening. The \emph{August window} is the nine nights ending on 10--18 August, around the national holiday of 15 August. \emph{Ordinary nights} are Monday, Tuesday and Wednesday evenings that are not a public holiday, nor the day before or after one, in the country or in any of the five largest origin regions, and that fall outside 24 June--10 September, 20 December--7 January and Holy Week; holidays come from the official labour calendars \cite{boe2022calendar}. Christmas Eve, Good Friday and All Saints (31 October--1 November) are secondary holiday nights.
+
+I estimate the premium by fitting the holiday nights and the ordinary nights of the same year together, with every term of Eq.~\eqref{eq:ppml} specific to its night, a common roots slope and one extra term, roots~$\times$~holiday. Its coefficient $\delta$ is the change in the roots elasticity on holiday nights relative to ordinary nights. Years enter with equal weight. As a diagnostic I repeat the contrast for every block of nine consecutive ordinary nights of the same year, which shows how large a ``premium'' ordinary nights produce by chance.
+
+\subsection{Inference}
+
+Cities of the same province share unobserved influences, and the same cities appear on every night. I therefore cluster by origin province jointly across all stacked nights (22 clusters for the 112 cities, 44 for the 675) and compute $p$-values and 95\% confidence intervals with the wild cluster restricted score bootstrap \cite{kline2012score,webb2023reworking}, using Webb weights and 9,999 draws. Primary and secondary hypotheses are corrected for multiple testing with Holm's method within each family.
+
+\subsection{Pre-registration, confirmation and hold-out}\label{sec:prereg}
+
+An earlier version of this analysis had looked at 306 nights. Before opening the other 779 nights of 2022--2024, I froze and published the night classes, quality rules, models, hypotheses, inference and decision rule (repository file \texttt{PREREGISTRATION.md}, committed on 27 November 2026). The primary hypotheses were: (P1) the roots elasticity is larger on August-window nights than on ordinary nights; (P2) the pre-1981 arrival term increases on August nights; (P3) the increase is larger for inland than for coastal destinations. Secondary hypotheses covered Christmas Eve, Good Friday and All Saints, the village-born and recent-arrival terms, and the difference between pre-1981 and recent arrivals.
+
+When the tests ran, it turned out that every August night of 2022--2024 had been among the nights already seen, so the 2022--2024 ``confirmation'' compared seen August nights with new ordinary nights. I recorded this as a deviation and, before downloading any 2025 file, registered a second confirmation: the five August-window nights of 2025 (10 and 14--17 August) against the 62 ordinary nights of 2025, all unseen, after a bridge test across the July 2025 method change. A claim enters the abstract if it passes Holm correction in either confirmation and has the same sign in both. The registered documents, deviations and every result are in the repository.
+
+\subsection{The receiving end}
+
+A zone is a \emph{net receiver} on a night when more people from elsewhere sleep in it than its own residents sleep elsewhere, counting all flows. For the most depopulated fifth of zones I compute, on every night, the share of net receivers and, per resident, arrivals (visitors sleeping in the zone) and departures (residents sleeping elsewhere).
+
+\subsection{Supplementary analyses}
+
+Two analyses are reported in the Supplementary Information. The first compares the structure of the holiday and ordinary networks with degree-preserving null models \cite{maslov2002specificity,zhou2007structural,zhou2017second}, because a denser network looks different on most measures \cite{vanwijk2010comparing,krings2012effects,cimini2019statistical}. The second links the birth municipalities of respondents' parents in a national survey \cite{ine2023ecepovmicro} to monthly municipal trips from three operators \cite{ine2026turismomoviles}, to test whether flows reach the specific villages of the parents; I fixed in advance the conditions it had to meet to enter the main text.
+
+%% ============================================================
+\section{Results}\label{sec:results}
+
+\subsection{Flows follow birthplaces every night}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig1.pdf}
+\caption{\textbf{Design and data.} \textbf{a}, Net overnight balance per resident by province on 14--15 August 2024 (visitors sleeping in the province minus its residents sleeping elsewhere), with the twelve largest city-to-province excess flows relative to ordinary nights. \textbf{b}, The comparison: for one city and two destination provinces, the share of its residents born in each (dashed) and the residents sleeping in each (solid). \textbf{c}, Nights available from MITMA (daily) and months available from INE (monthly), 2022--2025; symbols mark the holiday nights tested.}
+\label{fig:design}
+\end{figure}
+
+On every one of the 1,275 nights, cities send more people to the provinces where more of their residents were born (Fig.~\ref{fig:calendar}a). On ordinary weekday nights the roots elasticity averages 0.52: a city with twice the share of residents born in a province sends about 43\% more residents to sleep there, compared with another city of the same province and given distance and income. This is the baseline against which holidays are judged, and it is large: migration ties shape everyday travel, not only holidays.
+
+The elasticity has a clear calendar. It averages 0.57 on Friday and Saturday evenings and 0.59 on Sundays, 0.60 in July, 0.63 on the August-window nights and 0.65 in the rest of August. Among the secondary holidays it averages 0.62 on Christmas Eve, 0.60 on All Saints, 0.57 on Good Friday and 0.65 on the eve of Epiphany. The single highest nights are not 15 August but the end of August and early-September Sunday evenings, such as 30--31 August 2022 (0.70), when the largest volumes of the summer have already gone home. The pattern repeats in each year (Fig.~\ref{fig:calendar}a).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig2.pdf}
+\caption{\textbf{The roots calendar.} \textbf{a}, Roots elasticity $\beta_t$ (Eq.~\ref{eq:ppml}) on every valid night, 2022--2025, with 95\% intervals (shaded). Grey points: ordinary reference nights; dark points: August-window nights; symbols: Good Friday, All Saints, Christmas Eve; open markers: 2025 hold-out; dashed line: mean of ordinary nights; dotted line: method change of 1 July 2025. \textbf{b}, Change in the roots elasticity on August-window nights against ordinary nights of the same year (P1), with 95\% wild cluster bootstrap intervals; grey points: the same contrast for every block of nine consecutive ordinary nights. \textbf{c}, Elasticity terms for residents who arrived before 1981 and in 2016--2023 (675 cities), by night, with a 7-night rolling median.}
+\label{fig:calendar}
+\end{figure}
+
+\subsection{The August premium}
+
+Table~\ref{tab:tests} gives the pre-registered tests. Against new ordinary nights of 2022--2024, the August elasticity is higher by 0.106 (95\% CI 0.010--0.197). The increase is similar in each year (0.10, 0.11 and 0.11) and larger than every one of the 188 nine-night placebo windows of ordinary nights (Fig.~\ref{fig:calendar}b), but after Holm correction its $p$-value is 0.066, so P1 was not confirmed on 2022--2024. In the 2025 hold-out, where both the August nights and the ordinary nights were unseen, the premium is 0.134 (95\% CI 0.037--0.233; Holm $p=0.030$), and it is again above all 54 placebo windows. Measuring roots with the 2025 census instead of the 2024 one gives 0.131. By the registered decision rule, the August premium is confirmed.
+
+In plain terms, an August premium of 0.13 means that a doubling of the share of a city's residents born in a province is associated with about 9\% more of the city's residents sleeping there on an August night than the same doubling produces on an ordinary weeknight, on top of the 43\% it already produces then. The pooled estimate is sensitive to some choices: it lies between 0.07 and 0.15 across the robustness checks, and its interval reaches zero when distance is measured by road time ($p=0.069$) or when each night has equal weight ($p=0.060$; Supplementary Section~S3).
+
+\begin{table}[t]
+\caption{\textbf{Pre-registered tests.} Change in the roots elasticity on holiday nights relative to ordinary weekday nights of the same year. ``2022--24'': new ordinary nights against August nights already seen (27 August, 212 ordinary nights). ``2025'': unseen nights on both sides (5 August, 62 ordinary). Estimates with 95\% wild cluster bootstrap intervals; Holm-adjusted $p$-values within the primary (P) and secondary (S) families.}\label{tab:tests}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrlrlrlc}
+\toprule
+ & \multicolumn{3}{c}{2022--24} & \multicolumn{3}{c}{2025 hold-out} & \\
+\cmidrule{2-4}\cmidrule{5-7}
+Hypothesis & Est. & 95\% CI & $p$ & Est. & 95\% CI & $p$ & Conf. \\
+\midrule
+P1 August, all residents & $+0.106$ & [$0.010$, $0.197$] & 0.066 & $+0.134$ & [$0.037$, $0.233$] & 0.030 & yes \\
+P2 August, arrived before 1981 & $+0.071$ & [$0.041$, $0.092$] & $<$0.001 & $+0.057$ & [$0.022$, $0.076$] & 0.010 & yes \\
+P3 August, inland minus coast & $+0.122$ & [$-0.037$, $0.280$] & 0.11 & $+0.129$ & [$-0.055$, $0.319$] & 0.14 & no \\
+\midrule
+S1 Christmas Eve & $+0.088$ & [$0.049$, $0.177$] & $<$0.001 & --- & & & yes$^{a}$ \\
+S2 Good Friday & $+0.037$ & [$-0.041$, $0.110$] & 0.25 & $+0.076$ & [$-0.013$, $0.157$] & 0.15 & no \\
+S3 All Saints & $+0.073$ & [$0.022$, $0.135$] & 0.017 & --- & & & yes$^{a}$ \\
+S4 August, born in a village & $+0.073$ & [$0.055$, $0.095$] & $<$0.001 & $+0.056$ & [$0.031$, $0.078$] & 0.004 & yes \\
+S5 August, arrived 2016--2023 & $-0.044$ & [$-0.070$, $-0.011$] & 0.017 & $-0.033$ & [$-0.060$, $0.006$] & 0.15 & yes \\
+S6 August, pre-1981 minus recent & $+0.115$ & [$0.071$, $0.139$] & $<$0.001 & $+0.089$ & [$0.034$, $0.117$] & 0.004 & yes \\
+\botrule
+\end{tabular*}
+\footnotetext{$^{a}$ No 2025 night available; 2022--2024 only (Christmas Eve 3 nights, All Saints 2).}
+\end{table}
+
+\subsection{The exodus generation carries the premium}
+
+The pooled elasticity mixes residents who arrived at very different times. When the shares of two arrival groups enter together, the term for residents who arrived in their province before 1981 rises on August nights by 0.071 (95\% CI 0.041--0.092) on 2022--2024 and by 0.057 (0.022--0.076) in the 2025 hold-out, while the term for residents who arrived in 2016--2023 falls by 0.044 and 0.033 (Table~\ref{tab:tests}; Fig.~\ref{fig:who}a). The same pattern appears by birthplace: the term for residents born in a village of up to 2,000 inhabitants rises by 0.073 and 0.056. Across the calendar the pre-1981 term averages 0.18 on August-window nights against 0.10 on ordinary nights, while the recent-arrival term is lowest in August (0.12--0.13) and highest at Christmas, New Year and Epiphany (about 0.20--0.22; Fig.~\ref{fig:calendar}c). Two migrations pull in opposite directions and at different times of year: the old one in August, the recent one at Christmas. This is why the pooled premium is smaller and less precise than the premium of the exodus generation.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig3.pdf}
+\caption{\textbf{Who pulls.} Change in the roots elasticity on August nights for groups of residents. \textbf{a}, By arrival in the province and size of the birth municipality, against ordinary nights: 2022--2024 confirmation (filled) and 2025 hold-out (open). \textbf{b}, Arrived before 1981 and born in a village of up to 2,000 inhabitants, by destination type, 14--15 August 2024 against 13--14 February 2024 (circles) and against October 2024 weekdays (squares). \textbf{c}, Arrived before 1981 minus arrived later, within age bands. 95\% wild cluster bootstrap intervals, clustered by origin province (44 clusters).}
+\label{fig:who}
+\end{figure}
+
+Older residents could carry the premium simply because they are older. Within age bands the gap remains: among residents aged 65 and over, those who arrived before 1981 gain 0.095 more than those who arrived later (against February; 0.057 against October), and among residents aged 43--64 the gap is 0.040 (0.034; Fig.~\ref{fig:who}c). The cohort results also hold when Madrid and Barcelona are dropped as origins, when each of the 44 origin provinces is left out in turn, and on all 117 pairs of an August night and a February night of 2024 (Supplementary Section~S4). Their size depends on how empty census cells are treated, with estimates for the pre-1981 term between 0.014 and 0.122 across rules, so I report the sign as robust and the size as approximate.
+
+\subsection{Where and when: inland destinations and family holidays}
+
+The August premium is concentrated in inland destinations. Estimated on flows to inland zones only, it is 0.14 (95\% CI 0.02--0.22); on flows to coastal zones it is 0.01 ($-0.14$ to 0.13). The direct test of a difference (P3), however, is not significant in either confirmation, and it disappears when Madrid and Barcelona are dropped as origins, so I describe the premium as concentrated inland rather than larger inland. For the pre-1981 arrivals on the coursework nights of 2024, the inland-minus-coast difference on provinces that have both is 0.11 against February and 0.13 against October (Fig.~\ref{fig:who}b).
+
+The premium is not only a summer phenomenon. Christmas Eve raises the roots elasticity by 0.088 (95\% CI 0.049--0.177) and All Saints, when families traditionally visit relatives' graves, by 0.073 (0.022--0.135). Both are nights without beach. Good Friday, at Easter, shows no detectable change in either period.
+
+\subsection{The receiving end}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{fig4.pdf}
+\caption{\textbf{The receiving end.} \textbf{a}, Most depopulated fifth of zones (475 zones with the largest loss from their 1900--1960 peak) on 13--14 February, 14--15 August and Christmas Eve 2024: net receivers (more visitors than residents sleeping elsewhere) and net senders; other zones in grey. \textbf{b}, Share of net receivers among these zones on every valid night of 2022--2024, by type of night; filled: all 475 zones, open: single-municipality zones. \textbf{c}, Arrivals and departures per resident in these zones on the three nights of panel a, with 95\% bootstrap intervals (zones resampled within province).}
+\label{fig:receiving}
+\end{figure}
+
+The most depopulated places switch from sending people away to receiving them, but the switch follows the seasons rather than a single holiday (Fig.~\ref{fig:receiving}). On ordinary weekday nights from November to March, about 27--39\% of the most depopulated zones receive more visitors than they send residents away (monthly means); on ordinary weekday nights from April to June and in September, 72--81\% do. On every August-window night of 2022--2024 the share is 97--99\%, and on Christmas Eve 2024 it is 99.6\%. On 14--15 August 2024 these zones received 0.71 visitors per resident against 0.07 on 13--14 February, while departures per resident barely changed (0.08 against 0.10). Inland, with controls for size, area, coast, distance and province, about two thirds of the August change relative to February comes from more arrivals and one third from fewer departures, a split close to Christmas Eve (Supplementary Section~S5).
+
+\subsection{What the data could not show}
+
+Two further questions did not pass the tests set for them. First, the national survey records the birth municipality of respondents' parents, which in principle lets me ask whether flows reach the specific villages of the parents rather than their provinces. In August, a city-to-village flow is 4.0 percentage points (95\% CI 2.2--5.7) more likely to appear in the published municipal trip matrices, relative to February, when residents' parents were born in that village. But the statistics office withholds flows below 30 trips, and whether the number of trips grows depends on how those withheld flows are filled; the result failed the condition set in advance and is reported in Supplementary Section~S6 as a limit of the data. Second, the holiday network looks very different from the ordinary one, with fewer reciprocated links and a sharper split between sending and receiving zones. Degree-preserving null models reproduce about 93\% of the change in degree mixing, so most of the apparent reorganisation follows from the higher density of the holiday network (Supplementary Section~S2).
+
+%% ============================================================
+\section{Discussion}\label{sec:discussion}
+
+The answer to the title's question is: both, at different times and for different people. On every night, the provinces where a city's residents were born receive more of its overnight visitors than distance and income predict. On mid-August nights, at Christmas and on All Saints, this alignment strengthens, and in August it strengthens because of residents who arrived before 1981 and residents born in villages, while recent arrivals pull the other way and go home at Christmas instead. The coast takes most of the extra August travel in absolute numbers, but the part of August that follows birthplaces is inland.
+
+This connects two literatures that rarely meet. Work on mobility from digital traces treats flows as a function of current populations, distances and amenities \cite{simini2012universal,lenormand2016systematic,barbosa2018human}; work on migration and tourism shows that migrant stocks and social ties predict travel \cite{etzo2014migration,santanagallego2022tourism,bailey2018social,janta2015rethinking}. The calendar here shows that the second effect is not constant: it is a seasonal layer that switches on during family holidays and is carried by an identifiable generation. It is consistent with qualitative accounts of homecoming to Spanish villages \cite{galvezgarcia2025homecoming,vinuesa2005poblacion,delgadourrecho2014importancia} and with the evidence that family ties pull city residents back to their regions of origin \cite{mulder2020young,masso2019generational}. It also cautions against reading holiday network restructuring as new behaviour \cite{wen2026reframing,wei2018richclub}: most structural change in these networks follows from density, and the behavioural signal lies in which links grow.
+
+The results have practical meaning. Population registers count where people live, and hotel statistics count paid stays; neither sees the relatives and second-home owners who fill depopulated villages for part of the year \cite{back2017mapping,garciagonzalez2024retorno}. The receiving-end results show that these places are net receivers on most warm-season weeknights and on almost every August night, which matters for water, health and transport services planned on the registered population.
+
+\paragraph{Limitations.} The data link places, not people. A city with more residents born in a province sends more people there, but the travellers need not be those residents, and nothing here observes the purpose of a trip or where travellers sleep; the generation results describe the composition of cities, not individual behaviour. Arrival before 1981 marks arrival in a province, not in a city, and includes people who moved for reasons other than the exodus. The overnight data come from one operator and are expanded to the population, and the July 2025 method change, although it barely moves the quantity estimated here, makes 2025 a different measurement. The roots are measured once, in 2024, so slow changes in the population cannot be followed. The parents'-village analysis, which would come closest to individual return, is limited by the suppression of small flows in the published matrices. Finally, the pre-registration was made after part of the data had been seen; the 2025 hold-out is the cleanest test, and it rests on five August nights.
+
+\paragraph{Outlook.} The roots elasticity is easy to compute wherever overnight mobility and birthplace data exist, and the comparison generalises to other countries with large past internal migrations, from the depopulated interiors of Italy and France to the post-exodus regions of East Asia. Linking anonymised travel records to individuals' family origins, for example through consented surveys, would turn the association measured here into a statement about who returns. As the exodus generation ages, the calendar offers a way to watch whether the summer pull of the villages fades or passes to the next generation.
+
+%% ============================================================
+\backmatter
+
+\bmhead{Supplementary information}
+Supplementary Information (PDF): data validation, network diagnostics against null models, robustness of the tests, cohort sensitivity, receiving-end decomposition, the parents'-village analysis, the method bridge for 2025, and the pre-registration with its deviations.
+
+\bmhead{Acknowledgements}
+[To be completed by the author.]
+
+\section*{Declarations}
+
+\begin{itemize}
+\item \textbf{Funding.} [To be confirmed by the author; no specific funding.]
+\item \textbf{Competing interests.} The author declares no competing interests.
+\item \textbf{Ethics approval and consent to participate.} Not applicable. The study uses published, anonymised and aggregated official statistics and public-use microdata; no individual was contacted or identified.
+\item \textbf{Consent for publication.} Not applicable.
+\item \textbf{Availability of data and materials.} The overnight-stay matrices are open data of the Ministry of Transport \cite{mitms2024methodology}; census tables and microdata, income, housing and phone-based tourism matrices are open data of the national statistics office \cite{ine2026table68545,ine2025censo,ine2026adrh,ine2023viviendas,ine2026turismomoviles,ine2023ecepovmicro}; municipal boundaries are from Eurostat GISCO \cite{gisco2021lau}. Download scripts, derived city--province tables and all estimates are in the repository below.
+\item \textbf{Code availability.} All code, the pre-registration and its deviations are available at \url{https://github.com/aleetreny/spain-holiday-roots} and archived at Zenodo [DOI to be added at acceptance].
+\item \textbf{Authors' contributions.} A.T.O. designed the study, analysed the data and wrote the manuscript.
+\item \textbf{Use of AI tools.} [To be confirmed by the author.] Large language model assistants were used under the author's supervision for code development, literature searching and language editing. The author checked all analyses, numbers and text and takes full responsibility for the content.
+\end{itemize}
+
+\bibliography{references}
+
+\end{document}
