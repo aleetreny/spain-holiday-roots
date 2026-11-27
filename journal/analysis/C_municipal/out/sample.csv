@@ -1,0 +1,2 @@
+cities,villages,dyads,origin_provinces,destination_provinces,months,households,city_born_households,parent_ties,parent_ties_2plus_households,first_gen_ties,first_gen_ties_2plus_households,coastal_villages,coastal_cities,missing_housing_villages,distances_present,min_km,max_km,always_published,always_published_tied
+137,5849,789254,47,47,87,95495,57172,7988,1389,8615,711,30,49,0,789254,6.894381423158198,1035.7502646663938,360,184
