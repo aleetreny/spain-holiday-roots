@@ -1,0 +1,3 @@
+term,n_paired_dates,mean_absolute_difference,tolerance,pass,joint_pass
+pooled,6,0.013817309454432039,0.035,True,True
+pre1981,6,0.005423588729757403,0.024,True,True
