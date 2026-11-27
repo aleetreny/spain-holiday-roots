@@ -4,6 +4,12 @@
 - **Date of research & verification:** 27 November 2026. All URLs, DOIs, APC lists, and journal pages below were accessed on **27 November 2026** unless an explicit publisher list date is noted (e.g. Elsevier APC list dated `05-Oct-2026`; DOAJ records last updated `17-Sep-2026`).
 - **Verification note:** Direct HTTP access to Cloudflare- or JS-challenge-protected publisher portals (`link.springer.com`, `sciencedirect.com`, `onlinelibrary.wiley.com`, `tandfonline.com`, `journals.sagepub.com`, `academic.oup.com`, `royalsocietypublishing.org`, `scimagojr.com`) was not bypassed. Where a fact could not be read directly from an open publisher page, official static price list, DOAJ, Crossref, OpenAlex, PMC/Europe PMC, or indexed snippet, it is explicitly marked **not found** together with where I looked. All word counts extracted from XML/HTML/PDF full texts are marked **my count**.
 
+> **Orchestrator audit (27 Nov 2026).** Re-checked independently:
+> - APCs: EPJ Data Science (EUR 1,690 / USD 1,990 / GBP 1,340) and PLOS ONE (USD 2,477) match the DOAJ API; JTG, Annals of Tourism Research, Tourism Management, J. Rural Studies and CEUS match the Elsevier APC list (`article-publishing-charge.xlsx`) exactly.
+> - All 15 comparable-paper DOIs resolve in the Crossref API with the stated title, journal and first author.
+>
+> **Not yet backed by a source link in this file (verify before relying on them):** most impact factors and quartiles (JTG 6.8, PSP 2.4, EPJDS "~3.1", Annals 8.1, Tourism Management 14.5, Regional Studies 5.9 and others marked "recent JCR"); the "third-party" decision times (source not named); Wiley's "15.0 days" for PSP; word limits for JTG, PSP, Tourism Management, Regional Studies, EPB; acceptance rates; UCL/Jisc read-and-publish coverage; the Springer Nature "Green/Amber/Red" AI framework wording. "Collantes et al. 2014" and "Janta et al. 2015" are in `references.bib` but are not among the 19 works cited in the coursework report.
+
 ---
 
 ## Executive Summary
