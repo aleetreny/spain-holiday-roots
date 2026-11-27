@@ -190,7 +190,7 @@ NOTE_FULL = (
     "(Zhou, Cox & Hansen 2017), null keeping P(k) and φ(k). Rich-club clique: the largest n such that the n "
     "best-connected zones are all linked to one another (Zhou & Mondragón 2007). Tail fit: Clauset–Shalizi–Newman likelihood-ratio test; "
     "'tie' means p ≥ 0.05. † The change from the ordinary night does not keep its direction in every pair of "
-    "sister nights (117 summer pairs, 39 All Saints pairs). 1 Nov is the quietest of its three sister nights. "
+    "sister nights (117 summer pairs, 39 All Saints pairs). 31 Oct–1 Nov is the quietest of its three sister nights. "
     ""
 )
 NOTE_MAIN = (
@@ -233,7 +233,7 @@ def tex(s):
 def write(name, title, label, cols, rows_, note, sections):
     hdr = "| | " + " | ".join(f"{c[3]}<br>{c[4]}" for c in cols) + " |"
     md = [f"# {title}", "", hdr, "|---|" + "---:|" * len(cols)]
-    tx = [r"\begin{table}[t]", r"\centering", r"\small", r"\setlength{\tabcolsep}{3pt}", rf"\caption{{{title.split('. ', 1)[1]}}}",
+    tx = [r"\begin{table}[" + ("!h" if name == "tableA1" else "t") + "]", r"\centering", r"\small", r"\setlength{\tabcolsep}{3pt}", rf"\caption{{{title.split('. ', 1)[1]}}}",
           rf"\label{{{label}}}", r"\resizebox{\linewidth}{!}{\begin{tabular}{l" + "r" * len(cols) + "}", r"\toprule",
           " & " + " & ".join(rf"\shortstack[r]{{{c[3]}\\{c[4]}}}" for c in cols) + r" \\", r"\midrule"]
     last = None
