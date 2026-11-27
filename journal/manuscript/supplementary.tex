@@ -5,6 +5,10 @@
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{url}
+\usepackage{placeins}
+\geometry{textwidth=170mm,textheight=230mm}
+\clubpenalty=10000
+\widowpenalty=10000
 \graphicspath{{../figures/out/}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 \renewcommand{\thetable}{S\arabic{table}}
@@ -16,44 +20,48 @@
 \title[Roots or beaches? Supplementary Information]{Supplementary Information for ``Roots or beaches? Historical internal migration and holiday mobility in Spain''}
 \author{\fnm{Alejandro} \sur{Treny Ortega}}
 \affil{\orgname{University College London}, \orgaddress{\city{London}, \country{United Kingdom}}}
-\abstract{This document gives the checks behind the main text: validation of the overnight data (S1), the structure of the holiday network against null models (S2), robustness of the pre-registered tests (S3), sensitivity of the cohort results (S4), the receiving end of the flows (S5), the parents'-village analysis that failed its pre-registered gate (S6), the bridge across the July 2025 change of method (S7), and the pre-registration with its deviations (S8). Every number traces to a file in the code repository (\url{https://github.com/aleetreny/spain-holiday-roots}, branch \texttt{journal}).}
+\abstract{This supplement gives the checks behind the main text. Sections S1--S8 cover data validation, network structure, robustness, arrival cohorts, net receivers, parental birthplaces, the 2025 change of method and deviations from the pre-registration.}
 \maketitle
 
 %% ------------------------------------------------------------
 \section{Validation of the overnight data}\label{si:validation}
 
-The ministry's overnight estimates come from one operator. The national statistics office publishes monthly tourism matrices built from three operators \cite{ine2026turismomoviles,gonzalezolmos2024measuring}, with a different unit (trips with at least one night, not persons per night). I summed the ministry's daily person-nights over each month of 2024 with data in both sources (February, March, August, October, November and December) and compared them with the statistics office's province-to-province overnight totals. The correlation across the 47$\times$47 province pairs is $r=0.90$--$0.99$ (Spearman $\rho=0.92$--$0.95$) in every month; for overnight arrivals by destination zone, $\rho=0.85$--$0.89$; for the 44,000--77,000 pairs of single-municipality zones present in both, the correlation of logs is 0.72--0.76. The agreement is weaker at fine geography, as expected from the suppression of small cells in the published matrices, but the province-level flows used in the roots model agree closely.
+The ministry's overnight estimates come from one operator. The National Statistics Institute (INE) uses three operators in its monthly tourism statistics \cite{ine2026table52997,ine2026turismomoviles,gonzalezolmos2024measuring}. I used the earlier coursework extract to compare ministry person-nights, summed within February, March, August, October, November and December 2024, with the INE province-to-province person-night totals (table 52997). Across the 2,162 directed interprovincial pairs, Pearson's $r$ is 0.90--0.99 across months and Spearman's $\rho$ is 0.92--0.95. Against the INE municipal \emph{trip} matrices, the rank correlation for arrivals by destination zone is 0.85--0.89. Among about 44,000--77,000 pairs of single-municipality zones published in both sources, the Pearson correlation of log flows is 0.72--0.76. These checks compare released totals. They do not establish agreement for small unpublished flows or for any individual traveller.
 
-Quality rules were fixed before analysis (Section~\ref{si:prereg}). Of the 1,096 calendar dates of 2022--2024, eleven files were never published (including an outage of the operator between 30 October and 3 November 2023), three dates are on the ministry's incident list (4 and 19 April and 11 November 2024) and three fall in the Valencia flood (29--31 October 2024). No night failed the coverage or volume rules. All 196 files of 2025 passed; the largest deviation of the mainland total from its rolling median was 1.18\%.
+The 2022--2024 calendar has 1,096 dates. Eleven files are absent, including the five dates from 30 October to 3 November 2023 affected by an operator outage. Six available files were excluded: those dated 4 and 19 April and 11 November 2024 on the ministry incident list, and those dated 29--31 October 2024 under the Valencia flood rule. The coverage floor was 99\% of the median number of residence zones. Total mainland counts could differ by at most 10\% from a centred rolling median of 28 observations. Neither rule excluded a file. The 196 available standard files of 2025 passed both screens, with a maximum departure from the rolling median of 1.18\%.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{Network structure against null models}\label{si:network}
 
-\begin{figure}[t]
+Figure~\ref{fig:si-network} shows the degree and mixing diagnostics.
+
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figS1.pdf}
-\caption{\textbf{Holiday network structure against degree-preserving null models.} Ordinary night (13--14 February 2024), summer holiday (14--15 August) and All Saints (31 October--1 November). \textbf{a, b}, In-degree against out-degree of each zone, coloured by type (inland, coastal, city of more than 100,000 people). \textbf{c}, Degree assortativity: observed (point), mean of 50 degree-preserving rewirings (tick) and range reachable by rewiring while keeping degrees and connectivity (bar). \textbf{d}, Rich-club coefficient and second-order mixing against their null models. Links: at least 10 residents of $i$ sleeping in $j$.}
-\label{fig:S1}
+\caption{\textbf{Network structure on ordinary and holiday nights.} \textbf{a, b} Incoming and outgoing degree (plus one, on logarithmic axes) in 2,435 mainland zones on 13--14 February and 14--15 August 2024. Degree uses directed links carrying at least ten overnight travellers. Points are coloured by zone type: inland, coastal, or a city of more than 100,000 residents. \textbf{c} Undirected degree assortativity on those nights and All Saints (dots), compared with the mean of 50 connected degree-preserving rewirings per night (ticks). Grey bars span the range reachable by degree-preserving rewiring, from maximally disassortative to maximally assortative. \textbf{d} Mean second-order degree mixing (dots), compared with the mean of 50 connected rewirings preserving degree and the rich-club curve (ticks).}
+\label{fig:si-network}
 \end{figure}
 
-For each main night I build a directed network on the 2,435 zones, with a link from $i$ to $j$ when at least ten residents of $i$ sleep in $j$. The summer network is about four times denser (undirected density 0.89\% on 13--14 February 2024, 3.44\% on 14--15 August). It splits into sending and receiving zones: the rank correlation of a zone's in- and out-degree falls from 0.69 to 0.09, and reciprocity from 0.52 to 0.24 (0.24 also when every night keeps the same number of directed links, 35,812). Degree assortativity falls from $-0.131$ to $-0.214$. Degree-preserving rewiring of the same networks gives $-0.140$ and $-0.217$: the null reproduces about 93\% of the change, so the summer network mixes the way its new degrees force it to \cite{maslov2002specificity,zhou2007structural}. The range of assortativity reachable by rewiring \cite{zhou2007structural} widens from $[-0.22,-0.09]$ to $[-0.42,-0.11]$. The rich-club coefficient of the 50 best-connected zones rises from 0.80 to 0.96, but its rewired value rises from 0.66 to 0.92, and the normalised coefficient falls from 1.22 to 1.05. The only property clearly beyond its null in summer is second-order mixing \cite{zhou2017second}, $-0.289$ against $-0.252$ under a null that keeps degrees and the rich-club profile. Two network-level claims explored earlier did not survive their nulls: the promotion of depopulated zones to the network core is reproduced by rewiring, and the communities of the bipartite city--zone network are more geographically compact than a calibrated gravity null, not less (non-contiguous share 71\% against 99\%).
+For each main night I build a directed network on the 2,435 zones, with a link from $i$ to $j$ when at least ten residents of $i$ sleep in $j$. The summer network is about four times denser (undirected density 0.89\% on 13--14 February 2024, 3.44\% on 14--15 August). It splits into sending and receiving zones: the rank correlation of a zone's in- and out-degree falls from 0.69 to 0.09, and reciprocity from 0.52 to 0.24 (0.24 also when every night keeps the same number of directed links, 35,812). Degree assortativity falls from $-0.131$ to $-0.214$. Degree-preserving rewiring of the same networks gives $-0.140$ and $-0.217$: the null reproduces about 93\% of the change, conditional on the degree sequences \cite{maslov2002specificity,zhou2007structural}. The range of assortativity reachable by rewiring \cite{zhou2007structural} widens from $[-0.22,-0.09]$ to $[-0.42,-0.11]$. The rich-club coefficient of the 50 highest-degree zones rises from 0.80 to 0.96, but its rewired value rises from 0.66 to 0.92, and the normalised coefficient falls from 1.22 to 1.05. Second-order mixing in summer stands out in these comparisons \cite{zhou2017second}, $-0.289$ against $-0.252$ under a null that keeps degrees and the rich-club profile. Two network-level claims explored earlier did not survive their nulls: depopulated zones lose core rank in August, a pattern also seen after rewiring, and the communities of the bipartite city--zone network have a lower non-contiguous share than under a calibrated gravity null (71\% against 99\%).
 
-The lesson for the main text is that the holiday network looks different on almost every structural measure because it is denser, as expected from the literature on comparing networks of different density \cite{vanwijk2010comparing,krings2012effects,cimini2019statistical}. The behavioural signal is in which links grow, which the roots elasticity measures directly.
+Degree sequences constrain assortativity more tightly than density alone \cite{vanwijk2010comparing,krings2012effects,cimini2019statistical}. In particular, the equal-link comparison leaves August reciprocity low. These summaries describe network structure. The birthplace models ask which links account for the change in flows.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{Robustness of the pre-registered tests}\label{si:robust}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figS3.pdf}
-\caption{\textbf{Robustness of the August contrasts, 2022--2024 confirmation.} \textbf{a}, P1 (all residents), P2 (arrived before 1981) and P3 (inland minus coast) under alternative specifications. \textbf{b}, Leave-one-destination-province-out estimates. 95\% wild cluster bootstrap intervals, clustered by origin province.}
-\label{fig:S3}
+\caption{\textbf{Sensitivity of the August roots contrasts.} \textbf{a, b} Pooled August premium (P1, main sample of 112 cities) and pre-1981 arrival premium (P2, main sample of 675 cities) in the 2022--2024 confirmation sample. Diamonds mark the main specifications. Intervals are 95\% wild-cluster bootstrap intervals by origin province. Each lower strip shows point estimates from 47 fits, each excluding one destination province. The dark point repeats the full-sample estimate.}
+\label{fig:si-robust}
 \end{figure}
 
-Table~\ref{tab:robust} lists the pre-registered robustness checks on the 2022--2024 confirmation. The pooled premium (P1) stays between 0.07 and 0.15; its interval touches zero when distance is measured by road travel time and when each night has equal weight. The pre-1981 term (P2) is positive with an interval above zero in every check except coastal destinations only. The inland-minus-coast difference (P3) is significant only with road travel time and vanishes when Madrid and Barcelona are dropped as origins.
+Table~\ref{tab:robust} and Fig.~\ref{fig:si-robust} show sensitivity checks against the new ordinary nights of 2022--2024. The pooled estimate (P1) stays between 0.07 and 0.15. Its interval crosses zero with road travel time and equal night weighting. For the pre-1981 term (P2), the coastal-only interval and the interval with the smallest share offset also cross zero. The unadjusted P3 interval excludes zero with road travel time alone. The point estimate is close to zero after omitting Madrid and Barcelona.
 
-\begin{table}[t]
-\caption{\textbf{Robustness checks, 2022--2024 confirmation.} Estimate, 95\% wild cluster bootstrap interval and bootstrap $p$-value (not Holm-adjusted).}\label{tab:robust}
+\begin{table}[!htbp]
+\caption{\textbf{Robustness checks for 2022--2024.} Estimates with pointwise 95\% wild-cluster bootstrap intervals. A dash denotes a check without an estimate for that contrast.}\label{tab:robust}
 \footnotesize
 \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc}
 \toprule
@@ -65,91 +73,121 @@ Road travel time & 0.099 [$-0.007$, 0.202] & --- & 0.152 [0.022, 0.347] \\
 Drop Madrid origin & 0.119 [0.031, 0.183] & 0.071 [0.036, 0.093] & --- \\
 Drop Barcelona origin & 0.071 [0.017, 0.185] & 0.064 [0.031, 0.089] & --- \\
 Drop Madrid and Barcelona & 0.096 [0.035, 0.171] & 0.061 [0.024, 0.091] & 0.001 [$-0.126$, 0.244] \\
+Exclude three artefact destinations & 0.106 [0.011, 0.196] & --- & --- \\
 Inland zones only & 0.138 [0.024, 0.223] & 0.131 [0.093, 0.157] & --- \\
 Inland provinces only (28) & 0.154 [0.039, 0.245] & 0.147 [0.091, 0.184] & --- \\
 Coastal zones only & 0.011 [$-0.135$, 0.134] & $-0.005$ [$-0.028$, 0.014] & --- \\
 Seasonal reference (June, September) & 0.088 [0.014, 0.168] & 0.060 [0.036, 0.080] & 0.079 [$-0.049$, 0.233] \\
 Equal weight by night & 0.110 [$-0.007$, 0.200] & 0.071 [0.038, 0.093] & 0.132 [$-0.058$, 0.289] \\
+P3 on full destination support & --- & --- & 0.127 [$-0.020$, 0.275] \\
 Single pooled contrast across years & 0.103 [0.007, 0.193] & 0.071 [0.041, 0.093] & 0.128 [$-0.030$, 0.293] \\
 \botrule
 \end{tabular*}
 \end{table}
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{Sensitivity of the cohort results}\label{si:cohort}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figS5.pdf}
-\caption{\textbf{Cohort results under alternative rules for empty census cells.} August (14--15 August 2024) against 13--14 February 2024 and October 2024 weekdays, expressed as the percentage change in expected flow for a one-standard-deviation increase in the group share, so that rules are comparable. 95\% wild cluster bootstrap intervals, 44 origin-province clusters.}
-\label{fig:S5}
+\caption{\textbf{Sensitivity to the treatment of zero census cells.} \textbf{a--d} Change from the baseline to 14--15 August 2024 in the predicted-flow contrast for a one-standard-deviation rise in the raw birth share, plotted as a percentage. The raw-share shift is flow-weighted and defined within fixed effects. Points compare 675 cities, or a restricted 112-city sample on the final row, against 13--14 February or the mean of 12 October weekday nights. Lines are 95\% wild-cluster bootstrap intervals by origin province, transformed to the common predicted-flow scale.}
+\label{fig:si-zero}
 \end{figure}
 
-In a 10\% sample many city--province cells are empty for a group, so the log share needs a rule. The main text adds one half to each group count. Seven rules give the same sign for the pre-1981 and village-born terms; expressed as the percentage change in expected flow for a one-standard-deviation increase in the group share, six of them agree closely (pre-1981: $+4.1$\% to $+10.3$\% for all destinations, $+8.4$\% to $+14.9$\% inland; village-born: $+8.8$\% to $+17.4$\%). The exception, adding $10^{-5}$ to the share, gives extreme weight to pseudo-zeros and shrinks the pre-1981 effect to $+2.0$\% ($p=0.09$; inland $+5.2$\%, $p<0.001$). On the 2022--2024 confirmation the pre-1981 coefficient ranges from 0.014 to 0.122 across rules, so the sign is robust and the size approximate.
+In a 10\% sample many city--province counts are zero. Figure~\ref{fig:si-zero} compares the change in predicted flow from a one-standard-deviation rise in the raw share. For 14--15 August against 13--14 February 2024, the pre-1981 contrast ranges from $+4.1$\% to $+10.3$\% across six rows for all destinations and from $+8.2$\% to $+14.9$\% inland. The village-born contrast ranges from $+8.8$\% to $+17.4$\% for all destinations across those rows. Adding $10^{-5}$ to the share gives the smallest pre-1981 contrast, $+2.0$\% ($p=0.09$) overall and $+5.2$\% ($p<0.001$) inland. In the 2022--2024 test the pre-1981 coefficients range from 0.014 to 0.122 across specifications. Those coefficients are on different scales when the share transformation changes.
 
-Further checks on the 2024 nights: (i) the special arrival codes of the census were dropped from both groups, which moves the estimates by at most 0.0016; (ii) within age bands, residents who arrived before 1981 gain more than later arrivals among those aged 65 and over ($+0.095$ against February, $+0.057$ against October) and among those aged 43--64 ($+0.040$, $+0.034$); (iii) the results hold when each of the 44 origin provinces and each of the 47 destination provinces is left out, and when Madrid and Barcelona are dropped together (42 clusters); (iv) the pre-1981 and village-born terms keep their sign in all 117 pairs of an August-window night and a February weekday night of 2024 and in 108 pairs built with October 2024, 2022 and 2023. These pairs share nights and cities and are not independent replications. The recent-arrival decline is $-0.071$ against February but $-0.029$ ($p=0.08$) against October, because February has an unusually high recent-arrival slope; the difference between pre-1981 and recent arrivals is positive against both ($+0.155$ and $+0.116$).
+The separate 2024 recode excludes special arrival codes in the birthplace-size model, whereas the calendar model uses the recorded birthplace-size codes regardless of arrival code. On the August--February contrast the combined recode and zone exclusion move the village-born estimate by at most 0.0016 across the all-destination and inland samples. Within each age band, the pre-1981 term rises more than post-1980 arrivals among those aged 65 and over ($+0.095$ against February and $+0.057$ against October). Among those aged 43--64, the comparator is 2016--2023 arrivals ($+0.040$ and $+0.034$). The pre-1981 and village-born contrasts stay positive across the omissions of 44 origin and 47 destination provinces, and without Madrid and Barcelona together (42 origin clusters). Each contrast is positive in all 117 overlapping August--February pairs and all 108 August--October pairs in 2024. The February grids in 2022 and 2023 contain 108 pairs each. These checks reuse nights and cities. In 2024 the recent-arrival decline is $-0.071$ against February and $-0.029$ against October ($p=0.081$). The pre-1981 minus recent gap is $+0.155$ and $+0.116$, respectively.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{The receiving end}\label{si:receiving}
 
-\begin{table}[t]
-\caption{\textbf{Most depopulated fifth of zones: share of net receivers by type of night, 2022--2024.} 475 zones; ordinary nights by month (monthly means and range).}\label{tab:receiving}
+\begin{table}[!htbp]
+\caption{\textbf{Net receivers in the most depopulated zones.} Share of the 475 zones that receive more visitors than they send, across valid nights in 2022--2024. Ordinary nights are grouped by evening date.}\label{tab:receiving}
 \footnotesize
 \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc}
 \toprule
 Nights & Nights (n) & Mean share & Range \\
 \midrule
-Ordinary, January--March & 93 & 0.38--0.39$^{a}$ & 0.18--0.69 \\
-Ordinary, April--June & 85 & 0.72--0.81$^{a}$ & 0.52--0.88 \\
-Ordinary, September & 22 & 0.74 & 0.63--0.85 \\
-Ordinary, October & 28 & 0.49 & 0.35--0.65 \\
-Ordinary, November--December & 52 & 0.27--0.28$^{a}$ & 0.17--0.50 \\
-August window (10--18 August) & 27 & 0.98 & 0.97--0.99 \\
+Ordinary, January--March & 93 & 0.385--0.392$^{a}$ & 0.18--0.69 \\
+Ordinary, April--June & 85 & 0.72--0.82$^{a}$ & 0.52--0.88 \\
+Ordinary, September & 23 & 0.73 & 0.58--0.85 \\
+Ordinary, October & 27 & 0.48 & 0.35--0.65 \\
+Ordinary, November--December & 52 & 0.274$^{a}$ & 0.17--0.50 \\
+August window (nights ending 10--18 August) & 27 & 0.98 & 0.97--0.99 \\
 \botrule
 \end{tabular*}
-\footnotetext{$^{a}$ Range of the monthly means within the period.}
+\footnotetext{$^{a}$ Monthly means are shown as a range when they differ at the displayed precision.}
 \end{table}
 
-Table~\ref{tab:receiving} gives the seasonal cycle. On 14--15 August 2024 these zones received 0.71 visitors per resident (0.07 on 13--14 February) and sent 0.08 residents per resident elsewhere (0.10 in February); on Christmas Eve 0.38 and 0.14. Relative to the least depopulated fifth, about three quarters of the August gap comes from arrivals and one quarter from fewer departures, because departures from the least depopulated zones triple in August. In a model on inland zones with controls for population, number of municipalities, area, distance to the coast and to the nearest city, and province, the August change relative to February is $+0.144$ arrivals per resident (95\% CI 0.058--0.224) and $-0.076$ departures ($-0.090$ to $-0.060$), close to Christmas Eve ($+0.120$ and $-0.080$). With all zones, coastal resorts with very large August arrivals dominate the arrival term and the controlled August arrivals coefficient is not detected ($-0.040$).
+Table~\ref{tab:receiving} gives the seasonal cycle. The 27 mid-August nights range from 97.3\% to 98.9\% net receivers. Across all 93 nights ending in August the range is 96.6\% to 98.9\%. On 14--15 August 2024 these zones received a mean of 0.71 visitors per resident and sent 0.08 residents per resident elsewhere. The February means were 0.07 and 0.10, and the Christmas Eve means were 0.38 and 0.14. In the unadjusted comparison with the least depopulated fifth, arrivals account for about three quarters of the August change in the gap between groups. Fewer departures account for the rest. For inland zones I modelled changes in arrivals and departures separately, controlling for population, number of municipalities, area, distances to the coast and the nearest city, and province. Per unit of population-loss rank, the August-minus-February estimates are $+0.144$ arrivals per resident (95\% CI 0.058--0.224) and $-0.076$ departures ($-0.090$ to $-0.060$). The Christmas Eve estimates are $+0.120$ and $-0.080$. The corresponding August arrivals coefficient across all zones is $-0.040$, with an interval crossing zero.
 
-\paragraph{Second homes.} Adding the share of non-primary dwellings (Census 2021 \cite{ine2023viviendas}) to the regression of the log change in visitors on the depopulation rank reduces the rank coefficient by 48\% in August and 2\% on Christmas Eve (paired difference 0.209, 95\% CI 0.120--0.292 by zone bootstrap). This is an attenuation of a coefficient, not a mediation analysis, and it is not detected in single-municipality zones alone (0.083, $-0.039$ to 0.184). I therefore do not draw conclusions about where visitors sleep.
+\subsection{Non-primary dwellings} Adding the share of non-primary dwellings from the 2021 census \cite{ine2023viviendas} to the regression of the log visitor ratio on depopulation rank reduces the rank coefficient by 48\% in August and 2\% on Christmas Eve. The difference in attenuation is 0.209 (95\% CI 0.120--0.292, zone bootstrap). In single-municipality zones the difference is 0.083 ($-0.039$ to 0.184). This is a comparison of coefficients. The dwelling category includes vacant homes, and the data do not identify accommodation used by visitors.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{Parents' villages}\label{si:parents}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{figS2.pdf}
-\caption{\textbf{Flows to the villages where residents' parents were born.} 137 cities $\times$ 5,849 mainland municipalities of up to 2,000 inhabitants in other provinces. \textbf{a}, Change in the probability that the city-to-village flow appears in the published municipal trip matrices, for pairs with a parental tie, by month against February and October of the same year. \textbf{b}, Change in trips under alternative treatments of withheld cells (set to 0, set to 29, and the interval between them). 95\% intervals combine two-way province clustering and 399 survey resamples.}
-\label{fig:S2}
+\caption{\textbf{Parental ties and published city-to-village trips.} \textbf{a, b} Percentage-point change in the association between a survey-reported parental tie and publication of an INE flow, relative to February or October of the same year, for 789,254 city--village pairs. Points mark August. Ribbons show 95\% intervals combining origin- and destination-province clustering with variance from 399 household resamples. Gaps indicate unavailable comparison months or the reference month itself. \textbf{c} August minus reference trip-count bounds under suppression. Dots mark estimated endpoints. The light segment spans the lower endpoint's 95\% lower limit to the upper endpoint's 95\% upper limit.}
+\label{fig:si-parents}
 \end{figure}
 
-The national survey ECEPOV 2021 \cite{ine2023ecepovmicro} records the exact birth municipality of each respondent and of both parents. For city-born respondents in the 137 cities, I counted, for each city and each mainland municipality of up to 2,000 inhabitants in another province, the survey-weighted share of parent birthplaces in that village (7,988 city--village pairs have a parental tie). The outcome is the monthly number of trips from city to village in the statistics office's three-operator matrices \cite{ine2026turismomoviles}, July 2019 to September 2026, which withhold flows below 30 trips. Municipal geometry comes from Eurostat \cite{gisco2021lau}. The design compares villages of the same province receiving visitors from the same city, with city~$\times$~province and village effects.
+The 2021 Survey of Essential Characteristics of Population and Housing (ECEPOV) records the birth municipality of respondents and their parents \cite{ine2023ecepovmicro}. For city-born respondents I compute the survey-weighted share of parent birthplaces in each eligible village. The fixed sample contains 789,254 interprovincial pairs across 137 origin cities and 5,849 municipalities with up to 2,000 residents in 2021. Of these pairs, 7,988 have a reported parental tie. The outcome is the monthly trip count in the INE release from July 2019 to September 2026, which withholds published cross-tabulations below 30 trips \cite{ine2026turismomoviles}. The model compares within-pair changes and holds fixed city-by-destination-province and village terms. It also adjusts for first-generation birthplace ties, distance and the interaction of distance with coast. Municipal polygons supply distances and the coastal flag \cite{gisco2021lau}. \textcopyright{} EuroGeographics for the administrative boundaries.
 
-Pre-registered gate (Section~\ref{si:prereg}): (1) the August change in publication probability must be positive against February and October; (2) the change in trips must be positive under at least two treatments of the withheld cells; (3) intervals must propagate survey uncertainty and cluster in both province dimensions; (4) real municipal geometry must be used. Conditions 1, 3 and 4 pass: a parental tie raises the August-minus-February probability of publication by 4.0 percentage points (95\% CI 2.2--5.7) and the August-minus-October probability by 3.1 (1.5--4.6), with a dose response in the strength of the tie. Condition 2 fails. Setting withheld cells to 0 or to 29 gives positive changes ($+17$ and $+16$ trips against February), but these are two scenarios of the same method; allowing each withheld cell to take any value between 0 and 29 gives a confidence envelope from $-65$ to $+93$ trips, and on the 360 pairs published every month the change is $-0.16$ log points ($-0.83$ to 0.51). The analysis therefore stays here as a limit of the published data: flows towards parents' villages cross the publication threshold more often in August, but the data cannot say by how many trips they grow.
+The pre-registration set four conditions for reporting this analysis in the main text (Section~\ref{si:prereg}). The publication-probability contrast had to be positive against both references, and the count contrast had to be positive under at least two treatments of suppression. The design also required survey resampling, two-way province clustering and municipal geometry. The publication contrast is 3.98 percentage points (95\% CI 2.24--5.72) against February and 3.08 (1.52--4.63) against October (Fig.~\ref{fig:si-parents}a,b). The February comparison covers August 2020--2026 and the October comparison covers August 2019--2025. Filling all suppressed cells with 0 or all with 29 gives increases of about 17 and 16 trips against February. These are two fills from a single constant-fill approach. Under the working range of 0--29 trips for each withheld cell, the 95\% envelope is $-64.74$ to $+93.49$ trips against February and $-65.20$ to $+87.75$ against October (Fig.~\ref{fig:si-parents}c). For the 360 pairs published every month, the August--February contrast is $-0.16$ log points ($-0.83$ to 0.51). Earlier operator residuals need not obey that range. The analysis falls short of the count criterion. It uses previously explored data. The intervals combine two-way clustering across 47 origin and 47 destination provinces with variance from 399 household resamples. The continuously published subset uses the 395 draws that identify its coefficient.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{The July 2025 change of method}\label{si:bridge}
 
-\begin{figure}[t]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{figS4.pdf}
-\caption{\textbf{Method bridge.} Roots elasticity (all residents) and pre-1981 term on the six dates the ministry computed with both methods.}
-\label{fig:S4}
+\includegraphics[width=\textwidth]{figS4.pdf}
+\caption{\textbf{MITMA method bridge.} \textbf{a, b} Pooled elasticity (112 cities) and the pre-1981 term (675 cities) on six earlier nights processed by both MITMA methods. Each line joins two estimates for the same night. The panels use different horizontal ranges.}
+\label{fig:si-bridge}
 \end{figure}
 
-On 1 July 2025 the ministry changed its filter for static devices on road networks \cite{mitms2025methodchange} and recalculated six dates with the new method. On these dates the new method raises the mainland total away from home by 4--6\% and lowers the overall total by under 1\%. The roots elasticity changes by $+0.003$, $+0.002$, $-0.005$, $+0.022$, $+0.029$ and $+0.023$ (mean absolute change 0.014; registered tolerance 0.035), and the pre-1981 term by at most 0.014 (mean absolute change 0.005; tolerance 0.024). The bridge passed, so the 2025 hold-out compares the five August nights (new method) with ordinary nights of January--June (old method) and October 2025 (new method).
+On 1 July 2025 the ministry changed its filter for static devices on road networks \cite{mitms2025methodchange}. It recalculated six earlier dates (Fig.~\ref{fig:si-bridge}). On those dates the new method increases the total number of mainland residents sleeping away by 4.37--6.18\% and lowers the overall mainland person-night total by 0.74--0.80\%. The pooled elasticity changes by $+0.003$, $+0.002$, $-0.005$, $+0.022$, $+0.029$ and $+0.023$ in date order (mean absolute change 0.014, registered tolerance 0.035). The pre-1981 term changes by at most 0.014 (mean absolute change 0.005, tolerance 0.024). The bridge passed for those two measures. All five August nights use the new method. Among the 62 ordinary nights, 61 use the old method and only 15--16 October 2025 uses the new one. The recalculated pairs include no August night and do not calibrate P3 or the other cohort terms.
 
 %% ------------------------------------------------------------
+\FloatBarrier
 \section{Pre-registration and deviations}\label{si:prereg}
 
-The pre-registration (\texttt{journal/analysis/PREREGISTRATION.md} and \texttt{design.yml} in the repository) was committed on 27 November 2026 before the 779 new nights of 2022--2024 were opened. It fixed the night classes and quality rules, the two models, the primary hypotheses (P1--P3), the secondary hypotheses (S1--S6), the inference and the Holm families, the decision rule and the gate for the parents'-village analysis. Two deviations were recorded:
+The original design was committed on 27 November 2026 before the 779 previously unopened files from 2022--2024 were analysed (commit \texttt{79a135a}, \nolinkurl{journal/analysis/PREREGISTRATION.md} and \nolinkurl{design.yml}) in the analysis repository \cite{trenyjournal}. The 2025 addendum was committed before downloading or opening any 2025 file (commit \texttt{8506c36}). The night classes, methods, Holm families and criteria for reporting the August contrasts and the parental analysis are in those documents.
 \begin{enumerate}
-\item \emph{No new August nights in the 2022--2024 confirmation.} Every August night of 2022--2024 had been in the earlier cache, so that confirmation compares seen August nights with new ordinary nights. A second confirmation on 2025 was registered before any 2025 file was downloaded, with the method bridge of Section~\ref{si:bridge}.
-\item \emph{Three zones with data drop-outs} were meant to be excluded and were kept as destinations in the 2022--2024 estimates. Excluding them changes the 2025 estimates by at most 0.0005 and no Holm decision.
+\item \emph{No new August nights in the 2022--2024 comparison.} All 27 August-window nights were in the earlier coursework cache. The comparison uses 212 new ordinary nights. The two new Christmas Eve and two new Good Friday nights from 2022 and 2023 permit a separate strict comparison. All Saints uses previously seen holiday nights. The 2025 addendum supplies unseen August and reference nights on both sides.
+\item \emph{Three destination zones with drop-outs.} The 2022--2024 headline fits retained the three zones the design specified should be removed. Excluding them in a 2022--2024 sensitivity gives P1 of 0.106 (95\% CI 0.011--0.196, unadjusted $p=0.034$). The 2025 headline fits exclude the three. Including them in the 2025 sensitivity changes the seven estimates by at most 0.00047 and leaves the Holm decisions unchanged. The 2022--2024 headline table reports the original fits.
 \end{enumerate}
-Analyses added after the registration and labelled as such: the split of the confirmation into strictly unseen nights, the descriptive calendar summaries, and the seasonal breakdown of the receiving end.
+The split that omits the focal August dates still uses previously seen August nights. The strict secondary split, calendar summaries and seasonal breakdown of the receiving end are additional checks. In the strict 2022--2023 split, the Christmas Eve contrast is 0.087 (95\% CI 0.042--0.176) and the Good Friday contrast is 0.025 ($-0.076$ to 0.103). Table~\ref{tab:si-splits} reports the discovery and all-night estimates.
 
+
+\begin{table}[!htbp]
+\caption{\textbf{Discovery and all-night comparisons.} Estimates for 2022--2024 with pointwise 95\% wild-cluster bootstrap intervals and Holm-adjusted $p$-values. Test labels follow Table 2 of the main article.}\label{tab:si-splits}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrcrrcr}
+\toprule
+ & \multicolumn{3}{c}{Discovery} & \multicolumn{3}{c}{All nights} \\
+\cmidrule{2-4}\cmidrule{5-7}
+Test & Est. & 95\% CI & $p$ & Est. & 95\% CI & $p$ \\
+\midrule
+P1 & $+0.143$ & $[0.048,\,0.242]$ & 0.0196 & $+0.108$ & $[0.005,\,0.201]$ & 0.0844 \\
+P2 & $+0.077$ & $[0.043,\,0.102]$ & 0.0003 & $+0.074$ & $[0.043,\,0.097]$ & 0.0003 \\
+P3 & $+0.172$ & $[-0.021,\,0.352]$ & 0.0781 & $+0.139$ & $[-0.035,\,0.312]$ & 0.0971 \\
+S1 & $+0.087$ & $[0.052,\,0.183]$ & 0.0008 & $+0.090$ & $[0.054,\,0.178]$ & 0.0008 \\
+S2 & $+0.055$ & $[-0.037,\,0.141]$ & 0.1804 & $+0.039$ & $[-0.048,\,0.114]$ & 0.2726 \\
+S3 & $+0.126$ & $[0.076,\,0.176]$ & 0.0015 & $+0.076$ & $[0.028,\,0.138]$ & 0.0057 \\
+S4 & $+0.086$ & $[0.064,\,0.108]$ & 0.0006 & $+0.079$ & $[0.060,\,0.101]$ & 0.0006 \\
+S5 & $-0.041$ & $[-0.068,\,-0.006]$ & 0.0344 & $-0.045$ & $[-0.073,\,-0.011]$ & 0.0196 \\
+S6 & $+0.118$ & $[0.065,\,0.150]$ & 0.0006 & $+0.120$ & $[0.072,\,0.146]$ & 0.0006 \\
+\botrule
+\end{tabular*}
+\end{table}
+
+\FloatBarrier
 \bibliography{references}
 
 \end{document}
