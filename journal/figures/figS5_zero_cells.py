@@ -1,0 +1,52 @@
+"""Compare zero-cell rules in predicted-flow units rather than transformed slopes."""
+
+from matplotlib.lines import Line2D
+
+from style import B, EXODUS, NEUTRAL, RECENT, figure, forest, interval, panel, read, save
+
+RULES = {
+    "haldane_0.5_main": "Add 0.5 to count",
+    "plus_1.0_log1p": "Add 1 to count",
+    "plus_0.1_pop_plus1": "Add 0.1 to count",
+    "log_share_plus_1e4": "Add 0.0001 to share",
+    "log_share_plus_1e5": "Add 0.00001 to share",
+    "asinh_1000_share": "asinh(1,000 × share)",
+    "R2_112_large_cities_haldane0.5": "112 largest cities, +0.5",
+}
+TERMS = {
+    "pre1981": ("Arrived before 1981", EXODUS),
+    "recent_2016_2023": ("Arrived 2016–2023", RECENT),
+    "born_village_le2k": ("Birthplace ≤ 2,000", EXODUS),
+    "born_urban_gt10k": ("Birthplace > 10,000", RECENT),
+}
+BASELINES = {"Aug15_vs_Feb14": ("o", -.15, "13–14 February"),
+             "Aug15_vs_OctMean12": ("s", .15, "October weekdays")}
+
+
+def main():
+    data = read(B, "b5_zero_cells_common_scale").query("sample == 'all' and term in @TERMS and not model.str.contains('complete')").copy()
+    fig = figure(121)
+    estimate = "pct_flow_1sd_rawshare_fw"
+    extrema = min(data[f"{estimate}_ci_lo"]), max(data[f"{estimate}_ci_hi"])
+    for i, (term, (title, colour)) in enumerate(TERMS.items()):
+        x, y = i % 2, i // 2
+        ax = fig.add_axes([.245 + x * .39, .554 - y * .418, .341, .324])
+        panel(ax, "abcd"[i], title, x=-.65 if x == 0 else -.105)
+        forest(ax, list(RULES.values()) if x == 0 else [""] * len(RULES),
+               (extrema[0] - 1, extrema[1] + 1), [-10, 0, 10, 20])
+        rows = data.loc[data.term.eq(term)].set_index(["rule", "contrast"])
+        for j, rule in enumerate(RULES):
+            for contrast, (marker, shift, _) in BASELINES.items():
+                row = rows.loc[(rule, contrast)]
+                interval(ax, j + shift, row[estimate], row[f"{estimate}_ci_lo"], row[f"{estimate}_ci_hi"],
+                         color=colour, marker=marker, size=3.8)
+    fig.text(.56, .072, "August change in predicted flow (%) for a one-SD rise in raw birth share",
+             ha="center", fontsize=8)
+    fig.legend(handles=[Line2D([], [], ls="", marker=mark, color=NEUTRAL, label=label)
+                        for mark, _, label in BASELINES.values()],
+               loc="lower center", bbox_to_anchor=(.56, .014), ncol=2)
+    save(fig, "S5", data.assign(panel=data.term.map(dict(zip(TERMS, "abcd")))))
+
+
+if __name__ == "__main__":
+    main()
