@@ -385,6 +385,8 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count300
 \@lastruleclass=\count301
 \@thisrulewidth=\dimen196
+) (placeins.sty
+Package: placeins 2005/04/18  v 2.2
 ) (l3backend-xetex.def
 File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 \c__kernel_sys_dvipdfmx_version_int=\count302
@@ -395,29 +397,30 @@ File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
 \g__pdf_backend_object_int=\count306
 \g__pdf_backend_annotation_int=\count307
 \g__pdf_backend_link_int=\count308
-) (supplementary.aux)
+)
+(supplementary.aux)
 \openout1 = `supplementary.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -428,14 +431,14 @@ LaTeX Font Info:    ... okay on input line 14.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 17.07164pt
 * modes: twoside 
-* h-part:(L,W,R)=(83.37448pt, 372.0pt, 125.06175pt)
-* v-part:(T,H,B)=(73.97716pt, 552.69478pt, 218.37491pt)
+* h-part:(L,W,R)=(38.69574pt, 483.69684pt, 58.04366pt)
+* v-part:(T,H,B)=(73.97716pt, 654.41338pt, 116.65631pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=372.0pt
-* \textheight=552.69478pt
-* \oddsidemargin=28.17613pt
-* \evensidemargin=52.79176pt
+* \textwidth=483.69684pt
+* \textheight=654.41338pt
+* \oddsidemargin=-16.50261pt
+* \evensidemargin=-14.22633pt
 * \topmargin=-19.72638pt
 * \headheight=5.5pt
 * \headsep=15.93355pt
@@ -454,12 +457,12 @@ LaTeX Font Info:    ... okay on input line 14.
 * \@reversemargintrue
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \S on input line 14.
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 14.
+LaTeX Info: Redefining \S on input line 18.
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 18.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 14.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 18.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 14.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 18.
 (color.sty
 Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
  (color.cfg
@@ -467,7 +470,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
 )
-Package hyperref Info: Link coloring ON on input line 14.
+Package hyperref Info: Link coloring ON on input line 18.
  (nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (refcount.sty
@@ -477,113 +480,74 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count309
 )
-LaTeX Info: Redefining \ref on input line 14.
-LaTeX Info: Redefining \pageref on input line 14.
-LaTeX Info: Redefining \nameref on input line 14.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 (supplementary.out) (supplementary.out)
 \@outlinefile=\write3
 \openout3 = `supplementary.out'.
 
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 21
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 25
 .
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
  (umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
  (umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Calculating math sizes for size <9.03374> on input line 21.
-
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 21
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 25
 .
+File: ../figures/out//figS1.pdf Graphic file (type pdf)
+<use ../figures/out//figS1.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 ]
-File: ../figures/out//figS1.pdf Graphic file (type pdf)
-<use ../figures/out//figS1.pdf>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
 File: ../figures/out//figS3.pdf Graphic file (type pdf)
 <use ../figures/out//figS3.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 58.
-
-Overfull \hbox (26.24928pt too wide) in alignment at lines 58--75
-[] [] [] []
- []
-
+ [2]
 File: ../figures/out//figS5.pdf Graphic file (type pdf)
 <use ../figures/out//figS5.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+ [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5]
-
-Package hyperref Warning: Difference (3) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 115.
-
+ [4]
 File: ../figures/out//figS2.pdf Graphic file (type pdf)
 <use ../figures/out//figS2.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
+ [5]
 File: ../figures/out//figS4.pdf Graphic file (type pdf)
 <use ../figures/out//figS4.pdf>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [6]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 171.
+
 (supplementary.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
-Underfull \hbox (badness 7649) in paragraph at lines 203--211
-[]\TU/lmr/m/n/10.03749 Eurostat GISCO: Local Administrative Units (LAU) 2021, 1
-:1 mil-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--211
-\TU/lmr/m/n/10.03749 lion. [][]$[][][][][] [] [] [] [][] [] [][][][][][] [] [][
-] [] [][][][][][][][] [] [][][] [] [][][][][] [] [][][][][][][] [] [][][][][][]
-[][][][][][][][][][][][] []
- []
-
-
-Underfull \hbox (badness 2452) in paragraph at lines 216--224
-[]\TU/lmr/m/n/10.03749 Ministerio de Transportes y Movilidad Sostenible: Cambio
- metodológico
- []
-
-
-Underfull \hbox (badness 2512) in paragraph at lines 216--224
-\TU/lmr/m/n/10.03749 en los indicadores de movilidad big data a partir del 1 de
- julio de
- []
-
-)
+ [7])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+ [8]
 (supplementary.aux)
 Package rerunfilecheck Info: File `supplementary.out' has not changed.
-(rerunfilecheck)             Checksum: 6F0A67431E4AA7A0263E572FDF5AFA58;1709.
+(rerunfilecheck)             Checksum: E7DFDEBC72EA98C58FFCA69F195F408C;1753.
  )
-Output written on supplementary.xdv (9 pages, 195884 bytes).
+Output written on supplementary.xdv (8 pages, 227444 bytes).
