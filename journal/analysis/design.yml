@@ -1,0 +1,75 @@
+# Machine-readable twin of PREREGISTRATION.md. Frozen 2026-11-27 before opening new MITMA nights.
+frozen: 2026-11-27
+date_convention: "file date d = night ending on morning of d; calendar rules use evening e = d - 1"
+mitma:
+  years: [2022, 2023, 2024]
+  discovery_set: "files present in /Users/alejandrotreny/Proyectos/spain-holiday-roots/_local/external/mitma_pernoct on 2026-11-27"
+  confirmation_set: "all other standard municipal daily files 2022-01-01..2024-12-31 passing quality rules"
+  new_files_dir: "/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/_local/external_journal/mitma_pernoct"
+  excluded_zones: ["31905_AM", "19103_AM", "40149_AM"]
+  flows: full_weight
+quality_rules:
+  ministry_incident_list: exclude
+  dana_window: ["2024-10-29", "2024-10-30", "2024-10-31"]
+  min_residence_zone_coverage: 0.99   # share of median number of reporting residence zones
+  max_total_deviation: 0.10           # vs 28-night centred rolling median of mainland persons
+calendar:
+  source: "BOE annual labour-calendar resolutions 2022-2024"
+  regional_holiday_regions: ["Madrid", "Cataluna", "Andalucia", "Comunidad Valenciana", "Pais Vasco"]
+  ordinary:
+    evening_weekdays: [Mon, Tue, Wed]
+    exclude_holiday_and_adjacent_days: true
+    exclude_ranges_mmdd: [["06-24", "09-10"], ["12-20", "01-07"]]
+    exclude_holy_week: "Friday before Palm Sunday .. Easter Monday"
+    match: same_calendar_year
+  holidays:
+    AUG: {files_mmdd: ["08-10", "08-11", "08-12", "08-13", "08-14", "08-15", "08-16", "08-17", "08-18"], role: primary}
+    XMAS: {files_mmdd: ["12-25"], role: secondary}
+    EASTER: {files: ["2022-04-15", "2023-04-07", "2024-03-29"], role: secondary}
+    ALLSAINTS: {files_mmdd: ["11-01"], role: secondary}
+models:
+  pooled:
+    cities: "137 mainland census cities; 112 identifying (22 provinces with >= 2 cities)"
+    roots: "INE 68545, 2024-01-01, share born in p"
+    rhs: ["log share", "log km", "log km^2", "income x destination (ADRH 2024)"]
+    fe: ["city", "origin_prov x dest_prov"]
+    estimator: PPML
+  cohort:
+    cities: "675 single-zone municipalities > 10k, Censo anual 2024 10% microdata"
+    pseudo_count: 0.5
+    models:
+      cohort_joint: ["pre1981", "arrived_2016_2023"]
+      birthplace_joint: ["born_le_2000", "born_gt_10000"]
+    special_arrival_codes: drop
+stacked_test:
+  fe_interacted_with_night: true
+  contrast: "roots x holiday"
+  year_weighting: equal
+inference:
+  method: "wild cluster restricted score bootstrap (Kline & Santos 2012)"
+  weights: webb6
+  draws: 9999
+  cluster: "origin province, jointly across stacked nights"
+  sided: two
+hypotheses:
+  primary:   # Holm alpha 0.05, judged on confirmation set
+    P1: "delta_AUG > 0 (pooled)"
+    P2: "delta_pre1981_AUG > 0 (cohort_joint)"
+    P3: "delta_AUG(inland) - delta_AUG(coast) > 0"
+  secondary:  # Holm within family
+    S1: "delta_XMAS > 0"
+    S2: "delta_EASTER > 0"
+    S3: "delta_ALLSAINTS > 0"
+    S4: "delta_born_le_2000_AUG > 0"
+    S5: "delta_recent_AUG < 0"
+    S6: "delta_pre1981_AUG - delta_recent_AUG > 0"
+diagnostics:
+  placebo_windows: "every block of 9 consecutive ordinary-eligible nights, same year"
+analysis_C_gate:
+  frame: "137 ECEPOV cities x mainland municipalities <= 2000 residents (2021) in other provinces"
+  conditions:
+    - "Aug-Feb and Aug-Oct publication-probability change with parental tie > 0, 95% CI above 0"
+    - "count-margin change > 0 under >= 2 suppression treatments"
+    - "ECEPOV household resampling + two-way province clustering"
+    - "GISCO LAU 2021 geometry for distance and coast"
+  held_out: none
