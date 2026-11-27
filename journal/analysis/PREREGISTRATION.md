@@ -84,6 +84,9 @@ Year-matched roots and income; road travel time instead of km where available; d
 ### Deviation 1 (27 Nov 2026, after analysis A) — the confirmation set had no new August nights
 All August nights of 2022, 2023 and 2024 were already in the coursework cache, so every AUG night belongs to the discovery set. The "confirmation set" of §0 therefore contains new **ordinary reference nights** (and Christmas Eve and Good Friday of 2022–2023), but no new holiday nights for P1–P3. This was an error in §0, noticed only when analysis A ran. The results of `analysis/A_calendar/REPORT_A.md` stand as computed and are reported as "confirmed against new reference nights", not as an out-of-sample test of August. Confirmation II below adds genuinely unseen August nights.
 
+### Deviation 2 (27 Nov 2026, found by Confirmation II) — artefact zones in analysis A
+§1 excludes the zones `31905_AM`, `19103_AM` and `40149_AM`. Analysis A's headline estimates kept them as destinations. Confirmation II excluded them and re-ran its 2025 tests with A's convention: the largest change across the seven estimates was 0.00047 and every Holm verdict was the same (`A2_confirmation2025/out/artefact_sensitivity.csv`). The final paper re-runs the 2022–2024 tests with the zones excluded.
+
 ### Addendum: Confirmation II (frozen 27 Nov 2026, before any 2025 MITMA file is downloaded or opened)
 **Data.** All MITMA municipal daily files of 2025: January–June 2025 (old method, ~179 files), the 17 files after the 1 July 2025 method change (8–10 and 14–17 August, 13–19 October, 6–8 December 2025), and the 6 dates the ministry recalculated with the new method (15, 18, 19 Oct 2024; 13, 19 Jan, 8 Feb 2025). None of these has been opened by anyone in the project.
 
