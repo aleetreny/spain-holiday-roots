@@ -1,28 +1,34 @@
-% Checks of the group results (Section 4.2). Values copied from the roots outputs in results/ (r2_roots.py, n1_*, v1_verify_n1.py).
+% Checks of the group results (Section 4.2). Values copied from results/v1_c2_main_contrasts.csv,
+% n1_censo2024_cohort_diffs.csv, v1_c2_age_confound.csv, v1_c2_sister_summary.csv, v1_c2_jackknife.csv
+% and v1_c1_zero_sensitivity.csv (first six rules).
 \begin{table}[!tbp]
 \centering
-\footnotesize
-\caption{Checks of the summer change in the pull of the province of birth, by census group}
+\small
+\caption{Checks of the summer change in the pull of the province of birth, by group}
 \label{tab:checks}
-\begin{tabular}{p{0.30\linewidth}p{0.64\linewidth}}
+\begin{tabular}{lccc}
 \toprule
-Check & Result \\
+ & Arrived & Born in & Arrived \\
+ & before 1981 & a village & 2016--2023 \\
 \midrule
-Main estimate, 14--15 Aug against 13--14 Feb & Arrived before 1981 $+0.084$ (0.046 to 0.117); born in a village $+0.086$ (0.062 to 0.110); arrived 2016--2023 $-0.072$ ($-0.114$ to $-0.020$) \\
-Stays inland & Before 1981 $+0.154$ (0.111 to 0.190); born in a village $+0.123$ (0.095 to 0.150) \\
-Stays on the coast & Before 1981 $-0.017$ ($-0.059$ to $0.029$); born in a village $+0.019$ ($-0.018$ to $0.056$); the latter is significant against October \\
-Age groups & Aged 65+: arrived 1981 or later $-0.006$ ($-0.038$ to $0.023$), arrived before 1981 $+0.087$ (0.051 to 0.121); aged 43--64, arrived before 1981 $+0.013$, not significant \\
-Share born in the province and aged 65+ added to the model & Before 1981 $+0.060$ ($p<0.001$) \\
-117 pairs of a summer and a February sister night & All three groups keep their sign in every pair (Figure~\ref{fig:roots}c) \\
-Leaving out one of the 44 provinces at a time & Before 1981 between $+0.072$ and $+0.089$ \\
-October weekdays as the baseline & Before 1981 $+0.086$; born in a village $+0.093$; arrived 2016--2023 $-0.032$ ($p=0.06$) \\
-Nights of 2022 & Arrived 2016--2023 not significant (the 2024 census groups include people who arrived after 2022) \\
-Easter and Christmas Eve against February & Before 1981 $+0.057$ and $+0.026$; born in a village $+0.068$ and $+0.029$; at Christmas recent arrivals no longer pull less \\
-Six rules for empty cells & Same signs, different sizes (Table~\ref{tab:zero}) \\
+\multicolumn{4}{l}{\textit{One estimate}} \\
+\quad Main: 14--15 Aug against 13--14 Feb & $+0.084^{*}$ & $+0.086^{*}$ & $-0.072^{*}$ \\
+\quad Only stays inland & $+0.154^{*}$ & $+0.123^{*}$ & $-0.074^{*}$ \\
+\quad Only stays on the coast & $-0.017$ & $+0.019$ & $-0.046$ \\
+\quad Share aged 65+ added to the model & $+0.060^{*}$ & -- & $-0.065^{*}$ \\
+\quad October weekdays as baseline & $+0.086^{*}$ & $+0.093^{*}$ & $-0.032$ \\
+\quad Same nights in 2022 & $+0.083^{*}$ & $+0.088^{*}$ & $-0.022$ \\
+\quad Easter against February & $+0.057^{*}$ & $+0.068^{*}$ & $-0.071^{*}$ \\
+\quad Christmas Eve against February & $+0.026$ & $+0.029^{*}$ & $+0.001$ \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Lowest to highest of many estimates}} \\
+\quad 117 summer/February sister pairs & $+0.06$ to $+0.10$ & $+0.05$ to $+0.11$ & $-0.10$ to $-0.05$ \\
+\quad Leaving out one province & $+0.07$ to $+0.09$ & $+0.08$ to $+0.09$ & $-0.08$ to $-0.05$ \\
+\quad Six rules for empty cells & $+0.02$ to $+0.14$ & $+0.03$ to $+0.20$ & $-0.12$ to $-0.02$ \\
 \bottomrule
 \end{tabular}
 \par\smallskip
 \begin{minipage}{\linewidth}\footnotesize
-Change $\delta$ in the pull of the roots; 675 cities, 44 provinces; in brackets, 95\,\% wild cluster bootstrap intervals.
+$^{*}$ 95\,\% wild cluster bootstrap interval excludes zero. Aged 65 or more only: arrived before 1981 $+0.087^{*}$, arrived in 1981 or later $-0.006$.
 \end{minipage}
 \end{table}
