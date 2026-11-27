@@ -81,4 +81,17 @@ Year-matched roots and income; road travel time instead of km where available; d
 
 ## Deviations
 
-*(none yet)*
+### Deviation 1 (27 Nov 2026, after analysis A) — the confirmation set had no new August nights
+All August nights of 2022, 2023 and 2024 were already in the coursework cache, so every AUG night belongs to the discovery set. The "confirmation set" of §0 therefore contains new **ordinary reference nights** (and Christmas Eve and Good Friday of 2022–2023), but no new holiday nights for P1–P3. This was an error in §0, noticed only when analysis A ran. The results of `analysis/A_calendar/REPORT_A.md` stand as computed and are reported as "confirmed against new reference nights", not as an out-of-sample test of August. Confirmation II below adds genuinely unseen August nights.
+
+### Addendum: Confirmation II (frozen 27 Nov 2026, before any 2025 MITMA file is downloaded or opened)
+**Data.** All MITMA municipal daily files of 2025: January–June 2025 (old method, ~179 files), the 17 files after the 1 July 2025 method change (8–10 and 14–17 August, 13–19 October, 6–8 December 2025), and the 6 dates the ministry recalculated with the new method (15, 18, 19 Oct 2024; 13, 19 Jan, 8 Feb 2025). None of these has been opened by anyone in the project.
+
+**Step 1 — method bridge.** On the 6 recalculated dates, estimate the pooled roots elasticity and the pre-1981 cohort term under both methods. The two methods are treated as comparable for these quantities if the mean absolute difference across the 6 dates is below one third of the 2022–2024 August premium (pooled: 0.106/3 = 0.035; pre-1981: 0.071/3 = 0.024).
+
+**Step 2 — tests.** Holiday nights AUG2025 = files 10, 14, 15, 16, 17 August 2025 (the pre-registered 10–18 August window; 8 and 9 August are outside it and are descriptive). Ordinary nights O2025 = 2025 nights meeting the §2 rules (BOE 2025 calendar), from January–June 2025 and October 2025.
+- If the bridge passes: AUG2025 vs all O2025.
+- If it fails: AUG2025 vs new-method O2025 only (eligible October 2025 nights plus recalculated 15 Oct 2024), labelled low-power.
+Hypotheses, models, inference and Holm families as in §§3–4 for P1, P2, P3, S2 (Good Friday 2025 = file 2025-04-18), S4, S5, S6 (S1 and S3 have no 2025 night). Roots: Census 2024 (main), 2025 table year as sensitivity.
+
+**Decision rule.** A claim about the August premium enters the abstract if it holds after Holm on 2022–2024 confirmation (§3) **or** on Confirmation II, and has the same sign in both; Confirmation II is reported in full whatever its outcome.
