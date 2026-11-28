@@ -1,6 +1,7 @@
 # Results summary (analysis phase closed, 27 November 2026)
 
 One page for writing and figures. Every number comes from the report named in brackets; those reports trace each number to a CSV.
+Deviation 2 closed: 2022–2024 values from the compliant rerun [`A_calendar_noart/REPORT_NOART.md`](A_calendar_noart/REPORT_NOART.md) (max change 0.0004, no decision changed).
 Reports: [A](A_calendar/REPORT_A.md) (2022–2024 roots calendar), [A2](A2_confirmation2025/REPORT_A2.md) (2025 hold-out), [B and D](REPORT_BD.md) (cohorts, villages), [C](C_municipal/REPORT_C.md) (parents' villages). Rules: [pre-registration](PREREGISTRATION.md) (two deviations logged).
 
 ## Data
@@ -13,7 +14,7 @@ August holiday nights (files 10–18 Aug) against ordinary weekday nights of the
 
 | | 2022–24 | 2025 hold-out | Abstract? |
 |---|---|---|---|
-| P1 pooled August premium | +0.106 [0.010, 0.197], p = 0.066 | **+0.134 [0.037, 0.233], p = 0.030** | **Yes** (via 2025, same sign) |
+| P1 pooled August premium | +0.106 [0.010, 0.197], p = 0.067 | **+0.134 [0.037, 0.233], p = 0.030** | **Yes** (via 2025, same sign) |
 | P2 pre-1981 arrivals × August | **+0.071 [0.041, 0.092], p = 0.0003** | **+0.057 [0.022, 0.076], p = 0.010** | **Yes** (both) |
 | P3 inland minus coast | +0.122 [−0.037, 0.280], p = 0.11 | +0.129 [−0.055, 0.319], p = 0.14 | No |
 | S1 Christmas Eve | **+0.088 [0.049, 0.177], p = 0.0006** | no 2025 night | Secondary result |
