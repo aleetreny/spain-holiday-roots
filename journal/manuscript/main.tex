@@ -25,7 +25,7 @@
 
 \title[Roots or beaches?]{Roots or beaches? Historical internal migration and holiday mobility in Spain}
 
-\author*{\fnm{Alejandro} \sur{Treny Ortega}}\email{[corresponding author e-mail]}
+\author*{\fnm{Alejandro} \sur{Treny Ortega}}\email{alejandro.ortega.26@ucl.ac.uk}
 
 \affil*{\orgname{University College London}, \orgaddress{\city{London}, \country{United Kingdom}}}
 
@@ -63,11 +63,11 @@ Table~\ref{tab:data} lists the sources, what each measures and how I use it. Fig
 \toprule
 Source & What it measures & Coverage & Role \\
 \midrule
-Ministry overnight stays \cite{mitms2024methodology,mitmaovernightfiles} & Residents of zone $i$ who sleep in zone $j$ on one night, estimated from one operator's phones and scaled to the population & 2\,435 mainland zones, 1\,079 valid nights in 2022--2024 and 196 in 2025 & Nightly flow outcome \\
-Census, table 68545 \cite{ine2026table68545} & Residents of each large city by province of birth, 1 January 2024 & 137 mainland cities, birthplace shares for 47 mainland provinces & Roots share, pooled model \\
-Census 10\% sample \cite{ine2025censo} & Province of birth, year of arrival in the province, size of the birth municipality & 675 municipalities with $>10\,000$ inhabitants & Roots shares by group \\
-Historical census series \cite{ine2026intercensal} & Population of each municipality 1900--2021 & Mainland municipal series & Depopulation rank \\
-Income \cite{ine2026adrh} and housing \cite{ine2023viviendas} & Net income per person (2024) and non-primary dwellings (2021) & Municipalities & Controls and sensitivity \\
+Ministry overnight stays \cite{mitms2024methodology,mitmaovernightfiles} & Residents of zone $i$ who sleep in zone $j$ on one night, estimated from one operator's phones and scaled to the population & 2\,435 mainland zones, 1\,079 valid nights in 2022--2024 and 196 in 2025 & Nightly flow outcome \\ \addlinespace[4pt]
+Census, table 68545 \cite{ine2026table68545} & Residents of each large city by province of birth, 1 January 2024 & 137 mainland cities, birthplace shares for 47 mainland provinces & Roots share, pooled model \\ \addlinespace[4pt]
+Census 10\% sample \cite{ine2025censo} & Province of birth, year of arrival in the province, size of the birth municipality & 675 municipalities with $>10\,000$ inhabitants & Roots shares by group \\ \addlinespace[4pt]
+Historical census series \cite{ine2026intercensal} & Population of each municipality 1900--2021 & Mainland municipal series & Depopulation rank \\ \addlinespace[4pt]
+Income \cite{ine2026adrh} and housing \cite{ine2023viviendas} & Net income per person (2024) and non-primary dwellings (2021) & Municipalities & Controls and sensitivity \\ \addlinespace[4pt]
 INE phone tourism matrices \cite{ine2026turismomoviles,gonzalezolmos2024measuring} and ECEPOV 2021 \cite{ine2023ecepovmicro} & Monthly municipal trips (three operators) and survey-reported birthplaces of parents & July 2019--September 2026 (trips), 137 origin cities & Validation and supplementary analyses \\
 \botrule
 \end{tabularx}
@@ -208,7 +208,7 @@ In 2022--2024 the estimated premium is 0.088 (95\% CI 0.049--0.177) on Christmas
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=\textwidth]{fig4.pdf}
-\caption{\textbf{The receiving end of holiday mobility.} \textbf{a} Zones in the most emptied fifth (475 of 2,376 zones ranked by population loss from their 1900--1960 peak), coloured by net overnight balance on three nights in 2024. \textbf{b} Share receiving more people than they send on each of 1,079 valid nights in 2022--2024, for all 475 zones and for the 84 comprising a single municipality. The bracket spans the four ordinary baselines in Analysis D, including the October weekday mean. \textbf{c} Mean arrivals and departures per resident in the most emptied fifth, with 95\% within-province zone-bootstrap intervals. The table below the panel gives adjusted changes per unit of population-loss rank in 2,053 inland zones.}
+\caption{\textbf{The receiving end of holiday mobility.} \textbf{a} Zones in the most emptied fifth (475 of 2,376 zones ranked by population loss from their 1900--1960 peak), coloured by net overnight balance on three nights in 2024. \textbf{b} Share receiving more people than they send on each of 1,079 valid nights in 2022--2024, by type of night, for all 475 zones (filled) and for the 84 comprising a single municipality (open); ordinary weekday nights are split by season (evening dates). \textbf{c} Mean arrivals (visitors sleeping in the zone) and departures (residents sleeping elsewhere) per resident in the most emptied fifth, with values and 95\% within-province zone-bootstrap intervals. The table below the panel gives adjusted changes per unit of population-loss rank in 2,053 inland zones.}
 \label{fig:receiving}
 \end{figure}
 
@@ -251,31 +251,31 @@ Additional file 1 (\nolinkurl{supplementary.pdf}, PDF) contains data validation,
 \section*{Declarations}
 
 \subsection*{Availability of data and materials}
-The Spanish transport ministry publishes the overnight-stay files \cite{mitmaovernightfiles}. Spain's National Statistics Institute provides the census tables and public-use microdata, historical municipal populations, income, housing and phone-based tourism matrices \cite{ine2026table68545,ine2025censo,ine2026intercensal,ine2026adrh,ine2023viviendas,ine2026turismomoviles,ine2023ecepovmicro}. Municipal boundaries for the supplementary parental analysis are from Eurostat's Geographic Information System of the Commission (GISCO) \cite{gisco2021lau}. [Author to add the versioned archive and persistent link to the analysis inputs and outputs.]
+The Spanish transport ministry publishes the overnight-stay files \cite{mitmaovernightfiles}. Spain's National Statistics Institute provides the census tables and public-use microdata, historical municipal populations, income, housing and phone-based tourism matrices \cite{ine2026table68545,ine2025censo,ine2026intercensal,ine2026adrh,ine2023viviendas,ine2026turismomoviles,ine2023ecepovmicro}. Municipal boundaries for the supplementary parental analysis are from Eurostat's Geographic Information System of the Commission (GISCO) \cite{gisco2021lau}. The derived city--province tables, nightly estimates and every result needed to reproduce the tables and figures are distributed with the code (see Code availability).
 
 \subsection*{Code availability}
-Analysis code, the pre-registration and deviations are in the journal analysis repository \cite{trenyjournal}. [Zenodo DOI to be added by the author.]
+Analysis code, the pre-registration and its deviations are available at \url{https://github.com/aleetreny/spain-holiday-roots} (branch \texttt{journal}) and will be archived on Zenodo with a persistent identifier on acceptance.
 
 \subsection*{Competing interests}
 The author declares no competing interests.
 
 \subsection*{Funding}
-[Funding statement to be confirmed by the author.]
+This research received no specific funding.
 
 \subsection*{Authors' contributions}
 A.T.O. designed the study, analysed the data and wrote the manuscript.
 
 \subsection*{Acknowledgements}
-[To be completed by the author.]
+I thank the Spanish Ministry of Transport and Sustainable Mobility and the National Statistics Institute (INE) for publishing the data used here as open data.
 
 \subsection*{Ethics approval and consent to participate}
-[Ethics determination to be confirmed by the author.] The analysis uses published aggregate statistics and public-use microdata. No participant was contacted and no individual mobility record was accessed.
+Not applicable. The analysis uses only published aggregate statistics and public-use microdata released by public agencies. No participant was contacted and no individual mobility record was accessed.
 
 \subsection*{Consent for publication}
 Not applicable.
 
 \subsection*{Use of AI tools}
-[AI-use statement to be verified and completed by the author. Draft scope: code development, literature searching, manuscript drafting and editing.]
+The author used large language model assistants for help with the analysis code and the figures. The author designed the study, checked all code, results and text, and takes full responsibility for the content.
 
 \bibliography{references}
 

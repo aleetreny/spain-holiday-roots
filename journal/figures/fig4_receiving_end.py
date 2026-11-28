@@ -15,8 +15,8 @@ from style import (
 
 NIGHTS = {"feb14": ("2024-02-14", "13–14 February"), "aug15": ("2024-08-15", "14–15 August"),
           "dec25": ("2024-12-25", "Christmas Eve")}
-CLASSES = ["Ordinary", "Fri–Sun", "August window", "Other August",
-           "Christmas Eve", "Other holidays", "Other nights"]
+CLASSES = ["Ordinary, Nov–Mar", "Ordinary, October", "Ordinary, Apr–Jun, Sep", "Fri–Sun",
+           "August window", "Other August", "Christmas Eve", "Other holidays", "Other nights"]
 LEFT, RIGHT = 2.0, 106.0   # mm: panel-letter columns
 HALO = [patheffects.withStroke(linewidth=2.2, foreground="white")]
 
@@ -71,11 +71,13 @@ def calendar_data(zones):
     bucket = data.desc_bucket
     holiday = bucket.str.startswith(("ALLSAINTS", "EASTER", "EPIPHANY", "NEW_YEAR", "OTHER_holiday",
                                      "PUENTE", "XMAS_NEWYEAR"))
+    month = pd.to_datetime(data.evening_date).dt.month
+    ordinary = bucket.str.startswith("O_ordinary")
     data["class_index"] = np.select(
-        [bucket.str.startswith("O_ordinary"), bucket.str.startswith("WEEKEND"),
-         bucket.str.startswith("AUG_peak"), bucket.str.startswith("AUG"),
+        [ordinary & month.isin([11, 12, 1, 2, 3]), ordinary & month.eq(10), ordinary,
+         bucket.str.startswith("WEEKEND"), bucket.str.startswith("AUG_peak"), bucket.str.startswith("AUG"),
          bucket.eq("XMAS_eve_1225"), holiday],
-        [0, 1, 2, 3, 4, 5], default=6,
+        [0, 1, 2, 3, 4, 5, 6, 7], default=8,
     )
     data["night_category"] = data.class_index.map(dict(enumerate(CLASSES))).str.replace("\n", " ")
     return data
@@ -95,19 +97,13 @@ def draw_calendar(ax, data, boot):
         "mode == 'level' and cls == 'Q5' and sample == 'all' and metric == 'share_net_importer' "
         "and period in ['2022-02-16', '2023-02-15', '2024-02-14', '2024-10-mean12']"
     ).copy()
-    lo, hi = baselines["mean"].min(), baselines["mean"].max()
     assert len(baselines) == 4
-    y = -.58
-    ax.hlines(y, lo, hi, color=INK, lw=.8)
-    ax.vlines([lo, hi], y - .12, y + .12, color=INK, lw=.8)
-    ax.text(hi + .02, y, f"Ordinary baselines {lo * 100:.0f}–{hi:.0%}", va="center",
-            fontsize=TEXT)
     ax.set_yticks(range(len(CLASSES)), CLASSES)
     ax.tick_params(axis="y", length=0)
     ax.spines["left"].set_visible(False)
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
-    ax.set(ylim=(6.5, -.85), xlim=(0, 1.02), xticks=[0, .25, .5, .75, 1])
+    ax.set(ylim=(len(CLASSES) - .5, -.6), xlim=(0, 1.02), xticks=[0, .25, .5, .75, 1])
     ax.xaxis.set_major_formatter(PercentFormatter(1, decimals=0))
     ax.set_xlabel("Zones receiving more people than they send")
     ax.legend(handles=[
@@ -119,22 +115,25 @@ def draw_calendar(ax, data, boot):
 
 def draw_flows(ax, flows):
     panel(ax, "c", "Arrivals and departures per resident", at=RIGHT)
+    width = .36
     for row in flows.itertuples():
         j = [x[0] for x in NIGHTS.values()].index(row.period)
         arriving = row.metric == "arrivals_per_res"
-        x = j + (-.13 if arriving else .13)
-        ax.errorbar(x, row.point, yerr=[[row.point - row.ci_lo], [row.ci_hi - row.point]],
-                    fmt="o" if arriving else "s", color=NEUTRAL, ms=MARK, mew=.7,
-                    elinewidth=.85, capsize=0, zorder=3)
-        if j == 1:
-            ax.annotate("Arrivals" if arriving else "Departures", (x, row.point),
-                        xytext=(-6 if arriving else 6, 0), textcoords="offset points",
-                        ha="right" if arriving else "left", va="center", fontsize=TEXT)
+        x = j + (-width / 2 - .02 if arriving else width / 2 + .02)
+        colour = RECEIVER if arriving else SENDER
+        ax.bar(x, row.point, width=width, color=colour, edgecolor="white", linewidth=.6, zorder=2)
+        ax.errorbar(x, row.point, yerr=[[row.point - row.ci_lo], [row.ci_hi - row.point]], fmt="none",
+                    ecolor=INK, elinewidth=.7, capsize=0, zorder=3)
+        ax.annotate(f"{row.point:.2f}", (x, row.ci_hi), xytext=(0, 2.5), textcoords="offset points",
+                    ha="center", va="bottom", fontsize=TEXT)
+    ax.legend(handles=[Patch(color=RECEIVER, label="Arrivals"),
+                       Patch(color=SENDER, label="Departures")],
+              loc="upper left", bbox_to_anchor=(0, 1.02), frameon=False, handlelength=1.1, handleheight=.9)
     ax.set_xticks(range(3), ["13–14 Feb", "14–15 Aug", "Christmas Eve"])
     ax.tick_params(axis="x", length=0, pad=4)
-    ax.set(xlim=(-.5, 2.5), ylim=(0, .8), yticks=[0, .2, .4, .6, .8])
+    ax.set(xlim=(-.55, 2.55), ylim=(0, .85), yticks=[0, .2, .4, .6, .8])
     ax.yaxis.set_major_formatter(decimals(1))
-    ax.set_ylabel("Per resident")
+    ax.set_ylabel("People per resident")
 
 
 def draw_inland(ax, controlled):
@@ -170,11 +169,11 @@ def main():
         "and outcome in ['arrivals_per_res_diff', 'departures_per_res_diff']"
     )
     data = calendar_data(zones)
-    fig = figure(134)
+    fig = figure(140)
     maps = draw_maps(fig, zones)
-    baselines = draw_calendar(place(fig, 26, 78, 70, 38), data, read(D, "d_quintiles_main_boot"))
+    baselines = draw_calendar(place(fig, 30, 78, 66, 44), data, read(D, "d_quintiles_main_boot"))
     draw_flows(place(fig, 118, 78, 50, 26), flows)
-    draw_inland(place(fig, 110.2, 111, 58, 17), controlled)
+    draw_inland(place(fig, 110.2, 113, 58, 17), controlled)
     save(fig, 4, maps, data.assign(panel="b", series="nightly net receiver shares"), baselines,
          flows.assign(panel="c", series="zone means"), controlled.assign(panel="c", series="inland adjusted"))
 

@@ -14,7 +14,7 @@ All horizontal axes show changes in roots elasticity. **a** Arrival-cohort and b
 
 ## Figure 4. The receiving end of holiday mobility
 
-**a** Zones in the most emptied fifth (475 of 2,376 zones ranked by population loss from their 1900–1960 peak), coloured by net overnight balance on three nights in 2024. **b** Share receiving more people than they send on each of 1,079 valid nights in 2022–2024, for all 475 zones and for the 84 comprising a single municipality. The bracket spans the four ordinary baselines in Analysis D, including the October weekday mean. **c** Mean arrivals and departures per resident in the most emptied fifth, with 95% within-province zone-bootstrap intervals. The table below the panel gives adjusted changes per unit of population-loss rank in 2,053 inland zones.
+**a** Zones in the most emptied fifth (475 of 2,376 zones ranked by population loss from their 1900–1960 peak), coloured by net overnight balance on three nights in 2024. **b** Share receiving more people than they send on each of 1,079 valid nights in 2022–2024, by type of night, for all 475 zones (filled) and for the 84 comprising a single municipality (open); ordinary weekday nights are split by season (evening dates). **c** Mean arrivals (visitors sleeping in the zone) and departures (residents sleeping elsewhere) per resident in the most emptied fifth, with values and 95% within-province zone-bootstrap intervals. The table below the panel gives adjusted changes per unit of population-loss rank in 2,053 inland zones.
 
 ## Figure S1. Network structure on ordinary and holiday nights
 
