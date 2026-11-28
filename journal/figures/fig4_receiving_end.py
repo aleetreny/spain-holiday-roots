@@ -86,10 +86,10 @@ def calendar_data(zones):
 def draw_calendar(ax, data, boot):
     panel(ax, "b", "Net receiver share across nights", at=LEFT)
     rng = np.random.default_rng(475)
-    data["jitter"] = rng.uniform(-.125, .125, len(data))
+    data["jitter"] = rng.uniform(-.07, .07, len(data))
     for prop, shift, face, edge, alpha in (
-        ("q5_share_net_receiver", -.17, NEUTRAL, NEUTRAL, .25),
-        ("single_mun_share", .17, "none", MUTED, .35),
+        ("q5_share_net_receiver", -.2, NEUTRAL, NEUTRAL, .25),
+        ("single_mun_share", .2, "none", MUTED, .45),
     ):
         ax.scatter(data[prop], data.class_index + shift + data.jitter, s=SMALL ** 2,
                    facecolor=face, edgecolor=edge, linewidth=.5, alpha=alpha)
@@ -128,7 +128,7 @@ def draw_flows(ax, flows):
                     ha="center", va="bottom", fontsize=TEXT)
     ax.legend(handles=[Patch(color=RECEIVER, label="Arrivals"),
                        Patch(color=SENDER, label="Departures")],
-              loc="upper left", bbox_to_anchor=(0, 1.02), frameon=False, handlelength=1.1, handleheight=.9)
+              loc="upper right", bbox_to_anchor=(1, 1.02), frameon=False, handlelength=1.1, handleheight=.9)
     ax.set_xticks(range(3), ["13–14 Feb", "14–15 Aug", "Christmas Eve"])
     ax.tick_params(axis="x", length=0, pad=4)
     ax.set(xlim=(-.55, 2.55), ylim=(0, .85), yticks=[0, .2, .4, .6, .8])
