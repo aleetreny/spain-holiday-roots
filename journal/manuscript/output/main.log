@@ -587,12 +587,12 @@ File: ../figures/out//fig3.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
 File: ../figures/out//fig4.pdf Graphic file (type pdf)
 <use ../figures/out//fig4.pdf>
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
@@ -652,4 +652,4 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 087AF0AE044E398C2A3D707EFBDBA09F;3656.
  )
-Output written on main.xdv (19 pages, 529288 bytes).
+Output written on main.xdv (19 pages, 529956 bytes).
