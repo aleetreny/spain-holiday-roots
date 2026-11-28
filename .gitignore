@@ -1,42 +1,37 @@
-# data and caches (heavy, regenerable)
+# Data and caches (large, rebuilt from public sources)
 data/
 raw_data_cache/
 clean_data/
 metadata_cache/
 _local/
+results/r3_diag/cache/
+results/_archive_pre_rerun/
+
+# Python and tooling
 .venv/
 __pycache__/
 *.pyc
+.pytest_cache/
+.serena/
+.DS_Store
+
+# Binary outputs and logs
 *.zip
 *.pdf
 *.parquet
 *.npy
 *.pkl
-.DS_Store
-results/r3_diag/cache/
+*.log
+*.blg
 
-# --- 2026-11-25 clean repo ---
-.serena/
-.pytest_cache/
-# drafts and rejected figure options (kept locally only)
+# LaTeX build files (the report PDF and the figures are kept)
+reports/manuscript/output/*
+!reports/manuscript/output/main.pdf
+!reports/figures/*.pdf
+
+# Figure drafts not used in the report
 reports/figures_drafts/
 reports/figures/fig1_option1_bars.*
 reports/figures/fig1_where_people_sleep.*
 reports/figures/fig3_roots_generation_slopes.*
 reports/figures/fig4_option_*
-results/_archive_pre_rerun/
-# agent scratch: keep code and notes, drop dumps and screenshots
-research_notes/*_scratch/**/*.txt
-research_notes/*_scratch/**/*.png
-research_notes/*_scratch/**/*.log
-# LaTeX build files
-reports/manuscript/output/*
-!reports/manuscript/output/main.pdf
-# figures and the report PDF are needed to compile and read the report
-!reports/figures/*.pdf
-reports/figures/fig1_option1_bars.*
-reports/figures/fig1_where_people_sleep.*
-reports/figures/fig3_roots_generation_slopes.*
-reports/figures/fig4_option_*
-reports/critica_prof_zhou.md
-research_notes/review_manuscript_v1.md

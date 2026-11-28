@@ -477,7 +477,7 @@ def figbasic():
         axc.plot(r.r_norm, r.phi_rew_mean, color=col, lw=0.8, ls=(0, (1, 1.2)), zorder=2)
         _marked(axc, r.r_norm, r.phi_real, col, lw, ls, mk, mfc, n_marks=8)
     axa.axvline(len(nodes) - 1, color=MUTED, lw=0.6, ls=(0, (1, 1.5)), zorder=1)
-    axa.text(len(nodes) * 0.85, 0.75, "all other\nzones", ha="right", va="top", fontsize=7.2, color=MUTED)
+    axa.text(len(nodes) * 0.85, 0.75, "linked to\nall other\nzones", ha="right", va="top", fontsize=7.2, color=MUTED)
     axa.set_xlim(0.8, 4000); axa.set_ylim(2.5e-4, 1.6)
     axa.set_xlabel("Degree $k$"); axa.set_ylabel("Share of zones with degree ≥ $k$")
     axa.set_title("Degree distribution", fontsize=8.5)

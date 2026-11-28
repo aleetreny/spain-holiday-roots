@@ -180,18 +180,10 @@ for section, label, fn in row_defs():
 pd.DataFrame(tidy).to_csv(RES / "t01_table1.csv", index=False)
 
 NOTE_FULL = (
-    "Each column is the network of one night of 2024: node = one of 2,435 MITMA zones of mainland Spain; "
-    "a directed link i→j joins zones when at least 10 residents of i sleep in j (last column: the summer night cut "
-    "to the same number of directed links as the ordinary night, 35,812, by keeping the heaviest). Properties are "
-    "computed on the undirected projection unless marked directed. In brackets: mean of 50 networks with the same "
-    "degree sequence (degree-preserving rewiring, 10 swaps per link) and, where shown, of 50 Erdős–Rényi networks "
-    "with the same N and L. [r_min, r_max]: the most disassortative and most assortative values reached by "
-    "a heuristic rewiring search that keeps P(k) and a single connected component (Zhou & Mondragón 2007). R_avg: second-order mixing "
-    "(Zhou, Cox & Hansen 2017), null keeping P(k) and φ(k). Rich-club clique: the largest n such that the n "
-    "best-connected zones are all linked to one another (Zhou & Mondragón 2007). Tail fit: Clauset–Shalizi–Newman likelihood-ratio test; "
-    "'tie' means p ≥ 0.05. † The change from the ordinary night does not keep its direction in every pair of "
-    "sister nights (117 summer pairs, 39 All Saints pairs). 1 Nov is the quietest of its three sister nights. "
-    "Source of every cell: results/t01_table1.csv."
+    "One network per night of 2024; a link joins two zones when at least 10 residents of one sleep in the other. "
+    "Last column: the summer night cut to its 35,812 heaviest links, the size of the ordinary night. "
+    "In brackets: mean of 50 degree-preserving rewirings (and of 50 Erdős–Rényi graphs where shown). "
+    "† The change does not keep its direction on every pair of sister nights."
 )
 NOTE_MAIN = (
     "Undirected networks of 2,435 zones, one per night of 2024; median degrees and reciprocity use the "
@@ -214,7 +206,7 @@ MAIN_ROWS = [
     ("Rich club φ, top 50 zones (rewired)", "Rich club φ, top 50 (rewired)", True),
     ("Rich-club clique size (rewired)", "Rich-club clique n_clique", False),
     ("Average path length ℓ (rewired / ER)", "Average path length ℓ", False),
-    ("ℓ* = ln N / ln⟨k⟩", "Expected in a random graph ℓ*", True),
+    ("ℓ* = ln N / ln⟨k⟩", "Random-graph estimate ℓ* = ln N / ln⟨k⟩", True),
     ("Clustering ⟨C⟩ (rewired / ER)", "Clustering ⟨C⟩ (rewired / random)", True),
 ]
 
@@ -233,7 +225,7 @@ def tex(s):
 def write(name, title, label, cols, rows_, note, sections):
     hdr = "| | " + " | ".join(f"{c[3]}<br>{c[4]}" for c in cols) + " |"
     md = [f"# {title}", "", hdr, "|---|" + "---:|" * len(cols)]
-    tx = [r"\begin{table}[t]", r"\centering", r"\small", r"\setlength{\tabcolsep}{3pt}", rf"\caption{{{title.split('. ', 1)[1]}}}",
+    tx = [r"\begin{table}[" + ("!h" if name == "tableA1" else "t") + "]", r"\centering", r"\small", r"\setlength{\tabcolsep}{3pt}", rf"\caption{{{title.split('. ', 1)[1]}}}",
           rf"\label{{{label}}}", r"\resizebox{\linewidth}{!}{\begin{tabular}{l" + "r" * len(cols) + "}", r"\toprule",
           " & " + " & ".join(rf"\shortstack[r]{{{c[3]}\\{c[4]}}}" for c in cols) + r" \\", r"\midrule"]
     last = None

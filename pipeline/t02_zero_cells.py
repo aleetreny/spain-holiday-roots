@@ -35,7 +35,7 @@ Treatment & """ + " & ".join(l for _, l in TERMS) + r""" \\
 \end{tabular}
 \par\smallskip
 \begin{minipage}{\linewidth}\footnotesize
-All destinations; groups entered together as in Figure~\ref{fig:roots}. Between 46\,\% and 60\,\% of city--province cells have no sampled resident of a group, so the regressor needs a rule for empty cells. $^{\circ}$\,Wild cluster bootstrap $p\geq0.05$. Source: results/v1\_c1\_zero\_sensitivity.csv.
+All destinations; groups entered together as in Figure~\ref{fig:roots}. Between 46\,\% and 60\,\% of city--province cells have no sampled resident of a group, so the regressor needs a rule for empty cells. $^{\circ}$\,Wild cluster bootstrap $p\geq0.05$.
 \end{minipage}
 \end{table}
 """
