@@ -1,6 +1,6 @@
 # Replication package: Roots or beaches? Historical internal migration and holiday mobility in Spain
 
-Alejandro Treny Ortega, University College London.
+Alejandro Treny Ortega, University College London. DOI: [10.5281/zenodo.24624569](https://doi.org/10.5281/zenodo.24624569).
 
 This archive holds the code, the pre-registration and the derived data behind the article *Roots or beaches? Historical internal migration and holiday mobility in Spain*. It is a snapshot of the `journal` branch of <https://github.com/aleetreny/spain-holiday-roots>. `VERSION.txt` gives the exact commit.
 

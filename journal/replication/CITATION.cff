@@ -7,6 +7,7 @@ authors:
     given-names: "Alejandro"
     affiliation: "University College London"
 version: "1.0.0"
+doi: "10.5281/zenodo.24624569"
 license:
   - MIT
   - CC-BY-4.0
