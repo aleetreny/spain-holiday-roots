@@ -6,6 +6,7 @@ Small tidy CSVs and code live under <worktree>/journal/analysis/A_calendar/.
 """
 from __future__ import annotations
 
+import os
 import sys
 import time
 from pathlib import Path
@@ -14,8 +15,10 @@ WORKTREE = Path(__file__).resolve().parents[3]
 A_DIR = Path(__file__).resolve().parent
 OUT_DIR = A_DIR / "out"
 
-MAIN_REPO = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
-JOURNAL_REPO = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal")
+# One repository root holds code and data. SHR_MAIN_ROOT may point the coursework inputs
+# (data/, raw_data_cache/, clean_data/, _local/external/, results/) at another checkout.
+JOURNAL_REPO = WORKTREE
+MAIN_REPO = Path(os.environ.get("SHR_MAIN_ROOT", WORKTREE)).resolve()
 
 # Raw MITMA daily files
 DISCOVERY_RAW_DIR = MAIN_REPO / "_local" / "external" / "mitma_pernoct"

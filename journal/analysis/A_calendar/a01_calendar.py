@@ -21,7 +21,7 @@ MITMA incident list (accessed 27 November 2026):
       2024: 29, 30, 31 Oct
 
 Run:
-  /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar/a01_calendar.py
+  .venv/bin/python -I journal/analysis/A_calendar/a01_calendar.py
 """
 from __future__ import annotations
 

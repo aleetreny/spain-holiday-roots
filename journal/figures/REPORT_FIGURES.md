@@ -5,7 +5,7 @@ All nine figures are 170 mm wide. Each has a vector PDF, 300-dpi PNG and a plott
 To rebuild, run this command from this worktree. The two source checkouts are opened read-only by absolute path.
 
 ```sh
-/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I -B journal/figures/make_all.py
+.venv/bin/python -I -B journal/figures/make_all.py
 ```
 
 `make_all.py` also accepts a list of figure numbers such as `1 3 S2`. Figure 3 uses the two cached urban-born model fits in `out/fig3_urban_contrast.csv`. Run `urban_contrast.py` with the same interpreter and flags to refresh them. The fit uses the existing stacked PPML solver with the same night sets and model controls as the pre-registered village-born test (S4), with 95% cluster-robust intervals by origin province.

@@ -1,5 +1,6 @@
 """Inputs and survey household contributions for Analysis C."""
 from pathlib import Path
+import os
 import sys
 
 import geopandas as gpd
@@ -9,8 +10,10 @@ from scipy import sparse
 from shapely import STRtree
 
 HERE = Path(__file__).resolve().parent
-MAIN = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
-JOURNAL = MAIN.with_name("spain-holiday-roots-journal")
+# One repository root holds code and data. SHR_MAIN_ROOT may point the coursework inputs
+# (data/, raw_data_cache/, clean_data/, _local/external/, results/) at another checkout.
+JOURNAL = HERE.parents[2]
+MAIN = Path(os.environ.get("SHR_MAIN_ROOT", JOURNAL)).resolve()
 GISCO = JOURNAL / "_local/external_journal/gisco_lau_2021"
 PRIVATE = JOURNAL / "_local/journal_data/C_municipal"
 OUT = HERE / "out"

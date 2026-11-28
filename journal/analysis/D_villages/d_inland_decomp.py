@@ -4,7 +4,7 @@ and multi-year / 306-night summary statistics for REPORT_BD.md.
 
 Run:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-    /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I \
+    .venv/bin/python -I \
     journal/analysis/D_villages/d_inland_decomp.py
 """
 from __future__ import annotations

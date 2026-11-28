@@ -6,6 +6,7 @@ confirmation files in _local/external_journal/mitma_pernoct/.
 """
 from __future__ import annotations
 
+import os
 import sys
 import time
 import zlib
@@ -16,8 +17,11 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-MAIN_ROOT = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
-JOURNAL_DATA_BD = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/_local/journal_data/BD")
+# One repository root holds code and data. SHR_MAIN_ROOT may point the coursework inputs
+# (data/, raw_data_cache/, clean_data/, _local/external/, results/) at another checkout.
+REPO = Path(__file__).resolve().parents[3]
+MAIN_ROOT = Path(os.environ.get("SHR_MAIN_ROOT", REPO)).resolve()
+JOURNAL_DATA_BD = REPO / "_local" / "journal_data" / "BD"
 
 # Reuse coursework modules by import only (never edit pipeline/)
 sys.path.insert(0, str(MAIN_ROOT / "pipeline"))

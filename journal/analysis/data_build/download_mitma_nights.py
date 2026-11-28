@@ -16,10 +16,11 @@ import hashlib
 import re
 import time
 import urllib.request
+import os
 from pathlib import Path
 
 JOURNAL = Path(__file__).resolve().parents[3]
-MAIN = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
+MAIN = Path(os.environ.get("SHR_MAIN_ROOT", JOURNAL)).resolve()
 LOCAL_RAW = MAIN / "_local" / "external" / "mitma_pernoct"
 OUT = JOURNAL / "_local" / "external_journal" / "mitma_pernoct"
 RSS = "https://movilidad-opendata.mitma.es/RSS.xml"

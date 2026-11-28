@@ -5,7 +5,7 @@ and validate every discovery date against the coursework parquets.
 
 Idempotent: skips dates whose partition parquet already exists unless --force is passed.
 Run:
-  /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar/a02_build_dataset.py
+  .venv/bin/python -I journal/analysis/A_calendar/a02_build_dataset.py
 """
 from __future__ import annotations
 

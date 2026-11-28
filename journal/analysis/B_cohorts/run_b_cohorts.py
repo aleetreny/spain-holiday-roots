@@ -16,7 +16,7 @@ Stages:
 
 Run:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-    /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I \
+    .venv/bin/python -I \
     journal/analysis/B_cohorts/run_b_cohorts.py --stage all
 """
 from __future__ import annotations

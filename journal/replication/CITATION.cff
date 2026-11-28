@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code or these data, please cite the article and this archive."
+title: "Replication package for 'Roots or beaches? Historical internal migration and holiday mobility in Spain'"
+type: software
+authors:
+  - family-names: "Treny Ortega"
+    given-names: "Alejandro"
+    affiliation: "University College London"
+version: "1.0.0"
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/aleetreny/spain-holiday-roots"
+keywords:
+  - human mobility
+  - mobile phone data
+  - internal migration
+  - rural depopulation
+  - holidays
+  - Spain
+  - pre-registration

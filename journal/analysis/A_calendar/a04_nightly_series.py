@@ -4,7 +4,7 @@ v1_c2_main_contrasts.csv), and nightly PPML series across all valid 2022-2024 ni
 
 Run:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-    /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I \
+    .venv/bin/python -I \
     journal/analysis/A_calendar/a04_nightly_series.py
 """
 from __future__ import annotations

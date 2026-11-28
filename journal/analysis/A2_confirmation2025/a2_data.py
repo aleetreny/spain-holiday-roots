@@ -13,7 +13,7 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-JOURNAL = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal")
+JOURNAL = HERE.parents[2]
 A_DIR = JOURNAL / "journal/analysis/A_calendar"
 A_HEAVY = JOURNAL / "_local/journal_data/A_calendar"
 HEAVY = JOURNAL / "_local/journal_data/A2_confirmation2025"

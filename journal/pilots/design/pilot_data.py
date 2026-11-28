@@ -1,4 +1,5 @@
 """Shared inputs for the journal design pilots."""
+import os
 import sys
 from pathlib import Path
 
@@ -6,7 +7,7 @@ import numpy as np
 import pandas as pd
 from scipy.spatial import cKDTree
 
-MAIN = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
+MAIN = Path(os.environ.get("SHR_MAIN_ROOT", Path(__file__).resolve().parents[3])).resolve()
 EXTERNAL = MAIN / "_local/external"
 OUT = Path(__file__).resolve().parent / "out"
 sys.path.insert(0, str(MAIN / "pipeline"))

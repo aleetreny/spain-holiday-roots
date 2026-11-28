@@ -9,7 +9,7 @@ Answers Task 6 & PREREGISTRATION.md §5 descriptive outputs:
   - Emptied-village receiving-end daily summary (Q5 receiver share, arrivals & departures per resident)
 
 Run:
-  /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar/a06_descriptive.py
+  .venv/bin/python -I journal/analysis/A_calendar/a06_descriptive.py
 """
 from __future__ import annotations
 

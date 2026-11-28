@@ -1,6 +1,7 @@
 """Shared typography, plotting helpers and read-only inputs for the journal figures."""
 
 from functools import lru_cache
+import os
 from pathlib import Path
 
 import matplotlib as mpl
@@ -12,8 +13,10 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
-MAIN = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
-JOURNAL = MAIN.with_name("spain-holiday-roots-journal")
+# One repository root holds code and data. SHR_MAIN_ROOT may point the coursework inputs
+# (data/, raw_data_cache/, clean_data/, _local/external/, results/) at another checkout.
+JOURNAL = HERE.parents[1]
+MAIN = Path(os.environ.get("SHR_MAIN_ROOT", JOURNAL)).resolve()
 ANALYSIS = JOURNAL / "journal/analysis"
 HEAVY = JOURNAL / "_local/journal_data"
 A = "A_calendar"

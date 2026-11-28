@@ -16,7 +16,7 @@ Implements PREREGISTRATION.md & design.yml verbatim:
 
 Run:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-    /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I \
+    .venv/bin/python -I \
     journal/analysis/A_calendar/a05_preregistered_tests.py --workers 10
 """
 from __future__ import annotations

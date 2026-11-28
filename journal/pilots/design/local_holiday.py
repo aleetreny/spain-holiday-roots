@@ -9,7 +9,7 @@ import pandas as pd
 
 from pilot_data import OUT, birth_ties, municipalities
 
-HOLIDAYS = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/_local/external_journal/jcyl_fiestas/fiestas.csv")
+HOLIDAYS = Path(__file__).resolve().parents[3] / "_local/external_journal/jcyl_fiestas/fiestas.csv"
 # 2024 BOE national / Castilla y León regional holidays and 29–31 October DANA disruption.
 CONFLICTS = pd.to_datetime([
     "2024-01-01", "2024-01-06", "2024-03-28", "2024-03-29", "2024-04-23", "2024-05-01",

@@ -8,7 +8,7 @@ from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 OUT = Path(__file__).resolve().parent / "out"
-DEFAULT_A = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/journal/analysis/A_calendar")
+DEFAULT_A = Path(__file__).resolve().parents[1] / "A_calendar"
 ARTEFACT_ZONES = {"31905_AM", "19103_AM", "40149_AM"}
 PANEL_NAMES = ("panel_cities137_prov.parquet", "panel_cities675_prov.parquet")
 

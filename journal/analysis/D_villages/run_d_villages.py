@@ -17,12 +17,13 @@ Implements items D.1 through D.3 strictly on the coursework MITMA cache (2022-20
 
 Run:
   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
-    /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I \
+    .venv/bin/python -I \
     journal/analysis/D_villages/run_d_villages.py
 """
 from __future__ import annotations
 
 import re
+import os
 import sys
 import time
 import zlib
@@ -35,8 +36,11 @@ import scipy.sparse as sps
 from scipy import stats
 from scipy.linalg import qr
 
-MAIN_ROOT = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots")
-JOURNAL_DATA_BD = Path("/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/_local/journal_data/BD")
+# One repository root holds code and data. SHR_MAIN_ROOT may point the coursework inputs
+# (data/, raw_data_cache/, clean_data/, _local/external/, results/) at another checkout.
+REPO = Path(__file__).resolve().parents[3]
+MAIN_ROOT = Path(os.environ.get("SHR_MAIN_ROOT", REPO)).resolve()
+JOURNAL_DATA_BD = REPO / "_local" / "journal_data" / "BD"
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "out"
 OUT.mkdir(parents=True, exist_ok=True)

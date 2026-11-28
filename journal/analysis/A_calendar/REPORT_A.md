@@ -15,7 +15,7 @@ Date: 27 November 2026. Binding design: `journal/analysis/PREREGISTRATION.md` an
 | 5b. Placebo windows | same | `out/placebo_windows.csv`, `out/placebo_summary.csv` | ≈ 23 min (16:52–17:15) |
 | 5c. Robustness (§7) | same, `--skip-main --skip-placebo --workers 8` | `out/robustness.csv`, `out/robustness_lodo_dest.csv` | ≈ 63 min (17:51–18:54) |
 
-Run everything with `/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar/<script>.py` (set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1` for a05).
+Run everything with `.venv/bin/python -I journal/analysis/A_calendar/<script>.py` (set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1` for a05).
 
 ## 2. Data checks
 

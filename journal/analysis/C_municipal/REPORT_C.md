@@ -4,7 +4,7 @@
 
 ## Gate verdict
 
-**FAIL. Report Analysis C in the supplementary information as a measurement limitation.** Pairs with a sampled parental tie were more likely to enter the published August file relative to either baseline. The sign of the change in the latent trip count is undetermined under heterogeneous completions of the unpublished counts. Both uniform replacements yield positive coefficients. The pre-registration records that the pilot already explored these periods, so there is no held-out confirmation. [Frozen gate, §§0 and 6](/Users/alejandrotreny/Proyectos/spain-holiday-roots-journal/journal/analysis/PREREGISTRATION.md), [model results](out/estimates.csv).
+**FAIL. Report Analysis C in the supplementary information as a measurement limitation.** Pairs with a sampled parental tie were more likely to enter the published August file relative to either baseline. The sign of the change in the latent trip count is undetermined under heterogeneous completions of the unpublished counts. Both uniform replacements yield positive coefficients. The pre-registration records that the pilot already explored these periods, so there is no held-out confirmation. [Frozen gate, §§0 and 6](../PREREGISTRATION.md), [model results](out/estimates.csv).
 
 | Pre-registered condition | Verdict | Evidence |
 |---|---|---|
@@ -77,7 +77,7 @@ Run from this directory with the coursework environment. The checked run compare
 
 ```sh
 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 \
-  /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I run.py --check
+  .venv/bin/python -I run.py --check
 ```
 
 The local reader uses the coursework source paths, geography exclusions, INE number parser and frozen seed by import. The old `stage_roots_mun` is a complete analysis with a broader birthplace definition, an outcome-selected frame and writes to coursework results. It supplies the input conventions here. The new strict-city exposure and fixed-frame fits run directly in this folder.

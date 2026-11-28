@@ -2,7 +2,7 @@
 
 27 November 2026. Scope: the nine figures in `out/` (4 main, 5 SI), all 170 mm wide. No plotted number or claim changed: every `out/fig*_data.csv` column that existed before is identical row for row (checked with pandas). Fig. S1 adds three columns for the new elements (zone type and the structural-constraint range).
 
-Rebuild: `/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I -B journal/figures/make_all.py`
+Rebuild: `.venv/bin/python -I -B journal/figures/make_all.py`
 
 ## One theme for all nine figures (`style.py`)
 

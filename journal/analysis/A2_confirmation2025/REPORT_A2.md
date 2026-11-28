@@ -93,7 +93,7 @@ From this worktree, use the existing environment and the local data snapshots sp
 
 ```sh
 export OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
-PYTHON=/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python
+PYTHON=.venv/bin/python
 A2=journal/analysis/A2_confirmation2025
 "$PYTHON" -I -B "$A2/a2_data.py"
 "$PYTHON" -I -B "$A2/a2_models.py" tests --workers 7

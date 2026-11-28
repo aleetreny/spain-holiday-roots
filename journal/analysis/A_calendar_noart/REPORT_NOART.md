@@ -37,8 +37,8 @@ All 444 placebo windows and six August windows match A's dates and sample sizes.
 Analysis A was read from commit `3d16db437f6ccedf4262fa42cec433ba80ef0a5b` of the journal checkout. The wrapper reads A's manifest and the saved 137-city and 675-city parquets under the journal checkout's `_local/journal_data/A_calendar/panel/`. It writes its outputs in this directory. Run both commands from the repository root.
 
 ```sh
-/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar_noart/run_noart.py
-/Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar_noart/compare_noart.py
+.venv/bin/python -I journal/analysis/A_calendar_noart/run_noart.py
+.venv/bin/python -I journal/analysis/A_calendar_noart/compare_noart.py
 ```
 
 [Tests](out/preregistered_tests_noart.csv) · [Paired comparison](out/comparison_noart.csv) · [Placebo summary](out/placebo_summary_noart.csv) · [Individual placebo windows](out/placebo_windows_noart.csv)

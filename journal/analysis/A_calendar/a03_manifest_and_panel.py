@@ -5,7 +5,7 @@ and BOE calendar classes, and construct the three valid-night panels:
   (c) panel_zones2435_daily.parquet (2,435 mainland zones: residents_home, residents_away, visitors_in)
 
 Run:
-  /Users/alejandrotreny/Proyectos/spain-holiday-roots/.venv/bin/python -I journal/analysis/A_calendar/a03_manifest_and_panel.py
+  .venv/bin/python -I journal/analysis/A_calendar/a03_manifest_and_panel.py
 """
 from __future__ import annotations
 
